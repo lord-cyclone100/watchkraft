@@ -1,0 +1,206 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+@font-face{
+    font-family: 'domine';
+    src: url('./media/fonts/Domine/Domine-VariableFont_wght.ttf');
+}
+
+
+
+
+
+
+
+nav{
+    width: 100%;
+    /* height: 10vh; */
+    background-color: rgba(25, 24, 27, 0.6);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2vh 4vh;
+}
+
+nav > img{
+    height: 4.4em;
+    
+}
+
+.logos{
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.logos > i{
+    font-size: 1.6em;
+    color: #eee;
+    cursor: pointer;
+}
+
+.nav-head > ul{
+    display: flex;
+    gap: 4rem;
+}
+
+.nav-head > ul > li{
+    list-style: none;
+}
+
+.nav-head > ul > li > h1{
+    text-transform: capitalize;
+    color: aliceblue;
+    font-family: domine;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+.carousel{
+    display: flex;
+}
+
+.left-box{
+    height: 100vh;
+    width: 70vw;
+}
+
+.left-box > div{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.watch-box{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.copper-box{
+    background: linear-gradient(126deg, rgba(236,189,163,1) 0%, rgba(171,122,94,1) 50%, rgba(101,50,20,1) 100%);
+}
+
+.silver-box{
+    background: linear-gradient(126deg, rgba(213,228,242,1) 0%, rgba(187,206,220,1) 50%, rgba(192,205,213,1) 100%);
+}
+
+.leather-box{
+    background: linear-gradient(126deg, rgba(200,142,91,1) 0%, rgba(223,195,157,1) 50%, rgba(113,61,33,1) 100%);
+
+}
+
+.gold-box{
+    background: linear-gradient(126deg, rgba(180,153,103,1) 0%, rgba(243,200,114,1) 50%, rgba(241,212,94,1) 100%);
+
+}
+
+.copper-left, .silver-left, .leather-left, .gold-left{
+    position: absolute;
+    height: 240vh;
+    left: -40%;
+}
+
+.cover{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(46, 48, 48);
+    opacity: 0.85;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4vw;
+}
+
+.cover > h1{
+    font-family: domine;
+    font-size: 8rem;
+}
+
+.cover h1:nth-child(1){
+    color: #eee;
+}
+
+.cover h1:nth-child(2){
+    color: transparent;
+    opacity: 0.8;
+    -webkit-text-stroke: 1px #eee;
+}
+
+.right-box{
+    position: relative;
+    height: 100vh;
+    width: 30vw;
+    background-color: rgb(220, 220, 232);
+    display: flex;
+    align-items: center;
+}
+
+.right-box div{
+    position: absolute;
+    padding: 0 2%;
+    left: -36%;
+    top: 20vh;
+    height: 76%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    gap: 2rem;
+    z-index: 10;
+}
+
+.watch-pic{
+    height: 70vh;
+    filter: drop-shadow(5px 5px 10px #000);
+    transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.car-btn{
+    position: absolute;
+    z-index: 12;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    top: 52vh;
+}
+
+.car-btn > img{
+    height: 12vh;
+}
+
+.next{
+    right: 8vw;
+}
+
+.prev{
+    left: -18vw;
+}
