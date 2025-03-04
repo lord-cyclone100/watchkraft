@@ -23,7 +23,7 @@
 If you are looking to contribute, please refer to the [**Contributing Guide**](https://github.com/lord-cyclone100/watchkraft/blob/main/CONTRIBUTING.md).
 
 ## ❗Rules for Contributing
-Please keep these [**rules**](https://github.com/lord-cyclone100/watchkraft/blob/main/CONTRIBUTING.md) in mind before contributing.
+Please keep these [**rules**](https://github.com/lord-cyclone100/watchkraft/blob/main/RULES.md) in mind before contributing.
 
 ## 🌟 Support
 If there are any questions pertaining to the project itself (usage or implementation wise), you may create an [**issue**](https://github.com/lord-cyclone100/watchkraft/issues).
