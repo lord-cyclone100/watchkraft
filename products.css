@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d1117;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #0043ce, #0f62fe);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+}
+
+header h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 15px #00e1ff;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Product Gallery */
+.product-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px;
+    gap: 30px;
+}
+
+/* Product Card */
+.product-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Product Title */
+.product-card h2 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+/* Product Description */
+.product-card p {
+    font-size: 16px;
+    color: #a1a1a1;
+}
+
+/* Buy Now Button */
+.product-card button {
+    background: linear-gradient(90deg, #00e1ff, #008fb3);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #0d1117;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00e1ff, 0 0 40px #008fb3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}

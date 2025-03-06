@@ -17,6 +17,39 @@ html, body{
 }
 
 
+.nav-head ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-head ul li button {
+    background: linear-gradient(90deg, #00e1ff, #008fb3);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-head ul li button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00e1ff, 0 0 40px #008fb3;
+}
+
+/* Add an animated glow effect */
+@keyframes buttonGlow {
+    0% { box-shadow: 0 0 10px #00e1ff; }
+    50% { box-shadow: 0 0 20px #008fb3, 0 0 50px #00e1ff; }
+    100% { box-shadow: 0 0 10px #00e1ff; }
+}
+
+.nav-head ul li button:hover {
+    animation: buttonGlow 1.5s infinite alternate;
+}
 
 
 
