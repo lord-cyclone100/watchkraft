@@ -204,3 +204,99 @@ nav > img{
 .prev{
     left: -18vw;
 }
+
+.footer-section {
+    background-color: #19181B;
+    color: #eee;
+    padding: 4rem 2rem;
+    font-family: 'domine', serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 2rem;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-column h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    color: #ccc;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-column p {
+    line-height: 1.6;
+    color: #aaa;
+    max-width: 300px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column ul li a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-column ul li a i {
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    margin-top: 3rem;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+}
+
+.footer-bottom p {
+    color: #888;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.footer-bottom i {
+    color: #e74c3c;
+    font-size: 1.1rem;
+}
