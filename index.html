@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Kraft</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
 </head>
 <body>
-    <!-- Navbar -->
     <section>
         <nav>
-            <img src="./media/logo-light.svg" alt="Logo" onclick="showSection('home')" style="cursor: pointer;">
-
+            <img src="./media/logo-light.svg" alt="">
             <div class="nav-head">
                 <ul>
                     <li><h1><a href="#">HOME</a></h1></li>
                     <li><h1><a href="#">SERVICE</a></h1></li>
                     <li><h1><a href="Product.html">PRODUCTS</a></h1></li>
-                    <li><h1><a href="contact.html">CONTACT US</a></h1></li>
+                    <li><h1><a href="./pages/contact.html">CONTACT US</a></h1></li>
                 </ul>
             </div>
             <div class="logos">
                 <i class="ri-shopping-cart-2-line"></i>
                 <i class="ri-user-line"></i>
             </div>
+            <div class="hamburger">
+                <button type="" class="menu-button">
+                    <img src="./media/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+                </button>
+            </div>
         </nav>
     </section>
-
-    <!-- Home Section -->
-    <section id="home" class="content-section">
+    <section>
         <div class="carousel">
             <div class="left-box">
                 <div>
-                    <div class="watch-box copper-box">
+                    <div class=" watch-box copper-box">
                         <div class="cover">
                             <h1>Copper</h1>
                             <h1>Alloy</h1>
@@ -65,30 +66,62 @@
                 </div>
             </div>
             <div class="right-box">
+                <button class="car-btn prev"><img src="./media/bkd-arrow.svg" alt=""></button>
                 <div>
                     <img src="./media/copper-watch.svg" class="watch-pic copper">
                     <img src="./media/silver-watch.svg" class="watch-pic silver">
                     <img src="./media/leather-watch.svg" class="watch-pic leather">
                     <img src="./media/gold-watch.svg" class="watch-pic gold">
                 </div>
-                <button class="car-btn prev"><img src="./media/bkd-arrow.svg" alt=""></button>
                 <button class="car-btn next"><img src="./media/fwd-arrow.svg" alt=""></button>
             </div>
         </div>
     </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
 
-   
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
 
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
 
-            // Show the selected section
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 WatchKraft | Designed by <b>Fazley Rahaman</b></p>
+        </div>
+    </footer>
+
+
+
+    <script src="./script.js"></script>
 </body>
 </html>
