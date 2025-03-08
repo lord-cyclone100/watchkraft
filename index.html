@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watch Kraft</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
 </head>
 <body>
-    <!-- Navbar -->
     <section>
         <nav>
-            <img src="./media/logo-light.svg" alt="Logo" onclick="showSection('home')" style="cursor: pointer;">
-
+            <img src="./media/logo-light.svg" alt="">
             <div class="nav-head">
                 <ul>
-                    <li><h1><a href="#">HOME</a></h1></li>
-                    <li><h1><a href="#">SERVICE</a></h1></li>
-                    <li><h1><a href="#">PRODUCTS</a></h1></li>
-                    <li><h1><a href="contact.html">CONTACT US</a></h1></li>
+                    <li><h1>HOME</h1></li>
+                    <li><h1>SERVICE</h1></li>
+                    <li><h1>PRODUCTS</h1></li>
+                    <li><h1><a href="./pages/contact.html">CONTACT US</a></h1></li>
                 </ul>
             </div>
             <div class="logos">
@@ -28,13 +26,11 @@
             </div>
         </nav>
     </section>
-
-    <!-- Home Section -->
-    <section id="home" class="content-section">
+    <section>
         <div class="carousel">
             <div class="left-box">
                 <div>
-                    <div class="watch-box copper-box">
+                    <div class=" watch-box copper-box">
                         <div class="cover">
                             <h1>Copper</h1>
                             <h1>Alloy</h1>
@@ -120,18 +116,7 @@
     </footer>
 
 
-   
 
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('.content-section').forEach(section => {
-                section.style.display = 'none';
-            });
-
-            // Show the selected section
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
