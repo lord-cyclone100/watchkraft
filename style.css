@@ -17,9 +17,14 @@ html, body{
 }
 
 
+nav ul li a {
+    color: white; /* Match other menu items */
+    text-decoration: none; /* Remove underline */
+}
 
-
-
+nav ul li a:hover {
+    color: #ccc; /* Adjust hover color if needed */
+}
 
 
 nav{
@@ -94,7 +99,6 @@ nav ul li a:hover {
     height: 100vh;
     width: 70vw;
 }
-
 .left-box > div{
     height: 100%;
     width: 100%;
@@ -177,7 +181,7 @@ nav ul li a:hover {
     left: -36%;
     top: 20vh;
     height: 76%;
-    width: 80%;
+    width: 78%;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -212,7 +216,68 @@ nav ul li a:hover {
     left: -18vw;
 }
 
+.hamburger{
+    display: none;
+}
+@media screen and (max-Width:800px){
+    .carousel{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .left-box{
+        width: 100vw;
+        object-fit: cover;
+    }
+    .right-box{
+        height: 80vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        
+    }
+    .right-box div{
+        position: absolute;
+        left: 25vw;
+        max-width: 250px;
+        margin-bottom: 2rem;
+    }
+    .car-btn{
+        position: absolute;
+        z-index: 12;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        top: 42vh;
+    }
+    .prev{
+        left: 6vw;
+    }
+    .next{
+        right: 7vw;
+    }
+    .watch-pic{
+        height: 50vh;
+        width: 100%;
+        filter: drop-shadow(5px 5px 7px #000);
+        transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .nav-head{
+        display: none;
+    }
+    .hamburger{
+        display:block;
+        .menu-icon{
+            height: 1.2rem;
+            width: 1.3rem;
+        }
+        .menu-button{
+            border-radius: 2px;
+            background-color: rgba(87, 86, 91, 0.6);
+            border: none;
+        }
+    }
 
+}
 
 
 .newsletter-form button {
@@ -460,3 +525,16 @@ body {
 }
 
 
+.logos i {
+    font-size: 24px; 
+    color: white; 
+}
+
+.logos a {
+    text-decoration: none; 
+}
+
+.logos a i {
+    font-size: 24px; 
+    color: white;
+}
