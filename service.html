@@ -51,7 +51,11 @@
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+        nav img {
+           width: 150px; 
+           height: auto;
+           max-height: 60px; 
+        }
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -512,7 +516,7 @@
             color: #aaa;
             font-size: 14px;
         }
-        
+ 
         /* Theme Toggle */
         .theme-toggle {
             position: fixed;
@@ -624,6 +628,8 @@
             .footer-content {
                 grid-template-columns: 1fr;
             }
+
+
         }
     </style>
 </head>
@@ -631,7 +637,8 @@
     <!-- Navigation -->
     <nav>
         <div class="container nav-container">
-            <a href="#" class="logo">Watch<span>Kraft</span></a>
+            <img src="./media/logo-light.svg" alt="">
+            
             <ul class="nav-links">
                 <li><a href="index.html">Go Back</a></li>
                
