@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 30px;
+        }
+        .container {
+            max-width: 900px;
+            background: #1e1e1e;
+            padding: 4rem;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        }
+        .form-control {
+            background: #333;
+            color: #fff;
+            border: 1px solid #444;
+            padding: 14px;
+        }
+        .form-control::placeholder {
+            color: #bbb;
+        }
+        .btn-primary {
+            background: #ffc107;
+            border: none;
+            color: #000;
+            padding: 14px;
+        }
+        .btn-primary:hover {
+            background: #e0a800;
+        }
+        .btn-facebook {
+            background: #1877f2;
+            color: white;
+            padding: 14px;
+        }
+        .btn-google {
+            background: #db4437;
+            color: white;
+            padding: 14px;
+        }
+        .logo-img {
+            filter: brightness(1);
+        }
+        .footer {
+            background: #1e1e1e;
+            padding: 40px 0;
+            text-align: center;
+            color: #aaa;
+            margin-top: 40px;
+        }
+        .footer a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-5 text-center">
+                <img src="./media/logo-light.svg" class="img-fluid mb-4 logo-img">
+                <h1 class="mb-3">Create an Account</h1>
+                <p class="text-muted mb-4">"Timeless Precision, Unmatched Elegance."</p>
+            </div>
+            <div class="col-md-7">
+                <form>
+                    <div class="form-row mb-4">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="First Name">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" class="form-control" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <input type="email" class="form-control mb-4" placeholder="Email Address">
+                    <div class="form-row mb-4">
+                        <div class="col-md-3">
+                            <select class="form-control">
+                                <option>+91</option>
+                                <option>+1</option>
+                                <option>+15</option>
+                                <option>+81</option>
+                            </select>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="tel" class="form-control" placeholder="Phone Number">
+                        </div>
+                    </div>
+                    <div class="form-row mb-4">
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="password" class="form-control" placeholder="Confirm Password">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block mb-4">Create your account</button>
+                    <div class="text-center my-4">OR</div>
+                    <button class="btn btn-facebook btn-block mb-3"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
+                    <button class="btn btn-google btn-block"><i class="fab fa-google"></i> Continue with Google</button>
+                    <p class="text-center mt-4">Already Registered? <a href="#">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 WatchKraft | Designed by <b>Fazley Rahaman</b></p>
+        </div>
+    </footer>
+
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

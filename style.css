@@ -525,3 +525,16 @@ body {
 }
 
 
+.logos i {
+    font-size: 24px; 
+    color: white; 
+}
+
+.logos a {
+    text-decoration: none; 
+}
+
+.logos a i {
+    font-size: 24px; 
+    color: white;
+}
