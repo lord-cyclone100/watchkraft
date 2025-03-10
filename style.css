@@ -23,7 +23,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ccc; /* Adjust hover color if needed */
+    color: yellow; /* Adjust hover color if needed */
 }
 
 
@@ -81,7 +81,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ccc; /* Adjust hover color if needed */
+    color: yellow; /* Adjust hover color if needed */
+    transition-duration: 1s;
+    font-weight: 800;
+    text-decoration: 2px underline red;
 }
 
 
