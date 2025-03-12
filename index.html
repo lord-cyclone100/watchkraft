@@ -19,7 +19,29 @@
                     <li><h1><a href="Product.html">PRODUCTS</a></h1></li>
                     <li><h1><a href="./pages/contact.html">CONTACT US</a></h1></li>
                 </ul>
+
             </div>
+                <!-- Search and Filters -->
+    <section class="filters">
+        <input type="text" id="searchInput" placeholder="Search for watches..." onkeypress="handleSearch(event)">
+        
+        <select id="categoryFilter" onchange="applyFilters()">
+            <option value="all">All Categories</option>
+            <option value="male">Men</option>
+            <option value="female">Women</option>
+            <option value="unisex">Unisex </option>
+        </select>
+
+        <select id="brandFilter" onchange="applyFilters()">
+            <option value="all">All Brands</option>
+            <option value="casio">Casio</option>
+            <option value="helix">Helix</option>
+            <option value="titan">Titan</option>
+        </select>
+
+       
+    </section>
+
             <div class="logos">
                 <i class="ri-shopping-cart-2-line"></i>
                 <a href="login.html" target="_blank"><i class="ri-user-line"></i></a>
@@ -121,6 +143,8 @@
         </div>
     </footer>
 
+
+  
 
 
     <script src="./script.js"></script>

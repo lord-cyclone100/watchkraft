@@ -26,28 +26,32 @@
 
     <!-- Product Grid Section -->
     <section class="product-grid">
-        <div class="product">
+        <div class="product" data-gender="male" data-brand="casio">
             <img src="./media/copper-watch.svg" alt="Copper Watch">
             <h2>Copper Alloy</h2>
             <p>$299.99</p>
+            <p class="brand">Casio</p>
             <button>Add to Cart</button>
         </div>
-        <div class="product">
+        <div class="product" data-gender="female" data-brand="titan">
             <img src="./media/silver-watch.svg" alt="Silver Watch">
             <h2>Silver Spark</h2>
             <p>$349.99</p>
+            <p class="brand">Titan</p>
             <button>Add to Cart</button>
         </div>
-        <div class="product">
+        <div class="product" data-gender="unisex" data-brand="helix">
             <img src="./media/leather-watch.svg" alt="Leather Watch">
             <h2>Leather Ivory</h2>
             <p>$279.99</p>
+            <p class="brand">Helix</p>
             <button>Add to Cart</button>
         </div>
-        <div class="product">
+        <div class="product" data-gender="male" data-brand="casio">
             <img src="./media/gold-watch.svg" alt="Gold Watch">
             <h2>Gold Noir</h2>
             <p>$399.99</p>
+            <p class="brand">Casio</p>
             <button>Add to Cart</button>
         </div>
     </section>
@@ -78,5 +82,49 @@
             <p>&copy; 2025 Watch Collection. All rights reserved.</p>
         </div>
     </footer>
+
+
+    <!-- Product script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const params = new URLSearchParams(window.location.search);
+            const gender = params.get("gender");
+            const brand = params.get("brand");
+            const searchQuery = params.get("search") ? params.get("search").toLowerCase() : null;
+        
+            let foundProduct = false; // Flag to track if any product matches
+        
+            document.querySelectorAll(".product").forEach(product => {
+                let matchesGender = !gender || gender === "all" || product.getAttribute("data-gender") === gender;
+                let matchesBrand = !brand || brand === "all" || product.getAttribute("data-brand") === brand;
+        
+                let productTitleElement = product.querySelector("h2");
+                let productTitle = productTitleElement ? productTitleElement.innerText.toLowerCase() : "";
+        
+                let productGender = product.getAttribute("data-gender") ? product.getAttribute("data-gender").toLowerCase() : "";
+                let productBrand = product.getAttribute("data-brand") ? product.getAttribute("data-brand").toLowerCase() : "";
+        
+                let matchesSearch = !searchQuery || 
+                    productTitle.includes(searchQuery) || 
+                    productGender.includes(searchQuery) || 
+                    productBrand.includes(searchQuery);
+        
+                if (matchesGender && matchesBrand && matchesSearch) {
+                    product.style.display = "block";
+                    foundProduct = true; // At least one product matches
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        
+            // If no product matches, show an alert
+            if (!foundProduct) {
+                window.location.href = `index.html`;
+                alert("Product doesn't exist!");
+            }
+        });
+        
+    </script>
+
 </body>
 </html>
