@@ -11,13 +11,13 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body {
-            background-color: #121212;
+            background-color: #12121279;
             color: #ffffff;
             padding: 30px;
         }
         .container {
             max-width: 900px;
-            background: #1e1e1e;
+            background: #1e1e1ead;
             padding: 4rem;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
@@ -61,12 +61,40 @@
             margin-top: 40px;
         }
         .footer a {
-            color: #ffc107;
+            color: #ff0707;
             text-decoration: none;
         }
         .footer a:hover {
             text-decoration: underline;
         }
+        @media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+    .form-row .col-md-6, .form-row .col-md-3, .form-row .col-md-9 {
+        width: 100%;
+    }
+    .form-row {
+        flex-direction: column;
+    }
+    .btn {
+        width: 100%;
+    }
+    .footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .social-icons a {
+        margin: 0 5px;
+    }
+}
+
     </style>
 </head>
 <body>

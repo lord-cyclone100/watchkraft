@@ -76,25 +76,84 @@ nav > img{
 }
 
 nav ul li a {
-    color: white; /* Match other menu items */
+    color: rgb(158, 158, 158); /* Match other menu items */
     text-decoration: none; /* Remove underline */
 }
 
 nav ul li a:hover {
-    color: yellow; /* Adjust hover color if needed */
-    transition-duration: 1s;
+    color: rgb(255, 255, 255);
+    /* Adjust hover color if needed */
+    transition-duration: 2s;
     font-weight: 800;
-    text-decoration: 2px underline red;
+    text-decoration: 2px underline rgb(249, 242, 242);
 }
 
+.homepage {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: url("https://img.freepik.com/premium-photo/close-up-plant_1048944-9287125.jpg?ga=GA1.1.1341701790.1741798637&semt=ais_authors_boost");
+    background-position: center 65%;
+    background-size: cover;
+    background-attachment: fixed;
+  }
 
+ 
+  .homepage .content {
+    display: flex;
+    height: 85%;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+.homepage .content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
 
+.homepage .content .text {
+    margin-bottom: 50px;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+.content a {
+    color: #000;
+    display: block;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 0 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #fff;
+    transition: 0.4s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+  }
 
-
-
-
-
+.content a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.3);
+  }
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 80px 0 0; */
+  }
+  section h2 {
+    font-size: 2rem;
+  }
+  section > p {
+    text-align: center;
+  }
+  
 .carousel{
+    margin: top 0;;
     display: flex;
 }
 
@@ -282,7 +341,124 @@ nav ul li a:hover {
 
 }
 
+.cardbg {
+    margin: 0%;
+    padding: 0;
+    background-image: url("https://img.freepik.com/premium-photo/high-angle-view-old-pocket-watch-wood_1048944-5940757.jpg?ga=GA1.1.1341701790.1741798637&semt=ais_authors_boost");
+}
+.gallery {
+  
+    margin: 0;
+    padding: 80px;
+    background-image: url("https://img.freepik.com/premium-photo/high-angle-view-old-pocket-watch-wood_1048944-5940757.jpg?ga=GA1.1.1341701790.1741798637&semt=ais_authors_boost");
+    
+    background-size: cover;  
+    background-repeat: no-repeat;  
+    background-position: center;  
+    display: flex;
+    justify-content: space-between; /* Ensures space between h2 and other content */
+    align-items: center; 
+    height: 100vh; 
+}
 
+.gallery h2 {
+    margin: 0;
+    color: white;
+    flex: 1; /* Allows it to occupy space on the left */
+    text-align: left; /* Explicitly align text to the left */
+}
+
+.gallery-content {
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: flex-end; /* Align content to the right */
+    gap: 20px; /* Adds spacing between items */
+}
+
+
+.card-list {
+   
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin: 150px auto;
+    padding: 20px;
+    gap: 20px;
+}
+.card-list .card-item {
+    background: #ffffffa9;
+    padding: 26px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+    list-style: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+}
+.card-list .card-item:hover {
+    border: 2px solid #000;
+}
+.card-list .card-item img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.card-list span {
+    display: inline-block;
+    background: #f7dff550;
+    margin-top: 32px;
+    padding: 8px 15px;
+    font-size: 0.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+.card-list .developer {
+    background-color: #050131c9; 
+    color: white;
+}   
+.card-list .designer {
+    background-color: #3f013d;
+    color: white;
+}
+.card-list .editor {
+    background-color: #012f13; 
+    color: white;
+}
+.card-item h3 {
+    color: #0b0213;
+    font-size: 1.438rem;
+    margin-top: 28px;
+    font-weight: 600;
+}
+.card-item .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(-35deg);
+    height: 40px;
+    width: 40px;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-top: 40px;
+    transition: 0.2s ease;
+}
+.card-list .card-item:hover .arrow  {
+    background: #000;
+    color: #fff; 
+}
+@media (max-width: 1200px) {
+    .card-list .card-item {
+        padding: 15px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .card-list {
+        margin: 0 auto;
+    }
+}
 .newsletter-form button {
     padding: 10px 15px;
     background-color: yellow;
@@ -296,6 +472,88 @@ nav ul li a:hover {
 .newsletter-form button:hover {
     background-color: #a37448;
 }
+.center{
+    position: relative;
+    width: 770px;
+    left: -70px;
+    perspective: 1200px;
+  }
+  .center .img-card{
+    position: relative;
+    height: 350px;
+    width: 400px;
+    transform-style: preserve-3d;
+    transition: transform .5s ease-in;
+  }
+  .img-card img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .img-card img:nth-child(1){
+    transform: rotateX(-270deg) translateY(-175px);
+    transform-origin: top left;
+  }
+  .img-card img:nth-child(2){
+    transform: translateZ(175px);
+  }
+  .img-card img:nth-child(3){
+    transform: rotateX(-90deg) translateY(175px);
+    transform-origin: bottom center;
+  }
+  .img-card img:nth-child(4){
+    transform: rotateX(-180deg) translateY(350px) translateZ(175px);
+    transform-origin: bottom right;
+  }
+  #tab-1:checked ~ .img-card{
+    transform: rotateX(-90deg);
+  }
+  #tab-2:checked ~ .img-card{
+    transform: rotateX(0deg);
+  }
+  #tab-3:checked ~ .img-card{
+    transform: rotateX(90deg);
+  }
+  #tab-4:checked ~ .img-card{
+    transform: rotateX(180deg);
+  }
+  .sliders{
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -30px;
+  }
+  .sliders label{
+    height: 98px;
+    width: 110px;
+    display: flex;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 6px 0;
+    border: 2px solid #2d4052;
+  }
+  .sliders label:nth-child(1){
+    margin-top: 0;
+  }
+  label img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+    opacity: .9;
+  }
+  label img:hover,
+  #tab-1:checked ~ .sliders label:nth-child(1) img,
+  #tab-2:checked ~ .sliders label:nth-child(2) img,
+  #tab-3:checked ~ .sliders label:nth-child(3) img,
+  #tab-4:checked ~ .sliders label:nth-child(4) img{
+    filter: grayscale(0);
+    opacity: 1;
+  }
+  input{
+    display: none;
+  }
 
 .footer-bottom {
     margin-top: 20px;
@@ -456,6 +714,7 @@ body {
 .send-btn:hover {
     background-color: #e6c200;
 }
+
 .footer {
     background: #1a1a1a;
     color: white;
@@ -541,3 +800,214 @@ body {
     font-size: 24px; 
     color: white;
 }
+@media screen and (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1vh 2vh;
+    }
+
+    .nav-head {
+        display: none; /* Keeping it as per your existing setup */
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+@media screen and (max-width: 768px) {
+    .homepage .content h1 {
+        font-size: 8vw; /* Adjusts with screen width */
+    }
+
+    .homepage .content .text {
+        font-size: 4vw;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .carousel {
+        flex-direction: column-reverse;
+    }
+
+    .left-box, .right-box {
+        width: 100vw;
+        height: auto;
+    }
+
+    .watch-box {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 980px) {
+    .card-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        margin: 20px auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info, .contact-form {
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+    }
+}
+.container {
+    max-width: 1120px;
+    width: 100%;
+    padding: 40px 0;
+  }
+  .slide-container {
+    margin: 0 30px;
+    overflow: hidden;
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+  }
+  .card .image-box {
+    height: 200px;
+  }
+  .card .image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+  }
+  .card .profile-details {
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    padding: 15px;
+  }
+  .card .profile-details img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+  }
+  .profile-details .name {
+    font-size: 15px;
+    font-weight: 500;
+  }
+  .profile-details .job {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4d4d4d;
+  }
+  .swiper-navBtn {
+    color: #000;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after {
+    font-size: 18px;
+  }
+  .swiper-pagination-bullet {
+    background-color: #000;
+  }
+  @media screen and (max-width: 768px) {
+    .swiper-navBtn {
+      display: none;
+    }
+  }
+  .Neo {
+    padding: 50px 0;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCvhKgqthxW46UqAHa3WxJUJs3zlvFOQ98ZA&s");
+    background-repeat: no-repeat;
+    background-size: cover; /* Makes the image cover the entire section */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Optional: Adds a parallax effect */
+}
+
+  
+  .container {
+    width: 80%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .swiper {
+    overflow: hidden;
+  }
+  
+  .card-wrapper {
+    display: flex;
+  }
+  
+  .card {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEoqTy5pq0VNczgDFc2VEZf_h-aLJK8V07DQ&s");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(255, 252, 252);
+    height: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.742);
+    padding: 20px;
+    margin: 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-end; /* Align text to bottom */
+}
+
+
+
+  
+  .image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .profile-details {
+    margin-top: 10px;
+  }
+  
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .job {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+  }
+  
+  /* Navigation Buttons */
+  .swiper-navBtn {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+  
+  .swiper-button-prev {
+    left: 10px;
+  }
+  
+  /* Pagination */
+  .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+  }
