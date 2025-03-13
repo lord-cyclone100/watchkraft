@@ -106,4 +106,63 @@ $(function () {
       $(this).parent().find(".input-group-text").css("border-color", "#ced4da")
     })
   })
-  
+
+
+
+
+//   Javascript code for handling Filters
+// 1. Handling functions
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM fully loaded"); // Debugging
+
+    const searchInput = document.getElementById("searchInput");
+
+    if (searchInput) {
+        searchInput.addEventListener("keypress", handleSearch);
+    } else {
+        console.error("Search input not found!");
+    }
+});
+
+function handleSearch(event) {
+    console.log("Key pressed:", event.key); // Debugging
+    if (event.key === "Enter") {
+        const searchQuery = document.getElementById("searchInput").value;
+        console.log("Search Query:", searchQuery); // Debugging
+        window.location.href = `product.html?search=${searchQuery}`;
+    }
+}
+
+
+  function applyFilters() {
+      const category = document.getElementById("categoryFilter").value;
+      const brand = document.getElementById("brandFilter").value;
+      window.location.href = `product.html?gender=${category}&brand=${brand}`;
+  }
+
+
+
+  // 2. Handling products
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const gender = params.get("gender");
+    const brand = params.get("brand");
+    const searchQuery = params.get("search") ? params.get("search").toLowerCase() : null;
+
+    document.querySelectorAll(".product").forEach(product => {
+        let matchesGender = !gender || gender === "all" || product.getAttribute("data-gender") === gender;
+        let matchesBrand = !brand || brand === "all" || product.getAttribute("data-brand") === brand;
+        let matchesSearch = !searchQuery || product.querySelector("h2").innerText.toLowerCase().includes(searchQuery);
+
+        if (matchesGender && matchesBrand && matchesSearch) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+    });
+});
+
+
+
