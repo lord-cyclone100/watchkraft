@@ -164,5 +164,32 @@ function handleSearch(event) {
     });
 });
 
+// Cart functionality
+let cart = [];
 
+function addToCart(productName) {
+    cart.push(productName);
+    updateCartCount();
+    showNotification(`${productName} added to cart!`);
+}
 
+function updateCartCount() {
+    const cartIcon = document.querySelector('.ri-shopping-cart-2-line');
+    if (cartIcon) {
+        cartIcon.setAttribute('data-count', cart.length);
+    }
+}
+
+function showNotification(message) {
+    const notification = document.createElement('div');
+    notification.className = 'notification';
+    notification.textContent = message;
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 2000);
+}
+
+// Initialize cart count on load
+document.addEventListener('DOMContentLoaded', updateCartCount);
