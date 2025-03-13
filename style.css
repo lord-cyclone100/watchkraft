@@ -26,6 +26,15 @@ nav ul li a:hover {
     color: yellow; /* Adjust hover color if needed */
 }
 
+a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: yellow;
+}
 
 nav{
     width: 100%;
@@ -70,6 +79,18 @@ nav > img{
     position: relative;
 }
 
+.nav-link {
+    color: #ffc107;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #ffc107;
+    color: #000;
+    border-radius: 5px;
+}
 .nav-head > ul > li::after {
     content: '';
     position: absolute;
@@ -117,13 +138,6 @@ nav ul li a:hover {
     font-weight: 800;
     text-decoration: 2px underline red;
 }
-
-
-
-
-
-
-
 
 .carousel{
     display: flex;
@@ -546,12 +560,42 @@ body {
     font-size: 18px;
     margin-right: 10px;
     transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .social-icons a:hover {
     color: #fdd835;
+    transform: scale(1.1);
 }
 
+.social-icon {
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+.footer-sectioncustomer-service li
+{
+  margin:2px;
+  font-size: 20px;
+  font-weight: 400;
+  color: brown;
+}
+.footer-sectioncustomer-service li:hover
+{
+    color: rgb(235, 14, 44);
+    font-weight: 500;
+    text-decoration:  solid underline #fff;
+}
+.footer-content
+{
+    font-size: 20px;
+    color: brown;
+}
+.footer-section .footer-links{
+    font-size: 20px;
+    margin: 2px;
+}
 .footer-bottom {
     text-align: center;
     padding: 10px;
@@ -765,10 +809,12 @@ h1, h2, h3 {
 }
 
 .footer-section a {
-    color: #e0e0e0;
+    color: #f3d1a0;
     transition: color 0.3s ease;
+    font-size: 20px;
+    margin: 2px;
 }
 
 .footer-section a:hover {
-    color: #c5a47e;
+    color: #45181b;
 }
