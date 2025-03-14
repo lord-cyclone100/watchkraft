@@ -25,6 +25,18 @@ nav ul li a {
 nav ul li a:hover {
     color: yellow; /* Adjust hover color if needed */
 }
+.nav-link {
+    color: #ffc107;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #ffc107;
+    color: #000;
+    border-radius: 5px;
+}
 
 
 nav{
@@ -118,18 +130,14 @@ nav ul li a:hover {
     text-decoration: 2px underline red;
 }
 
-
-
-
-
-
-
-
 .carousel{
     display: flex;
     position: relative;
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .left-box{
@@ -340,7 +348,19 @@ nav ul li a:hover {
 .footer-bottom p {
     margin: 0;
 }
-
+.footer-section_customer-service h2
+{
+    color: #e0e0e0;
+}
+.footer-section_customer-service li,a{
+    font-size: medium;
+    
+    }
+    .footer-section_customer-service li,a:hover
+    {
+        color: rgb(248, 141, 9);
+        font-weight: 600;
+    }
 .footer-links {
     display: flex;
     justify-content: center;
@@ -510,11 +530,17 @@ body {
     min-width: 200px;
     margin: 10px;
 }
+.footer-section_customer-service h2
+{
+  font-weight: 600;
+  color: #111;
+  font-size: 25px;
+}
 
 .footer-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
-    border-bottom: 2px solid #fdd835;
+    border-bottom: 2px solid #0d30f4;
     padding-bottom: 5px;
     display: inline-block;
     color: #c5a47e;
@@ -528,34 +554,39 @@ body {
 
 .footer-section ul li {
     margin: 8px 0;
+    font-size: 20px;
 }
 
 .footer-section ul li a {
     text-decoration: none;
-    color: white;
+    color: rgb(247, 235, 235);
     transition: 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: #fdd835;
+    color: #f1e0e0;
 }
 
-.social-icons a {
+.social-icons a,i {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
+    color: rgb(97, 112, 247);
+    font-size: 20px;
     margin-right: 10px;
     transition: 0.3s;
 }
 
-.social-icons a:hover {
+.social-icons a,i:hover {
     color: #fdd835;
 }
 
+.fab fa-facebook
+{
+    color: yellow;
+}
 .footer-bottom {
     text-align: center;
     padding: 10px;
-    background: #111;
+    background: #c5a47e;
     margin-top: 20px;
 }
 
@@ -577,6 +608,16 @@ body {
     font-size: 24px; 
     color: white;
 }
+a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: yellow;
+}
+
 
 
 /* Filters Section */
@@ -764,11 +805,14 @@ h1, h2, h3 {
     border-color: #c5a47e;
 }
 
+.footer-section h2{
+    font-weight: 500;
+}
 .footer-section a {
-    color: #e0e0e0;
+    color: #888686;
     transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: #c5a47e;
+    color: #f48b14;
 }
