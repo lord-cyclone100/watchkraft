@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watches Collection</title>
-    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="./product.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
 <body>
@@ -14,12 +14,19 @@
         <img src="./media/logo-light.svg" alt="Logo" class="logo">
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Watches</a></li>
+            <li><a href="Product.html">Watches</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
         <div class="nav-icons">
-            <i class="ri-shopping-cart-2-line"></i>
+            <header>
+                <div class="cart-icon">
+                    <a href="shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>            
             <i class="ri-user-line"></i>
         </div>
     </nav>
@@ -125,6 +132,7 @@
         });
         
     </script>
+    <script src="shopCart.js"></script>
 
 </body>
 </html>

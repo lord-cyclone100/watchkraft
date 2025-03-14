@@ -58,6 +58,15 @@ nav {
     color: #fff;
     cursor: pointer;
 }
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.cart-icon a {
+    text-decoration: none;
+    color: inherit;
+}
 
 .contact-container {
     display: flex;
