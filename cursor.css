@@ -1,0 +1,67 @@
+/* cursor.css */
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ff6b6b;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, border-color 0.2s ease;
+    box-shadow: 0 0 8px rgba(255, 107, 107, 0.3);
+    display: none; /* Hidden by default */
+}
+
+.cursor-inner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    border-radius: 50%;
+    opacity: 0.7;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.cursor-second-hand {
+    position: absolute;
+    width: 1px;
+    height: 8px;
+    background: #2c3e50;
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: bottom;
+    animation: tickCursor 1s steps(60) infinite;
+    border-radius: 1px;
+    z-index: 1;
+}
+
+a:hover ~ .custom-cursor,
+button:hover ~ .custom-cursor {
+    transform: translate(-50%, -50%) scale(1.3);
+    border-color: #fff;
+}
+
+a:hover ~ .custom-cursor .cursor-inner,
+button:hover ~ .custom-cursor .cursor-inner {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.9;
+}
+
+a:hover ~ .custom-cursor .cursor-second-hand,
+button:hover ~ .custom-cursor .cursor-second-hand {
+    background: #fff;
+}
+
+@keyframes tickCursor {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
