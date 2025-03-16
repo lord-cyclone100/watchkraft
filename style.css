@@ -227,7 +227,8 @@ nav ul li a:hover {
 }
 
 .watch-pic{
-    height: 70vh;
+    height: 60vh;
+    width: auto;
     filter: drop-shadow(5px 5px 10px #000);
     transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
