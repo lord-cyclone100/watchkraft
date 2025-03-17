@@ -585,6 +585,7 @@ body {
     justify-content: center;
     gap: 10px;
     margin: 12px auto;
+    margin-top: 100px;
     padding: 1rem;
     /* background-color: rgb(54, 54, 54); */
     max-width: 800px;
