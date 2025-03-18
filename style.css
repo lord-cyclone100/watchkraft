@@ -676,6 +676,32 @@ body {
     color: white;
 }
 
+/* Filters Section */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 12px auto;
+    margin-top: 100px;
+    padding: 1rem;
+    /* background-color: rgb(54, 54, 54); */
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(20, 20, 20, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filters input, 
+.filters select, 
+.filters button {
+    padding: 2px 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
 /* About Section */
 .about-section {
     padding: 5rem 0;
