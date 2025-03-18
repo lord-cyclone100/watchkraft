@@ -36,19 +36,27 @@
     </nav>
     <!-- Search and Filters -->
     <section class="filters">
-        <input type="text" id="searchInput" placeholder="Search for watches..." onkeypress="handleSearch(event)">
-        <select id="categoryFilter" onchange="applyFilters()">
-            <option value="all">All Categories</option>
-            <option value="male">Men</option>
-            <option value="female">Women</option>
-            <option value="unisex">Unisex </option>
-        </select>
-        <select id="brandFilter" onchange="applyFilters()">
-            <option value="all">All Brands</option>
-            <option value="casio">Casio</option>
-            <option value="helix">Helix</option>
-            <option value="titan">Titan</option>
-        </select>
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Search for watches..." onkeypress="handleSearch(event)">
+            <button id="dropdownButton">
+                <i class="ri-arrow-down-s-line"></i>
+            </button>
+        </div>
+        <div class="dropdown-filters" id="dropdownFilters">
+            <select id="categoryFilter" onchange="applyFilters()">
+                <option value="all">All Categories</option>
+                <option value="male">Men</option>
+                <option value="female">Women</option>
+                <option value="unisex">Unisex</option>
+            </select>
+    
+            <select id="brandFilter" onchange="applyFilters()">
+                <option value="all">All Brands</option>
+                <option value="casio">Casio</option>
+                <option value="helix">Helix</option>
+                <option value="titan">Titan</option>
+            </select>
+        </div>
     </section>
     <section>
         <div class="carousel">
@@ -163,10 +171,10 @@
             <div class="footer-section social">
                 <h2>Follow Us</h2>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
                 </div>
             </div>
         </div>
@@ -176,6 +184,7 @@
         </div>
     </footer>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./script.js"></script>
 </body>
 </html>
