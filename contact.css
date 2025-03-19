@@ -245,7 +245,7 @@ nav {
 .newsletter-form button {
     padding: 10px 15px;
     background-color: yellow;
-    color: white;
+    color: #333333;
     border: none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
@@ -254,6 +254,7 @@ nav {
 
 .newsletter-form button:hover {
     background-color: #a37448;
+    color:white;
 }
 
 .footer-bottom {
