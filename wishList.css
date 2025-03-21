@@ -59,6 +59,13 @@
     text-decoration: underline;
 }
 
+
+
+.cart-btn{
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+}
+
 /* Footer - Fixed at Bottom */
 /* footer {
     position: fixed;

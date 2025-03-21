@@ -19,9 +19,11 @@ function addToWishList(product, button) {
 
 // Event listener for wishlist button clicks
 document.addEventListener('click', (event) => {
-    if (event.target.matches('.wishlist-btn')) {  // Correct selector
+    if (event.target.matches('.wishlist-btn')) {  
+        event.stopPropagation(); // Prevents triggering other click events
+
         const productElement = event.target.closest('.product');
-        const button = event.target;  // Get the button itself
+        const button = event.target;  
 
         const product = {
             name: productElement.querySelector('h2').textContent,
@@ -58,7 +60,6 @@ function loadWishListItems() {
 
     wishListContainer.innerHTML = '';
 
-    // Check if wishlist is empty
     if (wishList.length === 0) {
         wishListContainer.innerHTML = `
             <div class="empty-wishList-container">
@@ -70,7 +71,6 @@ function loadWishListItems() {
         return;
     }
 
-    // Loop through wishlist items and display them
     wishList.forEach((item) => {
         const row = document.createElement("div");
         row.classList.add("wishlist-item");
@@ -81,6 +81,7 @@ function loadWishListItems() {
                     <p>${item.name}</p>
                     <small>Price: $${item.price.toFixed(2)}</small>
                     <br>
+                    <button class="cart-btn" data-name="${item.name}">Add to Cart</button>
                     <button class="remove-wishlist-btn" data-name="${item.name}">Remove</button>
                 </div>
             </div>
@@ -95,7 +96,21 @@ function loadWishListItems() {
             removeFromWishList(productName);
         });
     });
+
+    // Add event listeners for "Add to Cart" buttons
+    document.querySelectorAll('.cart-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const productName = event.target.getAttribute('data-name');
+            const product = wishList.find(item => item.name === productName);
+            console.log(product);
+            if (product) {
+                addToCart(product); // Call the function from shopCart.js
+                removeFromWishList(productName); // Remove item from wishlist after adding to cart
+            }
+        });
+    });
 }
+
 
 // Function to remove an item from the wishlist
 function removeFromWishList(productName) {
