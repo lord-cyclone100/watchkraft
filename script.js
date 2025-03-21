@@ -162,3 +162,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// JavaScript to add 'visible' class when in viewport
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutSection = document.querySelector(".about-section");
+
+    function revealOnScroll() {
+        const sectionPosition = aboutSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2;
+
+        if (sectionPosition < screenPosition) {
+            aboutSection.classList.add("visible");
+        }
+    }
+
+    // Ensure section appears if already in view on load
+    revealOnScroll();
+
+    window.addEventListener("scroll", revealOnScroll);
+});
