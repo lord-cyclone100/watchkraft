@@ -69,6 +69,33 @@
 
 </div>
 
+
+
+<div id="payment-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Select Payment Method</h2>
+        <div class="payment-options">
+            <button class="payment-btn" onclick="showATMForm()">💳 ATM Card</button>
+            <button class="payment-btn" onclick="showOnlineForm()">🌐 Online Payment</button>
+        </div>
+
+        <div id="atm-form" class="payment-form hidden">
+            <h3>Enter ATM Card Details</h3>
+            <input type="text" placeholder="Card Number" required>
+            <input type="text" placeholder="Card Holder Name" required>
+            <input type="text" placeholder="Expiry Date (MM/YY)" required>
+            <input type="password" placeholder="CVV" required>
+            <button class="pay-btn">Pay Now</button>
+        </div>
+
+        <div id="online-form" class="payment-form hidden">
+            <h3>Proceed to Online Payment</h3>
+            <button class="pay-btn">Pay with UPI/Net Banking</button>
+        </div>
+    </div>
+</div>
+
     <!-- Footer Section -->
     <footer>
         <div class="footer-container">

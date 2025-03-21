@@ -130,3 +130,28 @@ function removeFromCart(index) {
 if (document.querySelector('.cart-page')) {
     loadCartItems();
 }
+
+document.querySelector('.checkout-btn').addEventListener('click',()=>{
+    document.getElementById('payment-modal').style.display='block';
+});
+
+document.querySelector('.close-btn').addEventListener('click',()=>{
+    document.getElementById('payment-modal').style.display='none';
+});
+
+window.onclick = function (event) {
+    const modal=document.getElementById('payment-modal');
+    if (event.target===modal) {
+        modal.style.display='none';
+    }
+};
+
+function showATMForm() {
+    document.getElementById('atm-form').style.display='block';
+    document.getElementById('online-form').style.display='none';
+}
+
+function showOnlineForm() {
+    document.getElementById('online-form').style.display='block';
+    document.getElementById('atm-form').style.display='none';
+}
