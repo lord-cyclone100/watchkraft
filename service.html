@@ -577,6 +577,26 @@
         body.dark-mode .service-card h3 {
             color: var(--light);
         }
+
+        #backToTop {
+            position: fixed;
+            bottom: 100px;
+            right: 40px;
+            background-color: #333;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%; 
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            transition: opacity 0.3s, background-color 0.3s;
+        }
+
+        #backToTop:hover {
+            background-color: #555;
+        }
         
         /* Responsive Styles */
         @media (max-width: 992px) {
@@ -825,6 +845,26 @@
            
         </div>
     </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+      window.onscroll = function () {
+        let button = document.getElementById("backToTop");
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
 
     <!-- Theme Toggle -->
     <div class="theme-toggle">
