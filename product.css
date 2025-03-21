@@ -371,3 +371,23 @@ footer {
 .color-option:hover {
     transform: scale(1.1);
 }
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes it round */
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+    transition: opacity 0.3s, background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #555;
+}

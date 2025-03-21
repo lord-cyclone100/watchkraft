@@ -1,128 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="./shopCart.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-</head>
-<body>
-
+    <link rel="stylesheet" href="./shopCart.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navbar -->
     <nav>
-        <a href="landing.html">
-            <img src="./media/logo-light.svg" alt="Logo" class="logo">
-        </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Product.html">Watches</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="nav-icons">
-            <header>
-                <div class="cart-icon">
-                    <a href="shopCart.html">
-                        <i class="ri-shopping-cart-2-line"></i>
-                    </a>
-                    <span id="cart-count">0</span>
-                </div>
-            </header> 
-            <i class="ri-user-line"></i>
-        </div>
+      <a href="landing.html">
+        <img src="./media/logo-light.svg" alt="Logo" class="logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Product.html">Watches</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <header>
+          <div class="cart-icon">
+            <a href="shopCart.html">
+              <i class="ri-shopping-cart-2-line"></i>
+            </a>
+            <span id="cart-count">0</span>
+          </div>
+        </header>
+        <i class="ri-user-line"></i>
+      </div>
     </nav>
-
 
     <!-- Cart item details -->
     <div class="small-container cart-page">
-        <table>
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th>Subtotal</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    <div class="price-container">
-    <div class="total-price">
-        <table>
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="price-container">
+        <div class="total-price">
+          <table>
             <tr>
-                <td>Subtotal</td>
-                <td class="subtotal-value">$0.00</td>
+              <td>Subtotal</td>
+              <td class="subtotal-value">$0.00</td>
             </tr>
             <tr>
-                <td>Delivery charge</td>
-                <td class="delivery-value">$0.00</td>
+              <td>Delivery charge</td>
+              <td class="delivery-value">$0.00</td>
             </tr>
             <tr>
-                <td>Total Price</td>
-                <td class="total-value">$0.00</td>
+              <td>Total Price</td>
+              <td class="total-value">$0.00</td>
             </tr>
-        </table>
-        <button class="checkout-btn">Proceed to Checkout</button>
+          </table>
+          <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+      </div>
     </div>
-    </div>
-    
 
-</div>
-
-
-
-<div id="payment-modal" class="modal">
-    <div class="modal-content">
+    <div id="payment-modal" class="modal">
+      <div class="modal-content">
         <span class="close-btn">&times;</span>
         <h2>Select Payment Method</h2>
         <div class="payment-options">
-            <button class="payment-btn" onclick="showATMForm()">💳 ATM Card</button>
-            <button class="payment-btn" onclick="showOnlineForm()">🌐 Online Payment</button>
+          <button class="payment-btn" onclick="showATMForm()">
+            💳 ATM Card
+          </button>
+          <button class="payment-btn" onclick="showOnlineForm()">
+            🌐 Online Payment
+          </button>
         </div>
 
         <div id="atm-form" class="payment-form hidden">
-            <h3>Enter ATM Card Details</h3>
-            <input type="text" placeholder="Card Number" required>
-            <input type="text" placeholder="Card Holder Name" required>
-            <input type="text" placeholder="Expiry Date (MM/YY)" required>
-            <input type="password" placeholder="CVV" required>
-            <button class="pay-btn">Pay Now</button>
+          <h3>Enter ATM Card Details</h3>
+          <input type="text" placeholder="Card Number" required />
+          <input type="text" placeholder="Card Holder Name" required />
+          <input type="text" placeholder="Expiry Date (MM/YY)" required />
+          <input type="password" placeholder="CVV" required />
+          <button class="pay-btn">Pay Now</button>
         </div>
 
         <div id="online-form" class="payment-form hidden">
-            <h3>Proceed to Online Payment</h3>
-            <button class="pay-btn">Pay with UPI/Net Banking</button>
+          <h3>Proceed to Online Payment</h3>
+          <button class="pay-btn">Pay with UPI/Net Banking</button>
         </div>
+      </div>
     </div>
-</div>
 
     <!-- Footer Section -->
     <footer>
-        <div class="footer-container">
-            <!-- Contact Section -->
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p><i class="ri-map-pin-line"></i> 123 Watch Street, New York, USA</p>
-                <p><i class="ri-phone-line"></i> +1 234 567 890</p>
-                <p><i class="ri-mail-line"></i> support@watchcollection.com</p>
-            </div>
+      <div class="footer-container">
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="ri-map-pin-line"></i> 123 Watch Street, New York, USA</p>
+          <p><i class="ri-phone-line"></i> +1 234 567 890</p>
+          <p><i class="ri-mail-line"></i> support@watchcollection.com</p>
+        </div>
 
         <!-- Review Form -->
         <div class="footer-review">
-            <h3>Leave a Review</h3>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <textarea placeholder="Write your review..." required></textarea>
-                <button type="submit">Submit</button>
-            </form>
+          <h3>Leave a Review</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <textarea placeholder="Write your review..." required></textarea>
+            <button type="submit">Submit</button>
+          </form>
         </div>
-    </div>
+      </div>
 
-    <!-- Copyright Section -->
-    <div class="footer-bottom">
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
         <p>&copy; 2025 Watch Collection. All rights reserved.</p>
-    </div>
-</footer>
-<script src="shopCart.js"></script>
-</body>
+      </div>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+      window.onscroll = function () {
+        let button = document.getElementById("backToTop");
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+    <script src="shopCart.js"></script>
+  </body>
 </html>

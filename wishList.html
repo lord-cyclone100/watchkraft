@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopping Cart</title>
-    <link rel="stylesheet" href="./shopCart.css">
-    <link rel="stylesheet" href="./wishList.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-</head>
-<body>
-
+    <link rel="stylesheet" href="./shopCart.css" />
+    <link rel="stylesheet" href="./wishList.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- Navbar -->
     <nav>
-        <img src="./media/logo-light.svg" alt="Logo" class="logo">
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Product.html">Watches</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="nav-icons">
-            <header>
-                <div class="cart-icon">
-                    <a href="shopCart.html">
-                        <i class="ri-shopping-cart-2-line"></i>
-                    </a>
-                    <span id="cart-count">0</span>
-                </div>
-            </header> 
-            <i class="ri-user-line"></i>
-        </div>
+      <img src="./media/logo-light.svg" alt="Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Product.html">Watches</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+        <header>
+          <div class="cart-icon">
+            <a href="shopCart.html">
+              <i class="ri-shopping-cart-2-line"></i>
+            </a>
+            <span id="cart-count">0</span>
+          </div>
+        </header>
+        <i class="ri-user-line"></i>
+      </div>
     </nav>
-    <div class="my-wishList wishList-page">
-
-    </div>
-
-    
+    <div class="my-wishList wishList-page"></div>
 
     <!-- Footer Section -->
     <footer>
-        <div class="footer-container">
-            <!-- Contact Section -->
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p><i class="ri-map-pin-line"></i> 123 Watch Street, New York, USA</p>
-                <p><i class="ri-phone-line"></i> +1 234 567 890</p>
-                <p><i class="ri-mail-line"></i> support@watchcollection.com</p>
-            </div>
+      <div class="footer-container">
+        <!-- Contact Section -->
+        <div class="footer-contact">
+          <h3>Contact Us</h3>
+          <p><i class="ri-map-pin-line"></i> 123 Watch Street, New York, USA</p>
+          <p><i class="ri-phone-line"></i> +1 234 567 890</p>
+          <p><i class="ri-mail-line"></i> support@watchcollection.com</p>
+        </div>
 
         <!-- Review Form -->
         <div class="footer-review">
-            <h3>Leave a Review</h3>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <textarea placeholder="Write your review..." required></textarea>
-                <button type="submit">Submit</button>
-            </form>
+          <h3>Leave a Review</h3>
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <textarea placeholder="Write your review..." required></textarea>
+            <button type="submit">Submit</button>
+          </form>
         </div>
-    </div>
+      </div>
 
-    <!-- Copyright Section -->
-    <div class="footer-bottom">
+      <!-- Copyright Section -->
+      <div class="footer-bottom">
         <p>&copy; 2025 Watch Collection. All rights reserved.</p>
-    </div>
-</footer>
-<script src="wishList.js"></script>
-</body>
+      </div>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+      window.onscroll = function () {
+        let button = document.getElementById("backToTop");
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
+    <script src="wishList.js"></script>
+  </body>
+</html>
