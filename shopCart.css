@@ -447,4 +447,22 @@ footer {
     }
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; 
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s, background-color 0.3s;
+}
 
+#backToTop:hover {
+    background-color: #555;
+}
