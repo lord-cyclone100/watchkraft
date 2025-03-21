@@ -140,6 +140,9 @@ nav {
     background-color: #e5a917;
 }
 
+.wishlist-btn{
+    margin-top: 0.5rem;
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
