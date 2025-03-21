@@ -41,7 +41,7 @@ nav{
     box-sizing: border-box;
 }
 
-nav > img{
+nav a > img{
     height: 3.5em;
     margin-right: 1rem;
     

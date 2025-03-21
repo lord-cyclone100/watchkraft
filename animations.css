@@ -1,0 +1,93 @@
+/* Landing Page Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate__fadeInUp {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Product Hover Animation */
+.product {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    animation: productAppear 0.5s ease-out;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Loading Animation */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    animation: spin 0.8s linear infinite;
+}
+
+/* Card Flip Animation */
+.product-card {
+    perspective: 1000px;
+}
+
+.product-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.product-card:hover .product-inner {
+    transform: rotateY(180deg);
+}
+
+/* Color Filter Animation */
+.color-option {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.color-option.active {
+    transform: scale(1.1);
+    border-color: #fbc02d;
+    box-shadow: 0 0 10px rgba(251,192,45,0.3);
+}
+
+.color-option::after {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    transition: border-color 0.2s ease;
+}
+
+.color-option.active::after {
+    border-color: #fbc02d;
+}
+
+@keyframes productAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

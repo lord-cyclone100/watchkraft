@@ -5,13 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watches Collection</title>
     <link rel="stylesheet" href="./product.css">
+    <link rel="stylesheet" href="animations.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
 
     <!-- Navbar -->
     <nav>
-        <img src="./media/logo-light.svg" alt="Logo" class="logo">
+        <a href="landing.html">
+            <img src="./media/logo-light.svg" alt="Logo" class="logo">
+        </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="Product.html">Watches</a></li>
@@ -31,10 +35,60 @@
             <i class="ri-user-line"></i>
         </div>
     </nav>
+    <section class="filters">
+        <div class="container">
+            <div class="search-wrapper">
+                <input type="text" id="searchInput" placeholder="Search watches...">
+                <button id="dropdownButton">
+                    <i class="ri-arrow-down-s-line"></i>
+                </button>
+            </div>
+            
+            <div class="advanced-filters">
+                <select id="categoryFilter" onchange="applyFilters()">
+                    <option value="all">All Categories</option>
+                    <option value="male">Men</option>
+                    <option value="female">Women</option>
+                    <option value="unisex">Unisex</option>
+                </select>
 
+                <select id="brandFilter">
+                    <option value="all">All Brands</option>
+                    <option value="casio">Casio</option>
+                    <option value="titan">Titan</option>
+                    <option value="helix">Helix</option>
+                </select>
+
+                <select id="typeFilter" onchange="applyFilters()">
+                    <option value="all">All Types</option>
+                    <option value="analog">Analog</option>
+                    <option value="digital">Digital</option>
+                </select>
+
+                <select id="materialFilter" onchange="applyFilters()">
+                    <option value="all">All Materials</option>
+                    <option value="metal">Metal</option>
+                    <option value="leather">Leather</option>
+                    <option value="plastic">Plastic</option>
+                </select>
+
+                <div class="color-filter">
+                    <div class="color-option" data-color="silver" onclick="toggleColorFilter('silver')"></div>
+                    <div class="color-option" data-color="gold" onclick="toggleColorFilter('gold')"></div>
+                    <div class="color-option" data-color="black" onclick="toggleColorFilter('black')"></div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Product Grid Section -->
     <section class="product-grid">
-        <div class="product" data-gender="male" data-brand="casio">
+        <div class="product" 
+            data-gender="male" 
+            data-brand="casio" 
+            data-type="analog" 
+            data-material="metal"
+            data-color="gold silver"
+        >
             <img src="./media/copper-watch.svg" alt="Copper Watch">
             <h2>Copper Alloy</h2>
             <p>$299.99</p>
@@ -43,7 +97,13 @@
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
 
         </div>
-        <div class="product" data-gender="female" data-brand="titan">
+        <div class="product" 
+            data-gender="female" 
+            data-brand="titan"
+            data-type="analog"
+            data-material="metal"
+            data-color="silver black"
+        >
             <img src="./media/silver-watch.svg" alt="Silver Watch">
             <h2>Silver Spark</h2>
             <p>$349.99</p>
@@ -52,7 +112,13 @@
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
             
         </div>
-        <div class="product" data-gender="unisex" data-brand="helix">
+        <div class="product" 
+            data-gender="unisex" 
+            data-brand="helix"
+            data-type="digital"
+            data-material="plastic"
+            data-color="black"
+        >
             <img src="./media/leather-watch.svg" alt="Leather Watch">
             <h2>Leather Ivory</h2>
             <p>$279.99</p>
@@ -60,7 +126,13 @@
             <button>Add to Cart</button>
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
         </div>
-        <div class="product" data-gender="male" data-brand="casio">
+        <div class="product" 
+            data-gender="male" 
+            data-brand="casio"
+            data-type="analog"
+            data-material="leather"
+            data-color="gold"
+        >
             <img src="./media/gold-watch.svg" alt="Gold Watch">
             <h2>Gold Noir</h2>
             <p>$399.99</p>
@@ -140,6 +212,7 @@
         
     </script>
     <script src="shopCart.js"></script>
+    <script src="Product.js"></script>
     <script src="wishList.js"></script>
 
 </body>
