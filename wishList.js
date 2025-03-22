@@ -123,7 +123,6 @@ function loadWishListItems() {
     });
 }
 
-
 // Function to remove an item from the wishlist
 function removeFromWishList(productName) {
     wishList = wishList.filter(item => item.name !== productName);
@@ -138,3 +137,26 @@ function removeFromWishList(productName) {
 if (document.querySelector('.wishList-page')) {
     loadWishListItems();
 }
+
+/* 🚀 DARK MODE FUNCTIONALITY 🚀 */
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Check if dark mode is enabled in localStorage
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+    }
+
+    // Toggle dark mode on switch change
+    darkModeToggle.addEventListener("change", function () {
+        if (darkModeToggle.checked) {
+            body.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark");
+        } else {
+            body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "light");
+        }
+    });
+});
