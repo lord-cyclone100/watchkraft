@@ -94,3 +94,19 @@ function toggleColorFilter(color) {
     btn.classList.toggle('active');
     applyFilters();
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".product").forEach(product => {
+        let stock = parseInt(product.getAttribute("data-stock")) || 0;
+        let stockStatus = product.querySelector(".stock-status");
+
+        if (stock > 0) {
+            stockStatus.innerHTML = `<span>🟢 In Stock</span>`;
+        } else {
+            stockStatus.innerHTML = `<span>🔴 Out of Stock</span>`;
+            let cartButton = product.querySelector(".add-to-cart-btn");
+            if (cartButton) cartButton.disabled = true; // Disable add to cart button
+        }
+    });
+});

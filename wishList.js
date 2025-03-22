@@ -29,7 +29,8 @@ document.addEventListener('click', (event) => {
             name: productElement.querySelector('h2').textContent,
             price: parseFloat(productElement.querySelector('p').textContent.replace('$', '')),
             brand: productElement.querySelector('.brand').textContent,
-            image: productElement.querySelector('img').src
+            image: productElement.querySelector('img').src,
+            stock:parseInt(productElement.getAttribute("data-stock")) || 0
         };
 
         addToWishList(product, button);
@@ -80,12 +81,23 @@ function loadWishListItems() {
                 <div>
                     <p>${item.name}</p>
                     <small>Price: $${item.price.toFixed(2)}</small>
+                    <p class="stock-status"></p>
                     <br>
                     <button class="cart-btn" data-name="${item.name}">Add to Cart</button>
                     <button class="remove-wishlist-btn" data-name="${item.name}">Remove</button>
                 </div>
             </div>
         `;
+        let stockStatus = row.querySelector(".stock-status");
+
+        if (item.stock > 0) {
+            stockStatus.innerHTML = `<span>🟢 In Stock</span>`;
+        } else {
+            stockStatus.innerHTML = `<span>🔴 Out of Stock</span>`;
+            let cartButton = row.querySelector(".cart-btn");
+            if (cartButton) cartButton.disabled = true; // Disable add to cart button
+        };
+    
         wishListContainer.appendChild(row);
     });
 
