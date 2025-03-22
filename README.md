@@ -4,8 +4,6 @@
 </div>
 
 <br>
-<div align="center">
-  <img height="80" src="./media/logo-dark.svg">
   
   # <div align="center">Watch Kraft</div>
   
@@ -63,9 +61,6 @@ For detailed guidelines, check the [**Contributing Guide**](https://github.com/l
 
 ## 📌 Issues & Suggestions
 If you find any issues or have suggestions, feel free to open an [**issue**](https://github.com/lord-cyclone100/watchkraft/issues). Your feedback helps us improve!
-
-## 📝 License
-This project is licensed under the **MIT License** – see the [LICENSE](https://github.com/lord-cyclone100/watchkraft/blob/main/LICENSE) file for details.
 
 ## 📖 Documentation
 Check out our [**Wiki**](https://github.com/lord-cyclone100/watchkraft/wiki) for in-depth details on project structure, guidelines, and development practices.
