@@ -12,22 +12,71 @@ body {
 }
 
 /* Navbar */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(25, 24, 27, 0.8);
-    backdrop-filter: blur(10px);
-    padding: 1rem 4rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
+nav ul li a:hover {
+    color: yellow;
 }
 
-.logo {
-    height: 50px;
+
+nav{
+    width: 100%;
+    height: 10vh;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(8px);
+    position: fixed;
+    top: 0;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 4%;
+    max-width: 100vw;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+}
+
+nav a > img{
+    height: 3.5em;
+    margin-right: 1rem;
+    
+}
+
+.logos{
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.logos > i{
+    font-size: 1.6em;
+    color: #eee;
+    cursor: pointer;
+}
+
+.nav-head > ul{
+    display: flex;
+    gap: 2.2rem;
+    white-space: nowrap;
+}
+
+.nav-head > ul > li{
+    list-style: none;
+    position: relative;
+}
+
+.nav-head > ul > li::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #c5a47e;
+    transition: width 0.3s ease;
+}
+
+.nav-head > ul > li:hover::after {
+    width: 100%;
 }
 
 .nav-links {
@@ -58,23 +107,23 @@ nav {
     color: #fff;
     cursor: pointer;
 }
-
 .cart-icon {
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
-
 .cart-icon a {
     text-decoration: none;
     color: inherit;
 }
+
 #cart-count {
     position: absolute;
     top: -5px;
     right: -5px;
     background-color: #fbc02d;
     color: #000;
+    font-family: Arial, Helvetica, sans-serif;
     border-radius: 50%;
     width: 20px;
     height: 20px;
@@ -83,6 +132,60 @@ nav {
     justify-content: center;
     font-size: 14px;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-head > ul > li > h1{
+    text-transform: capitalize;
+    font-family: domine;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a {
+    color: white; /* Match other menu items */
+    text-decoration: none; /* Remove underline */
+}
+
+nav ul li a:hover {
+    color: yellow; /* Adjust hover color if needed */
+    transition-duration: 1s;
+    font-weight: 800;
+}
+
+.hamburger{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .nav-head{
+        display: none;
+    }
+    .hamburger{
+        display:block;
+        .menu-icon{
+            height: 1.2rem;
+            width: 1.3rem;
+        }
+        .menu-button{
+            border-radius: 2px;
+            background-color: rgba(87, 86, 91, 0.6);
+            border: none;
+        }
+    }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {

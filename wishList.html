@@ -7,6 +7,7 @@
     <title>Wishlist &mdash; WatchKraft</title>
     <link rel="stylesheet" href="./shopCart.css" />
     <link rel="stylesheet" href="./wishList.css" />
+    <link rel="stylesheet" href="footer.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -15,55 +16,82 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <img src="./media/logo-light.svg" alt="Logo" class="logo" />
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Product.html">Watches</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="nav-icons">
-        <header>
-          <div class="cart-icon">
-            <a href="shopCart.html">
-              <i class="ri-shopping-cart-2-line"></i>
-            </a>
-            <span id="cart-count">0</span>
-          </div>
-        </header>
-        <i class="ri-user-line"></i>
+      <a href="landing.html">
+          <img src="./media/logo-light.svg" alt="">
+      </a>
+      <div class="nav-head">
+          <ul>
+              <li><h1><a href="index.html">HOME</a></h1></li>
+              <li><h1><a href="service.html">SERVICE</a></h1></li>
+              <li><h1><a href="Product.html">PRODUCTS</a></h1></li>
+              <li><h1><a href="wishList.html">WISH LIST</a></h1></li>
+              <li><h1><a href="contact.html">CONTACT US</a></h1></li>
+          </ul>
       </div>
-    </nav>
+      <div class="nav-icons">
+          <header>
+              <div class="cart-icon">
+                  <a href="shopCart.html">
+                      <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+                  <span id="cart-count">0</span>
+              </div>
+          </header>            
+          <i class="ri-user-line"></i>
+      </div>
+      <div class="hamburger">
+          <button type="" class="menu-button">
+              <img src="./media/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+          </button>
+      </div>
+  </nav>
     <div class="my-wishList wishList-page"></div>
 
     <!-- Footer Section -->
-    <footer>
-      <div class="footer-container">
-        <!-- Contact Section -->
-        <div class="footer-contact">
-          <h3>Contact Us</h3>
-          <p><i class="ri-map-pin-line"></i> 123 Watch Street, New York, USA</p>
-          <p><i class="ri-phone-line"></i> +1 234 567 890</p>
-          <p><i class="ri-mail-line"></i> support@watchcollection.com</p>
-        </div>
+    <footer class="footer">
+      <div class="container">
+          <div class="footer-section about">
+              <h2>About Us</h2>
+              <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+          </div>
 
-        <!-- Review Form -->
-        <div class="footer-review">
-          <h3>Leave a Review</h3>
-          <form>
-            <input type="text" placeholder="Your Name" required />
-            <textarea placeholder="Write your review..." required></textarea>
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+          <div class="footer-section links">
+              <h2>Quick Links</h2>
+              <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="Product.html">Shop</a></li>
+                  <li><a href="shopCart.html">Deals</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-section customer-service">
+              <h2>Customer Service</h2>
+              <ul>
+                  <li><a href="service.html">FAQs</a></li>
+                  <li><a href="service.html">Return Policy</a></li>
+                  <li><a href="service.html">Privacy Policy</a></li>
+                  <li><a href="service.html">Terms & Conditions</a></li>
+              </ul>
+          </div>
+
+          <div class="footer-section social">
+              <h2>Follow Us</h2>
+              <div class="social-icons">
+                  <a href="#"><i class="ri-facebook-fill"></i></a>
+                  <a href="#"><i class="ri-twitter-x-line"></i></a>
+                  <a href="#"><i class="ri-instagram-line"></i></a>
+                  <a href="#"><i class="ri-youtube-fill"></i></i></a>
+              </div>
+          </div>
       </div>
 
       <!-- Copyright Section -->
       <div class="footer-bottom">
-        <p>&copy; 2025 Watch Collection. All rights reserved.</p>
+          <p>© 2025 WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
+      </div>
+  </footer>
 
-    </div>
-</footer>
 <script src="shopCart.js"></script>
 <script src="wishList.js"></script>
 

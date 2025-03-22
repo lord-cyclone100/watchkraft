@@ -6,6 +6,7 @@
     <link rel="icon" type="image/svg" href="./media/favicon.svg">
     <title>Contact Us &mdash; WatchKraft</title>
     <link rel="stylesheet" href="contact.css"> 
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
 </head>
@@ -14,22 +15,32 @@
     <!-- Navbar -->
     <nav>
         <a href="landing.html">
-            <img src="../media/logo-light.svg" alt="Logo" class="logo">
+            <img src="./media/logo-light.svg" alt="">
         </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Product.html">Watches</a></li>
-            <li><a href="wishList.html">Wish List</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+        <div class="nav-head">
+            <ul>
+                <li><h1><a href="index.html">HOME</a></h1></li>
+                <li><h1><a href="service.html">SERVICE</a></h1></li>
+                <li><h1><a href="Product.html">PRODUCTS</a></h1></li>
+                <li><h1><a href="wishList.html">WISH LIST</a></h1></li>
+                <li><h1><a href="contact.html">CONTACT US</a></h1></li>
+            </ul>
+        </div>
         <div class="nav-icons">
-            <div class="cart-icon">
-                <a href="shopCart.html">
-                    <i class="ri-shopping-cart-2-line"></i>
-                </a>
-            </div>
+            <header>
+                <div class="cart-icon">
+                    <a href="shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>            
             <i class="ri-user-line"></i>
+        </div>
+        <div class="hamburger">
+            <button type="" class="menu-button">
+                <img src="./media/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+            </button>
         </div>
     </nav>
 
@@ -111,43 +122,45 @@
 
     <!-- Footer Section -->
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h3>Quick Links</h3>
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="Product.html">Collections</a></li>
-                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="Product.html">Shop</a></li>
+                    <li><a href="shopCart.html">Deals</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
 
-            <div class="footer-middle">
-                <h3>Collections</h3>
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
                 <ul>
-                    <li><a href="#">Copper Alloy</a></li>
-                    <li><a href="#">Platinum Series</a></li>
-                    <li><a href="#">Diamond Collection</a></li>
-                    <li><a href="#">Limited Editions</a></li>
+                    <li><a href="service.html">FAQs</a></li>
+                    <li><a href="service.html">Return Policy</a></li>
+                    <li><a href="service.html">Privacy Policy</a></li>
+                    <li><a href="service.html">Terms & Conditions</a></li>
                 </ul>
             </div>
 
-            <div class="footer-right">
-                <h3>Newsletter</h3>
-                <p>Subscribe to receive updates on new collections and exclusive events.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Your email">
-                    <button type="submit">Subscribe</button>
-                </form>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
+                </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>© 2025 Watch Kraft. All rights reserved.</p>
-            <ul class="footer-links">
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Shipping Policy</a></li>
-            </ul>
+            <p>© 2025 WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
         </div>
     </footer>
 
@@ -167,6 +180,7 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
     </script>
-
+    <script src="./script.js"></script>
+    <script src="shopCart.js"></script>
 </body>
 </html>
