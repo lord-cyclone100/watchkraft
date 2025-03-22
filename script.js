@@ -7,15 +7,18 @@ const next = document.querySelector('.next');
 let counter = 0;
 let totalImages = car.length;
 
+// Dynamically update the year in the footer
+document.querySelector(".year").textContent = new Date().getFullYear();
+
 if (prev && next) {
     prev.addEventListener('click', () => {
         if (counter === 0) {
-            disableTransition(0); 
+            disableTransition(0);
             counter = totalImages - 1;
             car[3].style.transition = 'transform 0.5s ease-out';
             box[3].style.transition = 'transform 0.5s ease-out';
-            move(); 
-            setTimeout(enableTransition, 50); 
+            move();
+            setTimeout(enableTransition, 50);
         } else {
             counter--;
             move();
@@ -25,7 +28,7 @@ if (prev && next) {
     next.addEventListener('click', () => {
         if (counter === totalImages - 1) {
             disableTransition(totalImages - 1);
-            counter = 0; 
+            counter = 0;
             car[0].style.transition = 'transform 0.5s ease-out';
             box[0].style.transition = 'transform 0.5s ease-out';
             move();
@@ -48,12 +51,12 @@ function move() {
 }
 
 function disableTransition(disableIndex) {
-    car.forEach((item,index) =>  {
+    car.forEach((item, index) => {
         if (index !== disableIndex) {
             item.style.transition = "none";
         }
     });
-    box.forEach((item,index) => {
+    box.forEach((item, index) => {
         if (index !== disableIndex) {
             item.style.transition = "none";
         }
@@ -70,12 +73,12 @@ if (car.length > 0) {
 }
 
 // jQuery input focus effects
-$(document).ready(function() {
-    $("input, select").on("focus", function() {
+$(document).ready(function () {
+    $("input, select").on("focus", function () {
         $(this).parent().find(".input-group-text").css("border-color", "#80bdff");
     });
-    
-    $("input, select").on("blur", function() {
+
+    $("input, select").on("blur", function () {
         $(this).parent().find(".input-group-text").css("border-color", "#ced4da");
     });
 });
@@ -134,7 +137,7 @@ function showNotification(message) {
     notification.className = 'notification';
     notification.textContent = message;
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.remove();
     }, 2000);
@@ -144,7 +147,7 @@ function showNotification(message) {
 document.addEventListener('DOMContentLoaded', updateCartCount);
 
 // Product filtering
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const params = new URLSearchParams(window.location.search);
     const gender = params.get("gender");
     const brand = params.get("brand");
@@ -183,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-window.onscroll = function() {
+window.onscroll = function () {
     let button = document.getElementById("backToTop");
     if (document.documentElement.scrollTop > 300) {
         button.style.display = "block";
