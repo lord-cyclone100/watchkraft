@@ -946,7 +946,7 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© 2025 WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
+            <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
         </div>
     </footer>
 
@@ -981,6 +981,9 @@
         // Mobile Menu Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
+
+        // Dynamically update the year in the footer
+        document.querySelector(".year").textContent = new Date().getFullYear();
         
         mobileMenu.addEventListener('click', () => {
             mobileMenu.classList.toggle('active');

@@ -1,5 +1,8 @@
 let cart = JSON.parse(localStorage.getItem('cart')) || [];  // Load cart from localStorage
 
+// Dynamically update the year in the footer
+document.querySelector(".year").textContent = new Date().getFullYear();
+
 // Updating cart count on page reload
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
@@ -48,7 +51,7 @@ function loadCartItems() {
 
     cartContainer.innerHTML = '';
 
-    if (cart.length === 0) { 
+    if (cart.length === 0) {
         document.querySelector('.cart-page').innerHTML = `
             <div class="empty-cart-container">
                 <img src="./media/empty-cart.svg" alt="Empty Cart">
@@ -56,15 +59,15 @@ function loadCartItems() {
                 <button class="return-to-shop" onclick="window.location.href='Product.html'">Return to Shop</button>
             </div>
         `;
-        updateTotal(); 
+        updateTotal();
         return;
     }
-    
+
     cart.forEach((item, index) => {
         const row = document.createElement('tr');
 
         // Ensure item.price is valid before using .toFixed()
-        let price = parseFloat(item.price) || 0; 
+        let price = parseFloat(item.price) || 0;
         let subtotal = price * (item.quantity || 1);
 
         row.innerHTML = `
@@ -124,7 +127,7 @@ function updateQuantity(index, value) {
         loadCartItems();
         updateCartCount();
     } else {
-        loadCartItems(); 
+        loadCartItems();
     }
 }
 
