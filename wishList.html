@@ -60,28 +60,11 @@
       <!-- Copyright Section -->
       <div class="footer-bottom">
         <p>&copy; 2025 Watch Collection. All rights reserved.</p>
-      </div>
-    </footer>
 
-    <button id="backToTop" onclick="scrollToTop()">↑</button>
+    </div>
+</footer>
+<script src="shopCart.js"></script>
+<script src="wishList.js"></script>
 
-    <script>
-      window.onscroll = function () {
-        let button = document.getElementById("backToTop");
-        if (
-          document.body.scrollTop > 300 ||
-          document.documentElement.scrollTop > 300
-        ) {
-          button.style.display = "block";
-        } else {
-          button.style.display = "none";
-        }
-      };
+</body>
 
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
-    <script src="wishList.js"></script>
-  </body>
-</html>

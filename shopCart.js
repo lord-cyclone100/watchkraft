@@ -1,11 +1,12 @@
-let cart = JSON.parse(localStorage.getItem('cart')) || [];  //Loading cart - localstorage
+let cart = JSON.parse(localStorage.getItem('cart')) || [];  // Load cart from localStorage
 
-//Updating the cart while page-reload
+// Updating cart count on page reload
 function updateCartCount() {
     const cartCount = document.getElementById('cart-count');
     cartCount.textContent = cart.length;
 }
 
+// Adding items to cart
 function addToCart(product) {
     const existingProduct = cart.find(item => item.name === product.name);
 
@@ -17,15 +18,17 @@ function addToCart(product) {
 
     localStorage.setItem('cart', JSON.stringify(cart));
     updateCartCount();
+    loadCartItems();
 }
 
+// Handle product button clicks
 document.addEventListener('click', (event) => {
-    if (event.target.matches('.product button')) {
+    if (event.target.matches('.add-to-cart-btn')) {  // Now only Add to Cart button works
         const productElement = event.target.closest('.product');
 
         const product = {
             name: productElement.querySelector('h2').textContent,
-            price: parseFloat(productElement.querySelector('p').textContent.replace('$', '')),
+            price: parseFloat(productElement.querySelector('p').textContent.replace('$', '')) || 0,
             brand: productElement.querySelector('.brand').textContent,
             image: productElement.querySelector('img').src
         };
@@ -35,13 +38,13 @@ document.addEventListener('click', (event) => {
 });
 
 
-//cart count on page-reload
+// Update cart count on page load
 updateCartCount();
 
-
 function loadCartItems() {
+    cart = JSON.parse(localStorage.getItem('cart')) || []; // Reload latest cart data
     const cartContainer = document.querySelector('.cart-page table tbody');
-    if (!cartContainer) return; 
+    if (!cartContainer) return;
 
     cartContainer.innerHTML = '';
 
@@ -59,13 +62,18 @@ function loadCartItems() {
     
     cart.forEach((item, index) => {
         const row = document.createElement('tr');
+
+        // Ensure item.price is valid before using .toFixed()
+        let price = parseFloat(item.price) || 0; 
+        let subtotal = price * (item.quantity || 1);
+
         row.innerHTML = `
             <td>
                 <div class="product-cart">
                     <img src="${item.image}" alt="${item.name}">
                     <div>
                         <p>${item.name}</p>
-                        <small>Price: $${item.price.toFixed(2)}</small>
+                        <small>Price: $${price.toFixed(2)}</small>
                         <br>
                         <a href="#" onclick="removeFromCart(${index})">Remove</a>
                     </div>
@@ -78,17 +86,18 @@ function loadCartItems() {
                     <button onclick="changeQuantity(${index}, 1)">+</button>
                 </div>
             </td>
-            <td>$${(item.price * item.quantity).toFixed(2)}</td>
+            <td>$${subtotal.toFixed(2)}</td>  <!-- No more errors! -->
         `;
+
         cartContainer.appendChild(row);
     });
 
     updateTotal();
 }
 
-//updating total price
+// Update total price
 function updateTotal() {
-    const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    const subtotal = cart.reduce((total, item) => total + ((parseFloat(item.price) || 0) * (item.quantity || 1)), 0);
     const delivery = cart.length > 0 ? 39.00 : 0;
     const total = subtotal + delivery;
 
@@ -97,7 +106,7 @@ function updateTotal() {
     document.querySelector('.total-value').textContent = `$${total.toFixed(2)}`;
 }
 
-//Changing quantity
+// Changing quantity
 function changeQuantity(index, amount) {
     if (cart[index].quantity + amount >= 1) {
         cart[index].quantity += amount;
@@ -106,6 +115,7 @@ function changeQuantity(index, amount) {
         updateCartCount();
     }
 }
+
 function updateQuantity(index, value) {
     const newValue = parseInt(value);
     if (!isNaN(newValue) && newValue >= 1) {
@@ -118,7 +128,7 @@ function updateQuantity(index, value) {
     }
 }
 
-//removing product item
+// Removing product from cart
 function removeFromCart(index) {
     cart.splice(index, 1);
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -126,32 +136,34 @@ function removeFromCart(index) {
     updateCartCount();
 }
 
-
-if (document.querySelector('.cart-page')) {
+// Load cart items when DOM is loaded
+document.addEventListener("DOMContentLoaded", () => {
     loadCartItems();
-}
-
-document.querySelector('.checkout-btn').addEventListener('click',()=>{
-    document.getElementById('payment-modal').style.display='block';
 });
 
-document.querySelector('.close-btn').addEventListener('click',()=>{
-    document.getElementById('payment-modal').style.display='none';
+// Checkout modal handling
+document.querySelector('.checkout-btn').addEventListener('click', () => {
+    document.getElementById('payment-modal').style.display = 'block';
+});
+
+document.querySelector('.close-btn').addEventListener('click', () => {
+    document.getElementById('payment-modal').style.display = 'none';
 });
 
 window.onclick = function (event) {
-    const modal=document.getElementById('payment-modal');
-    if (event.target===modal) {
-        modal.style.display='none';
+    const modal = document.getElementById('payment-modal');
+    if (event.target === modal) {
+        modal.style.display = 'none';
     }
 };
 
+// Show payment forms
 function showATMForm() {
-    document.getElementById('atm-form').style.display='block';
-    document.getElementById('online-form').style.display='none';
+    document.getElementById('atm-form').style.display = 'block';
+    document.getElementById('online-form').style.display = 'none';
 }
 
 function showOnlineForm() {
-    document.getElementById('online-form').style.display='block';
-    document.getElementById('atm-form').style.display='none';
+    document.getElementById('online-form').style.display = 'block';
+    document.getElementById('atm-form').style.display = 'none';
 }
