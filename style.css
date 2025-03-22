@@ -87,6 +87,61 @@ nav a > img{
     width: 100%;
 }
 
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fbc02d;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+.cart-icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+.cart-icon a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #fbc02d;
+    color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -847,7 +902,7 @@ body {
     position: absolute;
     top: -8px;
     right: -8px;
-    background: #f00;
+    /* background: #f00; */
     color: white;
     width: 20px;
     height: 20px;
