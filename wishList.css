@@ -120,3 +120,99 @@
         margin-top: 5px;
     }
 }
+
+
+/* darkmode button */
+
+/* Toggle Switch */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #222;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .product-card {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+}
+
+.dark-mode .navbar {
+    background-color: #222;
+}
+
+.dark-mode button {
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode .empty-wishList-container{
+    background-color: #444;
+}
+.dark-mode .wishList-page{
+    background-color: #444;
+
+}
+
+.dark-mode .return-to-shop {
+    background-color: grey;
+    border: #121212;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.return-to-shop:hover {
+    background-color: #fc8506da;
+}
