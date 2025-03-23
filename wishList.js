@@ -133,9 +133,99 @@ function removeFromWishList(productName) {
     updateWishlistButtons();
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const sortDropdown = document.getElementById("sort-options");
+    const inStockCheckbox = document.getElementById("in-stock-filter");
+
+    sortDropdown.addEventListener("change", updateWishlistDisplay);
+    inStockCheckbox.addEventListener("change", updateWishlistDisplay);
+});
+
+// Function to update wishlist based on sorting and filtering
+function updateWishlistDisplay() {
+    let filteredWishlist = [...wishList];
+
+    // Apply in-stock filter
+    if (document.getElementById("in-stock-filter").checked) {
+        filteredWishlist = filteredWishlist.filter(item => item.stock > 0);
+    }
+
+    // Apply sorting
+    const sortOption = document.getElementById("sort-options").value;
+    if (sortOption === "price-low") {
+        filteredWishlist.sort((a, b) => a.price - b.price);
+    } else if (sortOption === "price-high") {
+        filteredWishlist.sort((a, b) => b.price - a.price);
+    } else if (sortOption === "stock") {
+        filteredWishlist.sort((a, b) => b.stock - a.stock);
+    }
+
+    renderWishlist(filteredWishlist);
+}
+
+// Function to render the wishlist items dynamically
+function renderWishlist(items) {
+    const wishListContainer = document.querySelector(".wishList-page");
+    wishListContainer.innerHTML = "";
+
+    if (items.length === 0) {
+        wishListContainer.innerHTML = `
+        <div class="empty-wishList-container">
+            <img src="./media/empty-cart.svg" alt="Empty Wish List">
+            <p class="empty-cart">Your wish list feels empty 🛒</p>
+            <button class="return-to-shop" onclick="window.location.href='Product.html'">Return to Shop</button>
+        </div>
+    `;
+        return;
+    }
+
+    items.forEach(item => {
+        const row = document.createElement("div");
+        row.classList.add("wishlist-item");
+        row.innerHTML = `
+            <div class="product-wishlist">
+                <img src="${item.image}" alt="${item.name}">
+                <div>
+                    <p>${item.name}</p>
+                    <small>Price: $${item.price.toFixed(2)}</small>
+                    <p class="stock-status">${item.stock > 0 ? "🟢 In Stock" : "🔴 Out of Stock"}</p>
+                    <br>
+                    <button class="cart-btn" data-name="${item.name}" ${item.stock === 0 ? "disabled" : ""}>Add to Cart</button>
+                    <button class="remove-wishlist-btn" data-name="${item.name}">Remove</button>
+                </div>
+            </div>
+        `;
+        wishListContainer.appendChild(row);
+    });
+
+    // Add event listeners to buttons
+    document.querySelectorAll('.remove-wishlist-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const productName = event.target.getAttribute('data-name');
+            removeFromWishList(productName);
+        });
+    });
+
+    document.querySelectorAll('.cart-btn').forEach(button => {
+        button.addEventListener('click', (event) => {
+            const productName = event.target.getAttribute('data-name');
+            const product = wishList.find(item => item.name === productName);
+            if (product) {
+                addToCart(product);
+                removeFromWishList(productName);
+            }
+        });
+    });
+}
+
+// Ensure the wishlist is updated on page load
+document.addEventListener("DOMContentLoaded", updateWishlistDisplay);
+
 // Ensure wishlist loads on page load
 if (document.querySelector('.wishList-page')) {
     loadWishListItems();
+    updateWishlistDisplay();
+
 }
 
 /* 🚀 DARK MODE FUNCTIONALITY 🚀 */
