@@ -192,3 +192,27 @@ input:checked + .slider:before {
     color: white;
 }
 
+.dark-mode .empty-wishList-container{
+    background-color: #444;
+}
+.dark-mode .wishList-page{
+    background-color: #444;
+
+}
+
+.dark-mode .return-to-shop {
+    background-color: grey;
+    border: #121212;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.return-to-shop:hover {
+    background-color: #fc8506da;
+}
