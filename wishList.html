@@ -50,6 +50,19 @@
           </button>
       </div>
   </nav>
+  <div class="wishlist-controls">
+    <label for="sort-options">Sort by:</label>
+    <select id="sort-options">
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="stock">Stock Status</option>
+    </select>
+
+    <label>
+        <input type="checkbox" id="in-stock-filter"> Show only in-stock
+    </label>
+</div>
+
     <div class="my-wishList wishList-page"></div>
 
     <!-- Footer Section -->
