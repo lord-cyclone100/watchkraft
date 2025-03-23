@@ -169,7 +169,13 @@ function renderWishlist(items) {
     wishListContainer.innerHTML = "";
 
     if (items.length === 0) {
-        wishListContainer.innerHTML = `<p>Your wishlist is empty or no matching items found.</p>`;
+        wishListContainer.innerHTML = `
+        <div class="empty-wishList-container">
+            <img src="./media/empty-cart.svg" alt="Empty Wish List">
+            <p class="empty-cart">Your wish list feels empty 🛒</p>
+            <button class="return-to-shop" onclick="window.location.href='Product.html'">Return to Shop</button>
+        </div>
+    `;
         return;
     }
 
