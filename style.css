@@ -129,7 +129,7 @@ nav a > img{
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: #fbc02d;
+    background-color: rgb(255, 187, 0);
     color: #000;
     font-family: Arial, Helvetica, sans-serif;
     border-radius: 50%;
@@ -957,18 +957,21 @@ h1, h2, h3 {
 /* CTA Button */
 .cta-button {
     padding: 1rem 2.5rem;
-    background: #c5a47e;
+    background: linear-gradient(orange, rgb(232, 74, 74));
     color: #000;
     text-decoration: none;
     font-weight: 700;
     letter-spacing: 1px;
     border-radius: 30px;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 24px rgba(197, 164, 126, 0.3);
+    box-shadow: 0 8px 24px rgba(177, 149, 116, 0.3);
 }
 
 .cta-button:hover {
-    background: #d4b593;
+    background: #d11a0d;
+    color:white;
+    font-weight: 800;
+
     transform: translateY(-2px);
 }
 
