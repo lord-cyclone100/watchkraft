@@ -569,3 +569,91 @@ footer {
 #backToTop:hover {
     background-color: #555;
 }
+
+
+/* Dark Mode Toggle Switch */
+.theme-switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 25px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc; /* Light mode background */
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* When checkbox is checked (Dark Mode) */
+input:checked + .slider {
+    background-color: #fbc02d; /* Yellow color for dark mode */
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+    background-color: #222; /* Dark mode button color */
+}
+
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode .cart-page {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: #222;
+}
+
+.dark-mode button {
+    background-color: #444;
+    color: white;
+}
+
+.dark-mode .total-price table {
+    background-color: #1e1e1e;
+    border-top: 3px solid #fbc02d;
+    color: white;
+}
+
+.dark-mode .checkout-btn {
+    background-color: #fbc02d;
+    color: black;
+}
+
+.dark-mode .return-to-shop {
+    background-color: grey;
+    border: #121212;
+    color: white;
+    transition: background-color 0.3s ease;
+}
