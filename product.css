@@ -389,13 +389,17 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+
 .filters .container {
     max-width: 1200px;
     margin: 0 auto;
+    max-height: 100px;
+    display: flex;
 }
 
 .search-wrapper {
     position: relative;
+    top: 28px;
     max-width: 500px;
     margin: 0 auto;
 }
@@ -493,4 +497,97 @@ footer {
 
 #backToTop:hover {
     background-color: #555;
+}
+
+
+/* 1️⃣ Button Styling */
+.product button {
+    background-color: #fbc02d;
+    color: #333;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Added subtle shadow */
+}
+
+.product button:hover {
+    background-color: #e5a917;
+    transform: scale(1.05); /* Slight scale effect */
+}
+
+/* Wishlist Button */
+.wishlist-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: red;
+    transition: transform 0.3s;
+}
+
+.wishlist-btn:hover {
+    transform: scale(1.2);
+}
+
+/* 2️⃣ Improved Spacing & Alignment */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Improved consistency */
+    gap: 2rem;
+    padding: 8rem 4rem 4rem;
+}
+
+.filters {
+    padding: 2rem 4rem; /* Increased padding for readability */
+}
+
+/* 3️⃣ Search Bar Enhancement */
+.search-wrapper {
+    max-width: 600px; /* Increased width */
+}
+
+#dropdownButton {
+    top: 0.99rem;
+    right: 15px; /* Proper alignment */
+    position: center;
+}
+
+/* 4️⃣ Hover Effects */
+.product img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover img {
+    transform: scale(1.05); /* Subtle hover effect */
+}
+
+.product button {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* 5️⃣ Theme Toggle Visibility */
+.theme-toggle {
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+/* 6️⃣ Font Adjustments */
+.product .brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+}
+
+.product h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.product p {
+    margin-bottom: 0.5rem; /* Improved spacing */
 }
