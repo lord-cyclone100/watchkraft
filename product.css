@@ -389,13 +389,17 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
+
 .filters .container {
     max-width: 1200px;
     margin: 0 auto;
+    max-height: 100px;
+    display: flex;
 }
 
 .search-wrapper {
     position: relative;
+    top: 28px;
     max-width: 500px;
     margin: 0 auto;
 }
