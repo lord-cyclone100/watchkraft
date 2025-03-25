@@ -106,7 +106,7 @@
             <p class="stock-status"></p> <!-- Stock availability -->
             <button class="add-to-cart-btn">Add to Cart</button>
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
-
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
         </div>
         <div class="product" 
             data-gender="female" 
@@ -123,7 +123,7 @@
             <p class="stock-status"></p> <!-- Stock availability -->
             <button class="add-to-cart-btn">Add to Cart</button>
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
-            
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
         </div>
         <div class="product" 
             data-gender="unisex" 
@@ -140,6 +140,7 @@
             <p class="stock-status"></p> <!-- Stock availability -->
             <button class="add-to-cart-btn">Add to Cart</button>
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
         </div>
         <div class="product" 
             data-gender="male" 
@@ -156,6 +157,7 @@
             <p class="stock-status"></p> <!-- Stock availability -->
             <button class="add-to-cart-btn">Add to Cart</button>
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
+            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
         </div>
     </section>
     <!-- Footer Section -->
@@ -256,6 +258,10 @@
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function redirectToCheckout() {
+            window.location.href = 'checkout.html';
         }
         
     </script>
