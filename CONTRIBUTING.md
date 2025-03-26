@@ -1,4 +1,4 @@
-<img src="./unnamed.png">
+<img src="/assets/unnamed.png">
 
 # Contributing to Watch Kraft
 

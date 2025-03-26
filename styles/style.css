@@ -15,7 +15,7 @@ html, body{
 
 @font-face{
     font-family: 'domine';
-    src: url('./media/fonts/Domine/Domine-VariableFont_wght.ttf');
+    src: url('/styles/fonts/Domine/Domine-VariableFont_wght.ttf');
 }
 
 
