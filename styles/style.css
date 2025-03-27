@@ -141,6 +141,11 @@ nav a > img{
     font-size: 14px;
 }
 
+.login{
+    color: white;
+    text-decoration: none;
+}
+
 
 @keyframes fadeInUp {
     from {

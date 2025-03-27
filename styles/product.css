@@ -164,6 +164,11 @@ nav ul li a:hover {
     font-weight: 800;
 }
 
+.login{
+    color: white;
+    text-decoration: none;
+}
+
 .hamburger{
     display: none;
 }
