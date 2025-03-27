@@ -54,9 +54,9 @@ function loadCartItems() {
     if (cart.length === 0) {
         document.querySelector('.cart-page').innerHTML = `
             <div class="empty-cart-container">
-                <img src="./media/empty-cart.svg" alt="Empty Cart">
+                <img src="/assets/empty-cart.svg" alt="Empty Cart">
                 <p class="empty-cart">Your cart feels empty 🛒</p>
-                <button class="return-to-shop" onclick="window.location.href='Product.html'">Return to Shop</button>
+                <button class="return-to-shop" onclick="window.location.href='/markups/Product.html'">Return to Shop</button>
             </div>
         `;
         updateTotal();

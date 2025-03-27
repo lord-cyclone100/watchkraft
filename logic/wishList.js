@@ -64,9 +64,9 @@ function loadWishListItems() {
     if (wishList.length === 0) {
         wishListContainer.innerHTML = `
             <div class="empty-wishList-container">
-                <img src="./media/empty-cart.svg" alt="Empty Wish List">
+                <img src="/assets/empty-cart.svg" alt="Empty Wish List">
                 <p class="empty-cart">Your wish list feels empty 🛒</p>
-                <button class="return-to-shop" onclick="window.location.href='Product.html'">Return to Shop</button>
+                <button class="return-to-shop" onclick="window.location.href='/markups/Product.html'">Return to Shop</button>
             </div>
         `;
         return;
@@ -171,7 +171,7 @@ function renderWishlist(items) {
     if (items.length === 0) {
         wishListContainer.innerHTML = `
         <div class="empty-wishList-container">
-            <img src="./media/empty-cart.svg" alt="Empty Wish List">
+            <img src="/assets/empty-cart.svg" alt="Empty Wish List">
             <p class="empty-cart">Your wish list feels empty 🛒</p>
             <button class="return-to-shop" onclick="window.location.href='Product.html'">Return to Shop</button>
         </div>

@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Video background control
     const video = document.querySelector('.bg-video');
     const videoSources = [
-        'media/watch-video.mp4',
-        'media/watch-video-backup.mp4'
+        '/assets/watch-video.mp4',
+        '/assets/watch-video-backup.mp4'
     ];
 
     // Fallback video loading
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         // Navigate after transition
         setTimeout(() => {
-            window.location.href = 'index.html';
+            window.location.href = '/index.html';
         }, 500);
     });
 });
