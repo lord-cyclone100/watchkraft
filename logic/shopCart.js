@@ -54,9 +54,9 @@ function loadCartItems() {
     if (cart.length === 0) {
         document.querySelector('.cart-page').innerHTML = `
             <div class="empty-cart-container">
-                <img src="./media/empty-cart.svg" alt="Empty Cart">
+                <img src="/assets/empty-cart.svg" alt="Empty Cart">
                 <p class="empty-cart">Your cart feels empty 🛒</p>
-                <button class="return-to-shop" onclick="window.location.href='Product.html'">Return to Shop</button>
+                <button class="return-to-shop" onclick="window.location.href='/markups/Product.html'">Return to Shop</button>
             </div>
         `;
         updateTotal();
@@ -170,3 +170,29 @@ function showOnlineForm() {
     document.getElementById('online-form').style.display = 'block';
     document.getElementById('atm-form').style.display = 'none';
 }
+
+
+
+
+/* 🚀 DARK MODE FUNCTIONALITY 🚀 */
+document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const body = document.body;
+
+    // Check if dark mode is enabled in localStorage
+    if (localStorage.getItem("theme") === "dark") {
+        body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+    }
+
+    // Toggle dark mode on switch change
+    darkModeToggle.addEventListener("change", function () {
+        if (darkModeToggle.checked) {
+            body.classList.add("dark-mode");
+            localStorage.setItem("theme", "dark");
+        } else {
+            body.classList.remove("dark-mode");
+            localStorage.setItem("theme", "light");
+        }
+    });
+});

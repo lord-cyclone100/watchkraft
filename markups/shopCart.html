@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg" href="./media/favicon.svg">
+    <link rel="icon" type="image/svg" href="/assets/favicon.svg">
     <title>Shopping Cart &mdash; WatchKraft</title>
-    <link rel="stylesheet" href="./shopCart.css" />
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="/styles/shopCart.css" />
+    <link rel="stylesheet" href="/styles/footer.css">
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -15,32 +15,37 @@
   <body>
     <!-- Navbar -->
     <nav>
-      <a href="landing.html">
-        <img src="./media/logo-light.svg" alt="" />
+      <a href="/markups/landing.html">
+        <img src="/assets/logo-light.svg" alt="" />
       </a>
       <div class="nav-head">
         <ul>
           <li>
-            <h1><a href="index.html">HOME</a></h1>
+            <h1><a href="/index.html">HOME</a></h1>
           </li>
           <li>
-            <h1><a href="service.html">SERVICE</a></h1>
+            <h1><a href="/markups/service.html">SERVICE</a></h1>
           </li>
           <li>
-            <h1><a href="Product.html">PRODUCTS</a></h1>
+            <h1><a href="/markups/Product.html">PRODUCTS</a></h1>
           </li>
           <li>
-            <h1><a href="wishList.html">WISH LIST</a></h1>
+            <h1><a href="/markups/wishList.html">WISH LIST</a></h1>
           </li>
           <li>
-            <h1><a href="contact.html">CONTACT US</a></h1>
+            <h1><a href="/markups/contact.html">CONTACT US</a></h1>
           </li>
+          <label class="theme-switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider"></span>
+        </label>
+        
         </ul>
       </div>
       <div class="nav-icons">
         <header>
           <div class="cart-icon">
-            <a href="shopCart.html">
+            <a href="/markups/shopCart.html">
               <i class="ri-shopping-cart-2-line"></i>
             </a>
             <span id="cart-count">0</span>
@@ -51,7 +56,7 @@
       <div class="hamburger">
         <button type="" class="menu-button">
           <img
-            src="./media/burger-menu-svgrepo-com.svg"
+            src="/assets/burger-menu-svgrepo-com.svg"
             alt=""
             class="menu-icon"
           />
@@ -133,19 +138,19 @@
               <h2>Quick Links</h2>
               <ul>
                   <li><a href="#">Home</a></li>
-                  <li><a href="Product.html">Shop</a></li>
-                  <li><a href="shopCart.html">Deals</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="/markups/Product.html">Shop</a></li>
+                  <li><a href="/markups/shopCart.html">Deals</a></li>
+                  <li><a href="/markups/contact.html">Contact</a></li>
               </ul>
           </div>
 
           <div class="footer-section customer-service">
               <h2>Customer Service</h2>
               <ul>
-                  <li><a href="service.html">FAQs</a></li>
-                  <li><a href="service.html">Return Policy</a></li>
-                  <li><a href="service.html">Privacy Policy</a></li>
-                  <li><a href="service.html">Terms & Conditions</a></li>
+                  <li><a href="/markups/service.html">FAQs</a></li>
+                  <li><a href="/markups/service.html">Return Policy</a></li>
+                  <li><a href="/markups/service.html">Privacy Policy</a></li>
+                  <li><a href="/markups/service.html">Terms & Conditions</a></li>
               </ul>
           </div>
 
@@ -186,6 +191,6 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
-    <script src="shopCart.js"></script>
+    <script src="/logic/shopCart.js"></script>
   </body>
 </html>

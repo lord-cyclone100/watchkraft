@@ -15,7 +15,7 @@ html, body{
 
 @font-face{
     font-family: 'domine';
-    src: url('./media/fonts/Domine/Domine-VariableFont_wght.ttf');
+    src: url('/styles/fonts/Domine/Domine-VariableFont_wght.ttf');
 }
 
 
@@ -170,7 +170,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: yellow; /* Adjust hover color if needed */
+    color: rgb(255, 247, 0); /* Adjust hover color if needed */
     transition-duration: 1s;
     font-weight: 800;
 }
@@ -208,7 +208,7 @@ nav ul li a:hover {
 }
 
 .filters select:hover {
-    border-color: #c5a47e;
+    border-color: #d48123;
 }
 
 
@@ -532,7 +532,7 @@ body {
     padding: 50px 5%;
     gap: 50px;
     max-width: 1200px;
-    margin: auto;
+    margin: 4rem auto;
 }
 
 /* Left Side: Contact Info */
@@ -671,10 +671,10 @@ body {
 .footer-section h2 {
     font-size: 1.4rem;
     margin-bottom: 10px;
-    border-bottom: 2px solid #fdd835;
+    border-bottom: 2px solid #f79a05;
     padding-bottom: 5px;
     display: inline-block;
-    color: #c5a47e;
+    color: #ddc22c;
     letter-spacing: 1px;
 }
 
@@ -691,23 +691,31 @@ body {
     text-decoration: none;
     color: white;
     transition: 0.3s;
+    font-size: small;
 }
 
 .footer-section ul li a:hover {
-    color: #fdd835;
+    color: #f7ca05;
+    font-size: medium;
+    font-weight: 500;
 }
 
 .social-icons a {
     text-decoration: none;
-    color: white;
+    color: rgb(237, 231, 231);
     font-size: 18px;
     margin-right: 10px;
     transition: 0.3s;
+    opacity:0.7
 }
 
 .social-icons a:hover {
-    color: #fdd835;
+    /*color: rgb(255, 187, 0);*/
+    transform: scale(1);
+    font-weight: 700;
+    opacity: 1;
 }
+
 
 .footer-bottom {
     text-align: center;
@@ -977,20 +985,21 @@ h1, h2, h3 {
     transform: translateY(-2px);
 }
 
+
 .footer-section a {
-    color: #e0e0e0;
+   /* color: #e6dcdc;
     transition: color 0.3s ease;
 }
 
 .footer-section a:hover {
-    color: #c5a47e;
+    /*color: #be8d56;*/
 }
 
 #backToTop {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333;
+    background-color: rgb(52, 50, 50);
     color: white;
     border: none;
     width: 40px;
