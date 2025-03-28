@@ -1,4 +1,9 @@
 /* Wishlist Page Styling */
+.login{
+    color: white;
+    text-decoration: none;
+}
+
 .wishList-page {
     max-width: 900px;
     margin: 80px auto 20px;

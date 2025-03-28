@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg" href="/assets/favicon.svg">
@@ -8,110 +9,119 @@
     <link rel="stylesheet" href="/styles/shopCart.css" />
     <link rel="stylesheet" href="/styles/wishList.css" />
     <link rel="stylesheet" href="/styles/footer.css">
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
     <!-- Navbar -->
     <nav>
-      <a href="/markups/landing.html">
-          <img src="/assets/logo-light.svg" alt="">
-      </a>
-      <div class="nav-head">
-          <ul>
-              <li><h1><a href="/index.html">HOME</a></h1></li>
-              <li><h1><a href="/markups/service.html">SERVICE</a></h1></li>
-              <li><h1><a href="/markups/Product.html">PRODUCTS</a></h1></li>
-              <li><h1><a href="/markups/wishList.html">WISH LIST</a></h1></li>
-              <li><h1><a href="/markups/contact.html">CONTACT US</a></h1></li>
-              <label class="theme-switch">
-                <input type="checkbox" id="darkModeToggle">
-                <span class="slider"></span>
-             </label>
-            
-          </ul>
-      </div>
-      <div class="nav-icons">
-          <header>
-              <div class="cart-icon">
-                  <a href="/markups/shopCart.html">
-                      <i class="ri-shopping-cart-2-line"></i>
-                  </a>
-                  <span id="cart-count">0</span>
-              </div>
-          </header>            
-          <i class="ri-user-line"></i>
-      </div>
-      <div class="hamburger">
-          <button type="" class="menu-button">
-              <img src="/assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
-          </button>
-      </div>
-  </nav>
-  <div class="wishlist-controls">
-    <label for="sort-options">Sort by:</label>
-    <select id="sort-options">
-        <option value="price-low">Price: Low to High</option>
-        <option value="price-high">Price: High to Low</option>
-        <option value="stock">Stock Status</option>
-    </select>
+        <a href="/markups/landing.html">
+            <img src="/assets/logo-light.svg" alt="">
+        </a>
+        <div class="nav-head">
+            <ul>
+                <li>
+                    <h1><a href="/index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="/markups/service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="/markups/Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="/markups/wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="/markups/contact.html">CONTACT US</a></h1>
+                </li>
+                <label class="theme-switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
 
-    <label>
-        <input type="checkbox" id="in-stock-filter"> Show only in-stock
-    </label>
-</div>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <header>
+                <div class="cart-icon">
+                    <a href="/markups/shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>
+            <a href="/markups/login.html" class="login">
+                <i class="ri-user-line"></i>
+            </a>
+        </div>
+        <div class="hamburger">
+            <button type="" class="menu-button">
+                <img src="/assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+            </button>
+        </div>
+    </nav>
+    <div class="wishlist-controls">
+        <label for="sort-options">Sort by:</label>
+        <select id="sort-options">
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="stock">Stock Status</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="in-stock-filter"> Show only in-stock
+        </label>
+    </div>
 
     <div class="my-wishList wishList-page"></div>
 
     <!-- Footer Section -->
     <footer class="footer">
-      <div class="container">
-          <div class="footer-section about">
-              <h2>About Us</h2>
-              <p>Welcome to our store! We provide the best quality products at the best prices.</p>
-          </div>
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
 
-          <div class="footer-section links">
-              <h2>Quick Links</h2>
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="/markups/Product.html">Shop</a></li>
-                  <li><a href="/markups/shopCart.html">Deals</a></li>
-                  <li><a href="/markups/contact.html">Contact</a></li>
-              </ul>
-          </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/markups/Product.html">Shop</a></li>
+                    <li><a href="/markups/shopCart.html">Deals</a></li>
+                    <li><a href="/markups/contact.html">Contact</a></li>
+                </ul>
+            </div>
 
-          <div class="footer-section customer-service">
-              <h2>Customer Service</h2>
-              <ul>
-                  <li><a href="/markups/service.html">FAQs</a></li>
-                  <li><a href="/markups/service.html">Return Policy</a></li>
-                  <li><a href="/markups/service.html">Privacy Policy</a></li>
-                  <li><a href="/markups/service.html">Terms & Conditions</a></li>
-              </ul>
-          </div>
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="/markups/service.html">FAQs</a></li>
+                    <li><a href="/markups/service.html">Return Policy</a></li>
+                    <li><a href="/markups/service.html">Privacy Policy</a></li>
+                    <li><a href="/markups/service.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
 
-          <div class="footer-section social">
-              <h2>Follow Us</h2>
-              <div class="social-icons">
-                  <a href="#"><i class="ri-facebook-fill"></i></a>
-                  <a href="#"><i class="ri-twitter-x-line"></i></a>
-                  <a href="#"><i class="ri-instagram-line"></i></a>
-                  <a href="#"><i class="ri-youtube-fill"></i></i></a>
-              </div>
-          </div>
-      </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
+                </div>
+            </div>
+        </div>
 
-      <!-- Copyright Section -->
-      <div class="footer-bottom">
-          <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
-      </div>
-  </footer>
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
+        </div>
+    </footer>
 
-<script src="/logic/shopCart.js"></script>
-<script src="/logic/wishList.js"></script>
+    <script src="/logic/shopCart.js"></script>
+    <script src="/logic/wishList.js"></script>
 
 </body>
-
