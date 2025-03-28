@@ -216,7 +216,15 @@ nav ul li a:hover {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
 .product-cart {
     display: flex;
     flex-wrap: wrap;
@@ -308,12 +316,13 @@ th:last-child {
 
 /*Price*/
 .price-container {
-    display: flex;
-    justify-content: flex-end;
+    text-align: right;
+    margin-top: 20px;
 }
 .checkout-btn {
+    font-size: 18px;
+    padding: 10px 20px;
     width: 100%; 
-    padding: 12px;
     background-color: #fbc02d; 
     color: #000;
     border: none;

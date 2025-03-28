@@ -240,6 +240,16 @@ input:checked+.slider:before {
     /* Keeps it above other elements */
 }
 
+.wishlist-controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.wishlist-controls label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
 /* Label Styling */
 .wishlist-controls label {
     font-size: 16px;
@@ -268,6 +278,11 @@ input:checked+.slider:before {
     margin-left: 10px;
     transform: scale(1.2);
     cursor: pointer;
+}
+
+.my-wishList {
+    padding: 20px;
+    text-align: center;
 }
 
 /* Responsive Design */

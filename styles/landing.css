@@ -24,6 +24,7 @@ body {
     text-align: center;
     color: white;
     padding-top: 25vh;
+    padding: 20px;
 }
 
 .logo {
@@ -38,6 +39,16 @@ body {
     text-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
 
+h1.title {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+p.subtitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
 .cta-btn {
     display: inline-flex;
     align-items: center;
@@ -47,6 +58,8 @@ body {
     text-decoration: none;
     border-radius: 50px;
     transition: transform 0.3s ease;
+    font-size: 18px;
+    padding: 12px 24px;
 }
 
 .cta-btn:hover {
