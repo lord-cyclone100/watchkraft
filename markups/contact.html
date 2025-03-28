@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" href="/assets/favicon.svg">
     <title>Contact Us &mdash; WatchKraft</title>
-    <link rel="stylesheet" href="/styles/contact.css"> 
+    <link rel="stylesheet" href="/styles/contact.css">
     <link rel="stylesheet" href="/styles/style.css">
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <style>
         .contact-container {
             display: flex;
@@ -17,7 +18,8 @@
             padding: 20px;
         }
 
-        .contact-info, .contact-form {
+        .contact-info,
+        .contact-form {
             flex: 1;
             min-width: 300px;
         }
@@ -32,7 +34,8 @@
             font-size: 16px;
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input,
+        .form-group textarea {
             width: 100%;
             padding: 10px;
             font-size: 14px;
@@ -44,6 +47,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -53,11 +57,21 @@
         </a>
         <div class="nav-head">
             <ul>
-                <li><h1><a href="/index.html">HOME</a></h1></li>
-                <li><h1><a href="/markups/service.html">SERVICE</a></h1></li>
-                <li><h1><a href="/markups/Product.html">PRODUCTS</a></h1></li>
-                <li><h1><a href="/markups/wishList.html">WISH LIST</a></h1></li>
-                <li><h1><a href="/markups/contact.html">CONTACT US</a></h1></li>
+                <li>
+                    <h1><a href="/index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="/markups/service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="/markups/Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="/markups/wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="/markups/contact.html">CONTACT US</a></h1>
+                </li>
             </ul>
         </div>
         <div class="nav-icons">
@@ -68,8 +82,8 @@
                     </a>
                     <span id="cart-count">0</span>
                 </div>
-            </header>            
-            <a href="/markups/login.html" class="login">            
+            </header>
+            <a href="/markups/login.html" class="login">
                 <i class="ri-user-line"></i>
             </a>
         </div>
@@ -85,8 +99,9 @@
     <div class="contact-container">
         <div class="contact-info">
             <h2>Get in <span class="highlight">Touch</span></h2>
-            <p class="description">We're here to assist you with any inquiries about our luxury timepieces. Feel free to reach out to us.</p>
-            
+            <p class="description">We're here to assist you with any inquiries about our luxury timepieces. Feel free to
+                reach out to us.</p>
+
             <div class="info-item">
                 <i class="fas fa-map-marker-alt"></i>
                 <div>
@@ -115,7 +130,8 @@
                 <i class="fas fa-clock"></i>
                 <div>
                     <h3>Opening Hours</h3>
-                    <p>Monday - Friday: 10:00 AM - 7:00 PM<br>Saturday: 11:00 AM - 6:00 PM<br>Sunday: By Appointment Only</p>
+                    <p>Monday - Friday: 10:00 AM - 7:00 PM<br>Saturday: 11:00 AM - 6:00 PM<br>Sunday: By Appointment
+                        Only</p>
                 </div>
             </div>
         </div>
@@ -203,7 +219,7 @@
     <button id="backToTop" onclick="scrollToTop()">↑</button>
 
     <script>
-        window.onscroll = function() {
+        window.onscroll = function () {
             let button = document.getElementById("backToTop");
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 button.style.display = "block";
@@ -219,4 +235,5 @@
     <script src="/logic/script.js"></script>
     <script src="/logic/shopCart.js"></script>
 </body>
+
 </html>
