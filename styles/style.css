@@ -722,6 +722,7 @@ body {
     max-width: 1100px;
     margin: auto;
     flex-wrap: wrap;
+    padding: 0 20px;
 }
 
 .footer-section {
@@ -731,8 +732,8 @@ body {
 }
 
 .footer-section h2 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     border-bottom: 2px solid #f79a05;
     padding-bottom: 5px;
     display: inline-block;
@@ -760,6 +761,12 @@ body {
     color: #f7ca05;
     font-size: medium;
     font-weight: 500;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
 }
 
 .social-icons a {
@@ -944,6 +951,14 @@ body {
         flex-direction: column;
         gap: 1rem;
     }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
 }
 
 /* Cart Notification */
@@ -995,6 +1010,13 @@ body {
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
 .hero {

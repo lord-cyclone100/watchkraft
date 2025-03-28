@@ -1,196 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg" href="/assets/favicon.svg">
-    <title>Shopping Cart &mdash; WatchKraft</title>
-    <link rel="stylesheet" href="/styles/shopCart.css" />
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <nav>
-      <a href="/markups/landing.html">
-        <img src="/assets/logo-light.svg" alt="" />
-      </a>
-      <div class="nav-head">
-        <ul>
-          <li>
-            <h1><a href="/index.html">HOME</a></h1>
-          </li>
-          <li>
-            <h1><a href="/markups/service.html">SERVICE</a></h1>
-          </li>
-          <li>
-            <h1><a href="/markups/Product.html">PRODUCTS</a></h1>
-          </li>
-          <li>
-            <h1><a href="/markups/wishList.html">WISH LIST</a></h1>
-          </li>
-          <li>
-            <h1><a href="/markups/contact.html">CONTACT US</a></h1>
-          </li>
-          <label class="theme-switch">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider"></span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg" href="/assets/favicon.svg">
+  <title>Shopping Cart &mdash; WatchKraft</title>
+  <link rel="stylesheet" href="/styles/shopCart.css" />
+  <link rel="stylesheet" href="/styles/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav>
+    <a href="/markups/landing.html">
+      <img src="/assets/logo-light.svg" alt="" />
+    </a>
+    <div class="nav-head">
+      <ul>
+        <li>
+          <h1><a href="/index.html">HOME</a></h1>
+        </li>
+        <li>
+          <h1><a href="/markups/service.html">SERVICE</a></h1>
+        </li>
+        <li>
+          <h1><a href="/markups/Product.html">PRODUCTS</a></h1>
+        </li>
+        <li>
+          <h1><a href="/markups/wishList.html">WISH LIST</a></h1>
+        </li>
+        <li>
+          <h1><a href="/markups/contact.html">CONTACT US</a></h1>
+        </li>
+        <label class="theme-switch">
+          <input type="checkbox" id="darkModeToggle">
+          <span class="slider"></span>
         </label>
-        
-        </ul>
+
+      </ul>
+    </div>
+    <div class="nav-icons">
+      <header>
+        <div class="cart-icon">
+          <a href="/markups/shopCart.html">
+            <i class="ri-shopping-cart-2-line"></i>
+          </a>
+          <span id="cart-count">0</span>
+        </div>
+      </header>
+      <i class="ri-user-line"></i>
+    </div>
+    <div class="hamburger">
+      <button type="" class="menu-button">
+        <img src="/assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon" />
+      </button>
+    </div>
+  </nav>
+
+  <!-- Cart item details -->
+  <div class="small-container cart-page">
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="price-container">
+      <div class="total-price">
+        <table>
+          <tr>
+            <td>Subtotal</td>
+            <td class="subtotal-value">$0.00</td>
+          </tr>
+          <tr>
+            <td>Delivery charge</td>
+            <td class="delivery-value">$0.00</td>
+          </tr>
+          <tr>
+            <td>Total Price</td>
+            <td class="total-value">$0.00</td>
+          </tr>
+        </table>
+        <button class="checkout-btn">Proceed to Checkout</button>
       </div>
-      <div class="nav-icons">
-        <header>
-          <div class="cart-icon">
-            <a href="/markups/shopCart.html">
-              <i class="ri-shopping-cart-2-line"></i>
-            </a>
-            <span id="cart-count">0</span>
-          </div>
-        </header>
-        <i class="ri-user-line"></i>
-      </div>
-      <div class="hamburger">
-        <button type="" class="menu-button">
-          <img
-            src="/assets/burger-menu-svgrepo-com.svg"
-            alt=""
-            class="menu-icon"
-          />
+    </div>
+  </div>
+
+  <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Select Payment Method</h2>
+      <div class="payment-options">
+        <button class="payment-btn" onclick="showATMForm()">
+          💳 ATM Card
+        </button>
+        <button class="payment-btn" onclick="showOnlineForm()">
+          🌐 Online Payment
         </button>
       </div>
-    </nav>
 
-    <!-- Cart item details -->
-    <div class="small-container cart-page">
-      <table>
-        <thead>
-          <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-      <div class="price-container">
-        <div class="total-price">
-          <table>
-            <tr>
-              <td>Subtotal</td>
-              <td class="subtotal-value">$0.00</td>
-            </tr>
-            <tr>
-              <td>Delivery charge</td>
-              <td class="delivery-value">$0.00</td>
-            </tr>
-            <tr>
-              <td>Total Price</td>
-              <td class="total-value">$0.00</td>
-            </tr>
-          </table>
-          <button class="checkout-btn">Proceed to Checkout</button>
+      <div id="atm-form" class="payment-form hidden">
+        <h3>Enter ATM Card Details</h3>
+        <input type="text" placeholder="Card Number" required />
+        <input type="text" placeholder="Card Holder Name" required />
+        <input type="text" placeholder="Expiry Date (MM/YY)" required />
+        <input type="password" placeholder="CVV" required />
+        <button class="pay-btn">Pay Now</button>
+      </div>
+
+      <div id="online-form" class="payment-form hidden">
+        <h3>Proceed to Online Payment</h3>
+        <button class="pay-btn">Pay with UPI/Net Banking</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-section about">
+        <h2>About Us</h2>
+        <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+      </div>
+
+      <div class="footer-section links">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="/markups/Product.html">Shop</a></li>
+          <li><a href="/markups/shopCart.html">Deals</a></li>
+          <li><a href="/markups/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section customer-service">
+        <h2>Customer Service</h2>
+        <ul>
+          <li><a href="/markups/service.html">FAQs</a></li>
+          <li><a href="/markups/service.html">Return Policy</a></li>
+          <li><a href="/markups/service.html">Privacy Policy</a></li>
+          <li><a href="/markups/service.html">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section social">
+        <h2>Follow Us</h2>
+        <div class="social-icons">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-x-line"></i></a>
+          <a href="#"><i class="ri-instagram-line"></i></a>
+          <a href="#"><i class="ri-youtube-fill"></i></i></a>
         </div>
       </div>
     </div>
 
-    <div id="payment-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Select Payment Method</h2>
-        <div class="payment-options">
-          <button class="payment-btn" onclick="showATMForm()">
-            💳 ATM Card
-          </button>
-          <button class="payment-btn" onclick="showOnlineForm()">
-            🌐 Online Payment
-          </button>
-        </div>
-
-        <div id="atm-form" class="payment-form hidden">
-          <h3>Enter ATM Card Details</h3>
-          <input type="text" placeholder="Card Number" required />
-          <input type="text" placeholder="Card Holder Name" required />
-          <input type="text" placeholder="Expiry Date (MM/YY)" required />
-          <input type="password" placeholder="CVV" required />
-          <button class="pay-btn">Pay Now</button>
-        </div>
-
-        <div id="online-form" class="payment-form hidden">
-          <h3>Proceed to Online Payment</h3>
-          <button class="pay-btn">Pay with UPI/Net Banking</button>
-        </div>
-      </div>
+    <!-- Copyright Section -->
+    <div class="footer-bottom">
+      <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
     </div>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-      <div class="container">
-          <div class="footer-section about">
-              <h2>About Us</h2>
-              <p>Welcome to our store! We provide the best quality products at the best prices.</p>
-          </div>
-
-          <div class="footer-section links">
-              <h2>Quick Links</h2>
-              <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="/markups/Product.html">Shop</a></li>
-                  <li><a href="/markups/shopCart.html">Deals</a></li>
-                  <li><a href="/markups/contact.html">Contact</a></li>
-              </ul>
-          </div>
-
-          <div class="footer-section customer-service">
-              <h2>Customer Service</h2>
-              <ul>
-                  <li><a href="/markups/service.html">FAQs</a></li>
-                  <li><a href="/markups/service.html">Return Policy</a></li>
-                  <li><a href="/markups/service.html">Privacy Policy</a></li>
-                  <li><a href="/markups/service.html">Terms & Conditions</a></li>
-              </ul>
-          </div>
-
-          <div class="footer-section social">
-              <h2>Follow Us</h2>
-              <div class="social-icons">
-                  <a href="#"><i class="ri-facebook-fill"></i></a>
-                  <a href="#"><i class="ri-twitter-x-line"></i></a>
-                  <a href="#"><i class="ri-instagram-line"></i></a>
-                  <a href="#"><i class="ri-youtube-fill"></i></i></a>
-              </div>
-          </div>
-      </div>
-
-      <!-- Copyright Section -->
-      <div class="footer-bottom">
-          <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
-      </div>
   </footer>
 
 
-    <button id="backToTop" onclick="scrollToTop()">↑</button>
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
 
-    <script>
-      window.onscroll = function () {
-        let button = document.getElementById("backToTop");
-        if (
-          document.body.scrollTop > 300 ||
-          document.documentElement.scrollTop > 300
-        ) {
-          button.style.display = "block";
-        } else {
-          button.style.display = "none";
-        }
-      };
-
-      function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+  <script>
+    window.onscroll = function () {
+      let button = document.getElementById("backToTop");
+      if (
+        document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300
+      ) {
+        button.style.display = "block";
+      } else {
+        button.style.display = "none";
       }
-    </script>
-    <script src="/logic/shopCart.js"></script>
-  </body>
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+  <script src="/logic/shopCart.js"></script>
+</body>
+
 </html>
