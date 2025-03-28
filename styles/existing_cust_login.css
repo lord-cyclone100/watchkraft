@@ -144,3 +144,25 @@ body {
   height: 33px;
   width: 33px;
 }
+
+
+.back-button {
+  display: block;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  background: #ffc107;
+  color: #000;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.back-button:hover {
+  background: #e0a800;
+  color: white;
+  text-decoration: none;
+}
