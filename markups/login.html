@@ -19,7 +19,6 @@
         .container {
             max-width: 900px;
             background: #1e1e1e;
-            padding: 4rem;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
         }
@@ -41,15 +40,24 @@
         .btn-primary:hover {
             background: #e0a800;
         }
+        .btn-facebook, .btn-google {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 10px;
+        }
         .btn-facebook {
             background: #1877f2;
             color: white;
-            padding: 14px;
         }
         .btn-google {
             background: #db4437;
             color: white;
-            padding: 14px;
         }
         .logo-img {
             filter: brightness(1);
@@ -68,9 +76,37 @@
         .footer a:hover {
             text-decoration: underline;
         }
+        .back-button {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            text-align: center;
+            background: #ffc107;
+            color: #000;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .back-button:hover {
+            background: #e0a800;
+            color: white;
+            text-decoration: none;
+        }
+        select.form-control {
+            padding: 2px;
+            font-size: 16px;
+            width: 100%;
+            text-align: center;
+        }
+        .btn-facebook i, .btn-google i {
+            margin-right: 8px;
+        }
     </style>
+    <script src="https://kit.fontawesome.com/d8373423c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <a href="/markups/landing.html" class="back-button"><i class="fa-solid fa-arrow-left"></i> Back</a>
     <div class="container mt-5">
         <h1>Login to Your Account</h1>
         <p>Access your personalized dashboard and manage your preferences.</p>
@@ -116,58 +152,12 @@
                     </div>
                     <button type="submit" class="btn btn-primary btn-block mb-4">Create your account</button>
                     <div class="text-center my-4">OR</div>
-                    <button class="btn btn-facebook btn-block mb-3"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
+                    <button class="btn btn-facebook btn-block"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
                     <button class="btn btn-google btn-block"><i class="fab fa-google"></i> Continue with Google</button>
                     <p class="text-center mt-4">Already Registered? <a href="/markups/existing_cust_login.html">Login</a></p>
                 </form>
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-section about">
-                <h2>About Us</h2>
-                <p>Welcome to WatchKraft! We provide the best quality products at the best prices.</p>
-            </div>
-
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">Deals</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section customer-service">
-                <h2>Customer Service</h2>
-                <ul>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">Return Policy</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section social">
-                <h2>Follow Us</h2>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman</b></p>
-        </div>
-    </footer>
-
-
-
-    <script src="/logic/script.js"></script>
 </body>
 </html>
