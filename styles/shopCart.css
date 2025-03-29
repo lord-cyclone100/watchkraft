@@ -16,8 +16,7 @@ nav ul li a:hover {
     color: yellow;
 }
 
-
-nav{
+nav {
     width: 100%;
     height: 10vh;
     background: rgba(10, 10, 10, 0.95);
@@ -35,37 +34,36 @@ nav{
     box-sizing: border-box;
 }
 
-nav a > img{
+nav a>img {
     height: 3.5em;
     margin-right: 1rem;
-    
 }
 
-.logos{
+.logos {
     display: flex;
     justify-content: center;
     gap: 1.5em;
 }
 
-.logos > i{
+.logos>i {
     font-size: 1.6em;
     color: #eee;
     cursor: pointer;
 }
 
-.nav-head > ul{
+.nav-head>ul {
     display: flex;
     gap: 2.2rem;
     white-space: nowrap;
 }
 
-.nav-head > ul > li{
+.nav-head>ul>li {
     list-style: none;
     position: relative;
 }
 
-.nav-head > ul > li::after {
-    content: '';
+.nav-head>ul>li::after {
+    content: "";
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -75,7 +73,7 @@ nav a > img{
     transition: width 0.3s ease;
 }
 
-.nav-head > ul > li:hover::after {
+.nav-head>ul>li:hover::after {
     width: 100%;
 }
 
@@ -107,11 +105,13 @@ nav a > img{
     color: #fff;
     cursor: pointer;
 }
+
 .cart-icon {
     position: relative;
     display: inline-block;
     cursor: pointer;
 }
+
 .cart-icon a {
     text-decoration: none;
     color: inherit;
@@ -138,13 +138,14 @@ nav a > img{
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-.nav-head > ul > li > h1{
+.nav-head>ul>li>h1 {
     text-transform: capitalize;
     font-family: domine;
     font-weight: 400;
@@ -154,38 +155,43 @@ nav a > img{
 }
 
 nav ul li a {
-    color: white; /* Match other menu items */
-    text-decoration: none; /* Remove underline */
+    color: white;
+    /* Match other menu items */
+    text-decoration: none;
+    /* Remove underline */
 }
 
 nav ul li a:hover {
-    color: yellow; /* Adjust hover color if needed */
+    color: yellow;
+    /* Adjust hover color if needed */
     transition-duration: 1s;
     font-weight: 800;
 }
 
-.hamburger{
+.hamburger {
     display: none;
 }
 
 @media (max-width: 800px) {
-    .nav-head{
+    .nav-head {
         display: none;
     }
-    .hamburger{
-        display:block;
-        .menu-icon{
+
+    .hamburger {
+        display: block;
+
+        .menu-icon {
             height: 1.2rem;
             width: 1.3rem;
         }
-        .menu-button{
+
+        .menu-button {
             border-radius: 2px;
             background-color: rgba(87, 86, 91, 0.6);
             border: none;
         }
     }
 }
-
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -204,19 +210,26 @@ nav ul li a:hover {
     .nav-icons {
         margin-top: 0.5rem;
     }
-    
 }
 
 /* cart item */
 .cart-page {
     margin: 80px auto;
-    
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 20px;
 }
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
 .product-cart {
     display: flex;
     flex-wrap: wrap;
@@ -230,10 +243,10 @@ table {
     object-fit: contain;
     background-color: transparent;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
-    
 }
+
 .product-cart img:hover {
-    transform: translateY(-2px); 
+    transform: translateY(-2px);
 }
 
 th {
@@ -243,18 +256,22 @@ th {
     background: #fb972d;
     font-weight: normal;
 }
+
 td {
     padding: 10px 5px;
 }
+
 td input {
     width: 40px;
     height: 30px;
     padding: 5px;
 }
+
 td a {
     color: #fc8506;
     font-size: 12px;
 }
+
 .quantity-control {
     display: flex;
     align-items: center;
@@ -288,33 +305,37 @@ td a {
 /* price section */
 .total-price {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: stretch;
     width: 100%;
     max-width: 520px;
-    
 }
+
 .total-price table {
     border-top: 3px solid #fb972d;
     width: 100%;
     max-width: 520px;
 }
+
 td:last-child {
     text-align: right;
 }
+
 th:last-child {
     text-align: right;
 }
 
 /*Price*/
 .price-container {
-    display: flex;
-    justify-content: flex-end;
+    text-align: right;
+    margin-top: 20px;
 }
+
 .checkout-btn {
-    width: 100%; 
-    padding: 12px;
-    background-color: #fbc02d; 
+    font-size: 18px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: #fbc02d;
     color: #000;
     border: none;
     border-radius: 6px;
@@ -324,6 +345,7 @@ th:last-child {
     transition: background-color 0.3s ease;
     margin-top: 12px;
 }
+
 .checkout-btn:hover {
     background-color: #f09206ae;
 }
@@ -335,7 +357,7 @@ th:last-child {
 }
 
 .empty-cart-container img {
-    width: 340px; 
+    width: 340px;
     height: auto;
     margin-bottom: 10px;
 }
@@ -362,7 +384,7 @@ th:last-child {
 }
 
 .modal {
-    display: none; 
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -436,7 +458,7 @@ th:last-child {
 }
 
 .pay-btn {
-    background-color: #4CAF50;
+    background-color: #4caf50;
     color: white;
     padding: 12px 20px;
     font-size: 16px;
@@ -559,7 +581,7 @@ footer {
     border: none;
     width: 40px;
     height: 40px;
-    border-radius: 50%; 
+    border-radius: 50%;
     font-size: 20px;
     cursor: pointer;
     display: none;
@@ -569,7 +591,6 @@ footer {
 #backToTop:hover {
     background-color: #555;
 }
-
 
 /* Dark Mode Toggle Switch */
 .theme-switch {
@@ -592,7 +613,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc; /* Light mode background */
+    background-color: #ccc;
+    /* Light mode background */
     transition: 0.4s;
     border-radius: 25px;
 }
@@ -610,15 +632,16 @@ footer {
 }
 
 /* When checkbox is checked (Dark Mode) */
-input:checked + .slider {
-    background-color: #fbc02d; /* Yellow color for dark mode */
+input:checked+.slider {
+    background-color: #fbc02d;
+    /* Yellow color for dark mode */
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(24px);
-    background-color: #222; /* Dark mode button color */
+    background-color: #222;
+    /* Dark mode button color */
 }
-
 
 /* Dark Mode Styles */
 .dark-mode {

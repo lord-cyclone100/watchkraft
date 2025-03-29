@@ -4,6 +4,7 @@
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -22,12 +23,14 @@
 
 .product:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Loading Animation */
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .loading-spinner {
@@ -54,7 +57,7 @@
     height: 35px;
     border-radius: 50%;
     cursor: pointer;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all 0.2s ease;
     position: relative;
 }
@@ -62,7 +65,7 @@
 .color-option.active {
     transform: scale(1.1);
     border-color: #fbc02d;
-    box-shadow: 0 0 10px rgba(251,192,45,0.3);
+    box-shadow: 0 0 10px rgba(251, 192, 45, 0.3);
 }
 
 .color-option::after {
@@ -86,6 +89,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

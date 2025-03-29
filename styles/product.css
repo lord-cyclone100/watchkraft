@@ -201,6 +201,12 @@ nav ul li a:hover {
     margin-top: 10rem;
 }
 
+.product-grid h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 .product {
     background: white;
     padding: 1.5rem;
@@ -211,6 +217,7 @@ nav ul li a:hover {
     display: block;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .product:hover {
@@ -233,7 +240,7 @@ nav ul li a:hover {
     font-size: 1.2rem;
     font-weight: bold;
     color: #fbc02d;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .product button {
@@ -402,6 +409,11 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0);
 }
 
+.filters h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fdd835;
+}
 
 .filters .container {
     max-width: 1200px;
