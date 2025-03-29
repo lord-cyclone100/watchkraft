@@ -987,14 +987,19 @@
         // Mobile Menu Toggle
         const mobileMenu = document.querySelector('.mobile-menu');
         const navLinks = document.querySelector('.nav-links');
-
+        
         // Dynamically update the year in the footer
         document.querySelector(".year").textContent = new Date().getFullYear();
-        
-        mobileMenu.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
+        if(!mobileMenu || ! navLinks){
+            console.log("Element not found");
+        }
+        else{
+                mobileMenu.addEventListener('click', () => {
+                console.log(mobileMenu);
+                mobileMenu.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
         
         // Testimonial Slider
         let slideIndex = 1;
@@ -1008,7 +1013,20 @@
             let i;
             let slides = document.getElementsByClassName("testimonial-slide");
             let dots = document.getElementsByClassName("dot");
-            
+            let errorShown = true;
+            //Check if no elements found
+            if (slides.length === 0 || dots.length === 0) {
+                if (!errorShown) { 
+                    console.error("Slides or dots not found!");
+                    errorShown = true; 
+                }
+                return;
+            }
+            errorShown = false;
+            // Ensure slideIndex stays within bounds
+            if (n > slides.length) slideIndex = 1;
+            if (n < 1) slideIndex = slides.length;
+
             for (i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active");
             }
@@ -1022,26 +1040,56 @@
         }
         
         // Auto Slide
-        setInterval(() => {
-            slideIndex++;
-            if (slideIndex > document.getElementsByClassName("testimonial-slide").length) {
-                slideIndex = 1;
-            }
+        document.addEventListener("DOMContentLoaded", () => {
+            let slideIndex = 1;
             showSlides(slideIndex);
-        }, 5000);
+
+            setInterval(() => {
+                slideIndex++;
+                showSlides(slideIndex);
+            }, 5000);
+        });
+        // setInterval(() => {
+        //     slideIndex++;
+        //     if (slideIndex > document.getElementsByClassName("testimonial-slide").length) {
+        //         slideIndex = 1;
+        //     }
+        //     showSlides(slideIndex);
+        // }, 5000);
         
         // Theme Toggle
         const themeToggle = document.querySelector('.theme-toggle');
         const themeIcon = document.querySelector('.theme-icon');
-        
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            if (document.body.classList.contains('dark-mode')) {
+        const servicesSection = document.querySelector('.services-section');
+        const sectionHeaderTheme = document.querySelector('.section-header h2');
+        let whiteMode = true;
+        themeToggle.addEventListener('click',()=>{
+            console.log("themeToggle");
+            if(whiteMode == true){
                 themeIcon.textContent = '☀️';
-            } else {
+                themeToggle.style.backgroundColor = "white";
+                servicesSection.style.backgroundColor = "black";
+                sectionHeaderTheme.style.color = "white";
+                whiteMode = false;
+            }
+            else{
                 themeIcon.textContent = '🌙';
+                themeToggle.style.backgroundColor = "black";
+                servicesSection.style.backgroundColor = "white";
+                sectionHeaderTheme.style.color = "black";
+                whiteMode = true;
             }
         });
+        
+        // themeToggle.addEventListener('click', () => {
+        //     document.body.classList.toggle('dark-mode');
+        //     if (document.body.classList.contains('dark-mode')) {
+        //         themeIcon.textContent = '☀️';
+        //     } else {
+        //         themeIcon.textContent = '🌙';
+        //     }
+        //     console.log("darkmode");
+        // });
         
         // Scroll Animation
         window.addEventListener('scroll', () => {
