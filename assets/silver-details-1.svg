@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Stainless Steel Case -->
+    <path d="M200 80C123.2 80 60 143.2 60 220C60 296.8 123.2 360 200 360C276.8 360 340 296.8 340 220C340 143.2 276.8 80 200 80Z" fill="#C0C0C0"/>
+    
+    <!-- Brushed Metal Bezel -->
+    <path d="M200 95C128.8 95 70 153.8 70 225C70 296.2 128.8 355 200 355C271.2 355 330 296.2 330 225C330 153.8 271.2 95 200 95Z" stroke="#A0A0A0" stroke-width="10"/>
+    
+    <!-- Sleek Dial -->
+    <circle cx="200" cy="220" r="100" fill="#1A1A1A"/>
+    
+    <!-- Modern Markers -->
+    <g stroke="#FFFFFF" stroke-width="4">
+        <rect x="195" y="130" width="10" height="20" rx="2"/>
+        <rect x="265" y="165" width="10" height="20" rx="2" transform="rotate(45 265 165)"/>
+        <rect x="295" y="210" width="20" height="10" rx="2"/>
+        <rect x="265" y="265" width="10" height="20" rx="2" transform="rotate(-45 265 265)"/>
+        <rect x="195" y="300" width="10" height="20" rx="2"/>
+        <rect x="125" y="265" width="10" height="20" rx="2" transform="rotate(45 125 265)"/>
+        <rect x="95" y="210" width="20" height="10" rx="2"/>
+        <rect x="125" y="165" width="10" height="20" rx="2" transform="rotate(-45 125 165)"/>
+    </g>
+    
+    <!-- Chrome Hands -->
+    <g transform="rotate(45 200 220)">
+        <path d="M200 220L200 160" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+        <path d="M200 220L240 180" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round"/>
+        <path d="M200 220L200 110" stroke="#00FFFF" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Crown -->
+    <rect x="235" y="200" width="15" height="40" rx="3" fill="#D0D0D0"/>
+    
+    <!-- Hex Screws -->
+    <path d="M150 150a4 4 0 1 1 8 0 4 4 0 0 1-8 0" fill="#808080"/>
+    <path d="M250 150a4 4 0 1 1 8 0 4 4 0 0 1-8 0" fill="#808080"/>
+    <path d="M250 290a4 4 0 1 1 8 0 4 4 0 0 1-8 0" fill="#808080"/>
+    <path d="M150 290a4 4 0 1 1 8 0 4 4 0 0 1-8 0" fill="#808080"/>
+    
+    <!-- Metal Band -->
+    <rect x="80" y="220" width="40" height="20" fill="#B0B0B0"/>
+    <rect x="280" y="220" width="40" height="20" fill="#B0B0B0"/>
+</svg>

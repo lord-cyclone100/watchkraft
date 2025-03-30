@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- 18K Gold Case -->
+    <path d="M200 80C123.2 80 60 143.2 60 220C60 296.8 123.2 360 200 360C276.8 360 340 296.8 340 220C340 143.2 276.8 80 200 80Z" fill="#FFD700"/>
+    
+    <!-- Engraved Bezel -->
+    <path d="M200 95C128.8 95 70 153.8 70 225C70 296.2 128.8 355 200 355C271.2 355 330 296.2 330 225C330 153.8 271.2 95 200 95Z" stroke="#D4AF37" stroke-width="10"/>
+    
+    <!-- Black Lacquer Dial -->
+    <circle cx="200" cy="220" r="100" fill="#0A0A0A"/>
+    
+    <!-- Diamond Markers -->
+    <g fill="#FFD700">
+        <path d="M200 130l5 10-5-5-5 5 5-10z"/>
+        <path d="M270 170l7 7-7-3-3 3 3-7z"/>
+        <path d="M310 220l10 0-5-5 5 5z"/>
+        <path d="M270 270l7-7-3 3 3 7-7-3z"/>
+        <path d="M200 310l5-10-5 5-5-5 5 10z"/>
+        <path d="M130 270l-7-7 7 3 3-3-3 7z"/>
+        <path d="M90 220l-10 0 5-5-5 5z"/>
+        <path d="M130 170l-7 7 3-3-3-7 7 3z"/>
+    </g>
+    
+    <!-- Rose Gold Hands -->
+    <g transform="rotate(45 200 220)">
+        <path d="M200 220L200 160" stroke="#B76E79" stroke-width="8" stroke-linecap="round"/>
+        <path d="M200 220L240 180" stroke="#B76E79" stroke-width="6" stroke-linecap="round"/>
+        <path d="M200 220L200 110" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    
+    <!-- Jeweled Crown -->
+    <rect x="235" y="200" width="15" height="40" rx="3" fill="#D4AF37"/>
+    <circle cx="242.5" cy="210" r="3" fill="#FF0000"/>
+    
+    <!-- Gold Band -->
+    <rect x="80" y="220" width="40" height="20" fill="#D4AF37"/>
+    <rect x="280" y="220" width="40" height="20" fill="#D4AF37"/>
+</svg>

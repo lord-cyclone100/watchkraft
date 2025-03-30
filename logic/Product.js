@@ -2,6 +2,81 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeFilters();
 });
 
+const products = [
+    {
+        id: 1,
+        name: "Copper Alloy",
+        price: 299.99,
+        brand: "Casio",
+        type: "Analog",
+        material: "Metal",
+        colors: ["gold", "silver"],
+        stock: 5,
+        description: "A luxurious timepiece crafted from premium copper alloy, featuring a stainless steel case and genuine leather band.",
+        specs: [
+            "Case Diameter: 42mm",
+            "Water Resistance: 50m",
+            "Movement: Japanese Quartz",
+            "Band Width: 22mm"
+        ],
+        images: ["../assets/copper-watch.svg","../assets/copper-details-1.svg"]
+    },
+    {
+        id: 2,
+        name: "Silver Spark",
+        price: 349.99,
+        brand: "Titan",
+        type: "Analog",
+        material: "Metal",
+        colors: ["black", "silver"],
+        stock: 5,
+        description: "A luxurious timepiece crafted from premium silver, featuring a stainless steel case and genuine leather band.",
+        specs: [
+            "Case Diameter: 42mm",
+            "Water Resistance: 50m",
+            "Movement: Japanese Quartz",
+            "Band Width: 22mm"
+        ],
+        images: ["../assets/silver-watch.svg","../assets/silver-details-1.svg"]
+    },
+    {
+        id: 3,
+        name: "Leather Ivory",
+        price: 279.99,
+        brand: "Helix",
+        type: "Digital",
+        material: "Plastic",
+        colors: ["black"],
+        stock: 5,
+        description: "A luxurious timepiece crafted from premium Leather, featuring a plastic case and genuine leather band.",
+        specs: [
+            "Case Diameter: 42mm",
+            "Water Resistance: 50m",
+            "Movement: Japanese Quartz",
+            "Band Width: 22mm"
+        ],
+        images: ["/assets/leather-watch.svg","../assets/leather-details-1.svg"]
+    },
+    {
+        id: 4,
+        name: "Gold Noir",
+        price: 399.99,
+        brand: "Casio",
+        type: "Analog",
+        material: "Leather",
+        colors: ["gold"],
+        stock: 5,
+        description: "A luxurious timepiece crafted from premium Gold, featuring a stainless steel case and genuine leather band.",
+        specs: [
+            "Case Diameter: 42mm",
+            "Water Resistance: 50m",
+            "Movement: Japanese Quartz",
+            "Band Width: 22mm"
+        ],
+        images: ["/assets/gold-watch.svg","../assets/gold-details-1.svg"]
+    }
+];
+
 function initializeFilters() {
     // Initialize event listeners
     const filterSelectors = [
@@ -131,5 +206,28 @@ document.addEventListener("DOMContentLoaded", function () {
             body.classList.remove("dark-mode");
             localStorage.setItem("theme", "light");
         }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Add click handlers to product elements
+    document.querySelectorAll('.product').forEach(product => {
+        const productId = product.dataset.id;
+        
+        // Click handler for image
+        product.querySelector('img').addEventListener('click', () => {
+            window.location.href = `productDetails.html?id=${productId}`;
+        });
+
+        // Click handler for product title
+        product.querySelector('h2').addEventListener('click', () => {
+            window.location.href = `productDetails.html?id=${productId}`;
+        });
+
+        // Update Buy Now button
+        const buyBtn = product.querySelector('.buy-now-btn');
+        buyBtn.onclick = () => {
+            window.location.href = `productDetails.html?id=${productId}`;
+        };
     });
 });
