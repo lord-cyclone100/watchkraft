@@ -1,0 +1,139 @@
+.product-details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 8rem 4rem 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.product-gallery .main-image img {
+    width: 100%;
+    max-height: 600px;
+    object-fit: contain;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.thumbnails img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnails img.active {
+    border-color: #fbc02d;
+}
+
+.product-info h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.product-info .brand {
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.product-info .price {
+    font-size: 2.4rem;
+    color: #fbc02d;
+    margin: 2rem 0;
+}
+
+.stock-status {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1.5rem 0;
+}
+
+.stock-status.in-stock {
+    color: #28a745;
+}
+
+.stock-status.out-of-stock {
+    color: #dc3545;
+}
+
+.product-actions {
+    display: flex;
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+#add-to-cart-btn, #buy-now-btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#add-to-cart-btn {
+    background-color: #fbc02d;
+    color: #333;
+}
+
+#buy-now-btn {
+    background-color: #333;
+    color: white;
+}
+
+.product-description {
+    margin: 3rem 0;
+}
+
+.product-description h2, .product-specs h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    border-bottom: 2px solid #fbc02d;
+    padding-bottom: 0.5rem;
+}
+
+.product-specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-specs li {
+    padding: 1rem;
+    margin: 0.8rem 0;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+/* Dark Mode */
+.dark-mode .product-info h1,
+.dark-mode .product-description h2,
+.dark-mode .product-specs h2 {
+    color: #fff;
+}
+
+.dark-mode .product-specs li {
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .product-details-container {
+        grid-template-columns: 1fr;
+        padding: 6rem 2rem 2rem;
+    }
+    
+    .product-info h1 {
+        font-size: 2rem;
+    }
+}

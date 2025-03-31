@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/product.css">
+    <link rel="stylesheet" href="/styles/animations.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="../styles/product-details.css">
+    <link rel="icon" type="image/svg" href="../assets/favicon.svg">
+    <title>Timeless Masterpieces &mdash; WatchKraft</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <a href="/markups/landing.html">
+            <img src="/assets/logo-light.svg" alt="">
+        </a>
+        <div class="nav-head">
+            <ul>
+                <li><h1><a href="/index.html">HOME</a></h1></li>
+                <li><h1><a href="/markups/service.html">SERVICE</a></h1></li>
+                <li><h1><a href="/markups/Product.html">PRODUCTS</a></h1></li>
+                <li><h1><a href="/markups/wishList.html">WISH LIST</a></h1></li>
+                <li><h1><a href="/markups/contact.html">CONTACT US</a></h1></li>
+                <label class="theme-switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                 </label>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <header>
+                <div class="cart-icon">
+                    <a href="/markups/shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>            
+            <a href="/markups/login.html" class="login">            
+                <i class="ri-user-line"></i>
+            </a>
+        </div>
+        <div class="hamburger">
+            <button type="" class="menu-button">
+                <img src="/assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+            </button>
+        </div>
+    </nav>
+
+    <main class="product-details-container">
+        <section class="product-gallery">
+            <div class="main-image">
+                <img id="main-image" src="">
+            </div>
+            <div class="thumbnails"></div>
+        </section>
+
+        <section class="product-info">
+            <h1 id="product-name"></h1>
+            <p class="brand" id="product-brand"></p>
+            <p class="price" id="product-price"></p>
+            <p class="stock-status" id="product-stock"></p>
+            
+            <div class="product-actions">
+                <button id="add-to-cart-btn">Add to Cart</button>
+                <button id="buy-now-btn">Buy Now</button>
+            </div>
+
+            <div class="product-description">
+                <h2>Description</h2>
+                <p id="product-description"></p>
+            </div>
+
+            <div class="product-specs">
+                <h2>Specifications</h2>
+                <ul id="product-specs"></ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="/markups/Product.html">Shop</a></li>
+                    <li><a href="/markups/shopCart.html">Deals</a></li>
+                    <li><a href="/markups/contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="/markups/service.html">FAQs</a></li>
+                    <li><a href="/markups/service.html">Return Policy</a></li>
+                    <li><a href="/markups/service.html">Privacy Policy</a></li>
+                    <li><a href="/markups/service.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
+        </div>
+    </footer>
+    
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script src="../logic/product.js"></script>
+    <script src="../logic/shopCart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+            const product = products.find(p => p.id == productId);
+
+            if (!product) {
+                window.location.href = '/markups/Product.html';
+                return;
+            }
+
+            // Populate product details
+            document.getElementById('product-name').textContent = product.name;
+            document.getElementById('product-brand').textContent = product.brand;
+            document.getElementById('product-price').textContent = `$${product.price.toFixed(2)}`;
+            document.getElementById('product-description').textContent = product.description;
+
+            // Stock status
+            const stockStatus = document.getElementById('product-stock');
+            stockStatus.textContent = product.stock > 0 ? '🟢 In Stock' : '🔴 Out of Stock';
+            stockStatus.className = product.stock > 0 ? 'stock-status in-stock' : 'stock-status out-of-stock';
+
+            // Specifications
+            const specsList = document.getElementById('product-specs');
+            specsList.innerHTML = product.specs.map(spec => `<li>${spec}</li>`).join('');
+
+            // Product images
+            const mainImage = document.getElementById('main-image');
+            const thumbnailsContainer = document.querySelector('.thumbnails');
+            
+            product.images.forEach((img, index) => {
+                const thumbnail = document.createElement('img');
+                thumbnail.src = img;
+                thumbnail.alt = `Thumbnail ${index + 1}`;
+                thumbnail.addEventListener('click', () => {
+                    mainImage.src = img;
+                    document.querySelectorAll('.thumbnails img').forEach(t => t.classList.remove('active'));
+                    thumbnail.classList.add('active');
+                });
+                if (index === 0) thumbnail.classList.add('active');
+                thumbnailsContainer.appendChild(thumbnail);
+            });
+
+            // Cart functionality
+            document.getElementById('add-to-cart-btn').addEventListener('click', () => {
+                addToCart({
+                    name: product.name,
+                    price: product.price,
+                    brand: product.brand,
+                    image: product.images[0]
+                });
+            });
+
+            document.getElementById('buy-now-btn').addEventListener('click', () => {
+                addToCart({
+                    name: product.name,
+                    price: product.price,
+                    brand: product.brand,
+                    image: product.images[0]
+                });
+                window.location.href = '/markups/checkout.html';
+            });
+        });
+    </script>
+</body>
+</html>
