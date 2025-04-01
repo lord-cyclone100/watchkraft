@@ -1,0 +1,335 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #0a0a0a;
+    color: white;
+}
+
+.container {
+    display: flex;
+    width: 98vw;
+    height: 95vh;
+    margin: 2em 0em !important;
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.left {
+    flex: 1;
+    background: url('https://source.unsplash.com/600x600/?luxury,watch') center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.clock-container {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: glowAnimation 3s infinite alternate ease-in-out;
+}
+
+@keyframes glowAnimation {
+    0% {
+        box-shadow:
+            0 0 10px 5px rgba(255, 215, 0, 0.9),
+            0 0 20px 10px rgba(255, 215, 0, 0.6),
+            0 0 30px 15px rgba(255, 215, 0, 0.3);
+    }
+
+    100% {
+        box-shadow:
+            0 0 20px 10px rgba(255, 215, 0, 1),
+            0 0 30px 20px rgba(255, 215, 0, 0.7),
+            0 0 40px 25px rgba(255, 215, 0, 0.4);
+    }
+}
+
+.clock {
+    font-size: 45px;
+    font-weight: bold;
+    color: gold;
+    text-align: center;
+}
+
+.left {
+    width: 50vw !important;
+}
+
+.left h1 {
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+.left p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.right {
+    width: 50vw !important;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    background: #1a1a1a;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.right h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.steps {
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: gray;
+    position: relative;
+}
+
+.step-label {
+    margin-top: 5px;
+    font-size: 14px;
+    color: gold;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+.step.active::after {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.step.completed {
+    background: gold;
+}
+
+.step.completed::after {
+    display: block;
+}
+
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid gold;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+
+.button-group-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+}
+
+.button-group {
+    flex: 1;
+    padding: 12px;
+    background: gold;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: gold;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.social-login {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.fb {
+    background: #1877f2;
+    color: white;
+}
+
+.google {
+    background: #db4437;
+    color: white;
+}
+
+/********************************************/
+/***** MEDIA QUERIES FOR RESPONSIVENESS *****/
+/********************************************/
+/* Ultra-Wide Screens (1440px and below) */
+@media (max-width: 1440px) {
+    /* Styles for ultra-wide screens */
+}
+
+/* Extra Large devices (Large screens, 1280px and below) */
+@media (max-width: 1280px) {
+    /* Styles for larger screens */
+}
+
+/* Large devices (Laptops & Desktops, 1024px and below) */
+@media (max-width: 1024px) {
+
+    /* Styles for desktops */
+    .clock-container {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .clock {
+        font-size: 20px !important;
+    }
+
+    .left h1 {
+        font-size: 25px !important;
+        margin-top: 40px;
+    }
+
+    .left p {
+        font-size: 12px !important;
+    }
+}
+
+/* Medium devices (Small Laptops, 768px and below) */
+@media (max-width: 768px) {
+
+    /* Styles for small laptops */
+    .clock-container {
+        width: 32vw;
+        height: 32vw;
+    }
+
+    .clock {
+        font-size: 16px !important;
+    }
+
+    .left h1 {
+        font-size: 22px !important;
+        margin-top: 35px;
+    }
+
+    .left p {
+        font-size: 10px !important;
+    }
+
+    .right {
+        padding: 1em;
+    }
+}
+
+/* Small devices (Tablets, 600px and below) */
+@media (max-width: 600px) {
+
+    /* Styles for tablets */
+    .container {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .left {
+        display: flex;
+        margin-top: 95vh;
+        width: 98vw !important;
+        height: fit-content !important;
+    }
+
+    .right {
+        width: 98vw !important;
+        height: fit-content !important;
+    }
+
+    .clock-container {
+        width: 65vw;
+        height: 65vw;
+    }
+}
+
+/* Extra Small devices (Large Phones, 480px and below) */
+@media (max-width: 480px) {
+    /* Styles for large phones */
+}
+
+/* Very Small devices (Small Phones, 375px and below) */
+@media (max-width: 375px) {
+    /* Styles for small phones */
+}
+
+/* Extra Small devices (Minimum Mobile Size, 320px and below) */
+@media (max-width: 320px) {
+    /* Styles for very small phones */
+}
