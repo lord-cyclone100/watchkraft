@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg" href="/assets/favicon.svg">
+    <link rel="icon" type="image/svg" href="../assets/favicon.svg">
     <title>Timeless Masterpieces &mdash; WatchKraft</title>
-    <link rel="stylesheet" href="/styles/product.css">
-    <link rel="stylesheet" href="/styles/animations.css">
-    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="../styles/product.css">
+    <link rel="stylesheet" href="../styles/animations.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
@@ -15,39 +16,70 @@
 
     <!-- Navbar -->
     <nav>
-        <a href="/markups/landing.html">
-            <img src="/assets/logo-light.svg" alt="">
+        <a href="../index.html">
+            <img src="../assets/logo-light.svg" alt="">
         </a>
         <div class="nav-head">
             <ul>
-                <li><h1><a href="/index.html">HOME</a></h1></li>
-                <li><h1><a href="/markups/service.html">SERVICE</a></h1></li>
-                <li><h1><a href="/markups/Product.html">PRODUCTS</a></h1></li>
-                <li><h1><a href="/markups/wishList.html">WISH LIST</a></h1></li>
-                <li><h1><a href="/markups/contact.html">CONTACT US</a></h1></li>
-                <label class="theme-switch">
-                    <input type="checkbox" id="darkModeToggle">
-                    <span class="slider"></span>
-                 </label>
+                <li>
+                    <h1><a href="../index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./contact.html">CONTACT US</a></h1>
+                </li>
             </ul>
         </div>
         <div class="nav-icons">
             <header>
                 <div class="cart-icon">
-                    <a href="/markups/shopCart.html">
+                    <a href="./shopCart.html">
                         <i class="ri-shopping-cart-2-line"></i>
                     </a>
                     <span id="cart-count">0</span>
                 </div>
-            </header>            
-            <a href="/markups/login.html" class="login">            
+            </header>
+            <a href="./login.html" class="login">
                 <i class="ri-user-line"></i>
             </a>
         </div>
         <div class="hamburger">
-            <button type="" class="menu-button">
-                <img src="/assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+            <button type="" class="menu-button" onclick="navOpen()">
+                <img src="../assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
             </button>
+        </div>
+
+        <div class="nav-head2" id="nav-head2">
+            <div class="cancelBox">
+                <button type="" class="menu-button cancel" onclick="navClose()">
+                    X
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <h1><a href="../index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./contact.html">CONTACT US</a></h1>
+                </li>
+            </ul>
         </div>
     </nav>
 
@@ -111,7 +143,7 @@
             data-color="gold silver"
             data-stock="5"
         >
-            <img src="/assets/copper-watch.svg" alt="Copper Watch">
+            <img src="../assets/copper-watch.svg" alt="Copper Watch">
             <h2>Copper Alloy</h2>
             <p>$299.99</p>
             <p class="brand">Casio</p>
@@ -129,7 +161,7 @@
             data-color="silver black"
             data-stock="5"
         >
-            <img src="/assets/silver-watch.svg" alt="Silver Watch">
+            <img src="../assets/silver-watch.svg" alt="Silver Watch">
             <h2>Silver Spark</h2>
             <p>$349.99</p>
             <p class="brand">Titan</p>
@@ -147,7 +179,7 @@
             data-color="black"
             data-stock="5"
         >
-            <img src="/assets/leather-watch.svg" alt="Leather Watch">
+            <img src="../assets/leather-watch.svg" alt="Leather Watch">
             <h2>Leather Ivory</h2>
             <p>$279.99</p>
             <p class="brand">Helix</p>
@@ -165,7 +197,7 @@
             data-color="gold"
             data-stock="5"
         >
-            <img src="/assets/gold-watch.svg" alt="Gold Watch">
+            <img src="../assets/gold-watch.svg" alt="Gold Watch">
             <h2>Gold Noir</h2>
             <p>$399.99</p>
             <p class="brand">Casio</p>
@@ -188,19 +220,19 @@
                 <h2>Quick Links</h2>
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="/markups/Product.html">Shop</a></li>
-                    <li><a href="/markups/shopCart.html">Deals</a></li>
-                    <li><a href="/markups/contact.html">Contact</a></li>
+                    <li><a href="./Product.html">Shop</a></li>
+                    <li><a href="./shopCart.html">Deals</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
                 </ul>
             </div>
 
             <div class="footer-section customer-service">
                 <h2>Customer Service</h2>
                 <ul>
-                    <li><a href="/markups/service.html">FAQs</a></li>
-                    <li><a href="/markups/service.html">Return Policy</a></li>
-                    <li><a href="/markups/service.html">Privacy Policy</a></li>
-                    <li><a href="/markups/service.html">Terms & Conditions</a></li>
+                    <li><a href="./service.html">FAQs</a></li>
+                    <li><a href="./service.html">Return Policy</a></li>
+                    <li><a href="./service.html">Privacy Policy</a></li>
+                    <li><a href="./service.html">Terms & Conditions</a></li>
                 </ul>
             </div>
 
@@ -281,9 +313,22 @@
         }
         
     </script>
-    <script src="/logic/shopCart.js"></script>
-    <script src="/logic/Product.js"></script>
-    <script src="/logic/wishList.js"></script>
+    <script>
+        function navOpen() {
+            document.getElementById('nav-head2').classList.add('active');
+        }
+
+        function navClose() {
+            document.getElementById('nav-head2').classList.remove('active');
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+    <script src="../logic/shopCart.js"></script>
+    <script src="../logic/Product.js"></script>
+    <script src="../logic/wishList.js"></script>
 
 </body>
 </html>
