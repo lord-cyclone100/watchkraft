@@ -85,6 +85,19 @@
     background: #111;
     margin-top: 20px;
 }
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    position: relative;
+    
+   
+}
 
 .footer-bottom b {
     color: #fdd835;
@@ -106,4 +119,62 @@
     max-width: 1100px;
     margin: auto;
     flex-wrap: wrap;
+}
+body {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.payments {
+    display: flex;
+    gap: 40px; /* More space between icons */
+}
+
+.payment-link {
+    font-size: 40px;
+    color: aliceblue;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Expands hover area */
+}
+
+.payment-link i {
+    font-size: 90px; /* Increase icon size */
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Hover Effects */
+
+.payments a i:hover {
+    color: #fdd835;
+}
+
+.payments a i:hover {
+    text-decoration: none;
+   
+   
+}
+
+.fa-apple-pay:hover {
+    
+    color: #A3AAAE;
+}
+
+.fa-google-pay{
+    font-size: 25px;
+    color: #fff;
+}
+
+.mastercard:hover {
+    color: #7900eb !important;
+}
+
+.visa:hover {
+    color: #1A1F71 !important;
 }
