@@ -3,161 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg" href="/assets/favicon.svg">
-    <title>Login here &mdash; WatchKraft</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <title>Luxury Signup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
         body {
-            background-color: #121212;
-            color: #ffffff;
-            padding: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #0a0a0a;
+            color: white;
         }
         .container {
-            max-width: 900px;
-            background: #1e1e1e;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-        }
-        .form-control {
-            background: #333;
-            color: #fff;
-            border: 1px solid #444;
-            padding: 14px;
-        }
-        .form-control::placeholder {
-            color: #bbb;
-        }
-        .btn-primary {
-            background: #ffc107;
-            border: none;
-            color: #000;
-            padding: 14px;
-        }
-        .btn-primary:hover {
-            background: #e0a800;
-        }
-        .btn-facebook, .btn-google {
             display: flex;
-            align-items: center;
+            width: 1000px;
+            height: 600px;
+            background: #111;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+        }
+        .left {
+            flex: 1;
+            background: url('https://source.unsplash.com/600x600/?luxury,watch') center/cover;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            font-size: 16px;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        .clock-container {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                    background: black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: relative;
+                    animation: glowAnimation 3s infinite alternate ease-in-out;
+        }
+
+@keyframes glowAnimation {
+    0% {
+        box-shadow: 
+            0 0 10px 5px rgba(255, 215, 0, 0.9),
+            0 0 20px 10px rgba(255, 215, 0, 0.6),
+            0 0 30px 15px rgba(255, 215, 0, 0.3);
+    }
+    100% {
+        box-shadow: 
+            0 0 20px 10px rgba(255, 215, 0, 1),
+            0 0 30px 20px rgba(255, 215, 0, 0.7),
+            0 0 40px 25px rgba(255, 215, 0, 0.4);
+    }
+}
+
+        .clock {
+            font-size: 45px;
             font-weight: bold;
-            border-radius: 5px;
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 10px;
-        }
-        .btn-facebook {
-            background: #1877f2;
-            color: white;
-        }
-        .btn-google {
-            background: #db4437;
-            color: white;
-        }
-        .logo-img {
-            filter: brightness(1);
-        }
-        .footer {
-            background: #1e1e1e;
-            padding: 40px 0;
+            color: gold;
             text-align: center;
-            color: #aaa;
+        }
+        .left h1 {
+            font-size: 28px;
             margin-top: 40px;
         }
-        .footer a {
-            color: #ffc107;
-            text-decoration: none;
+        .left p {
+            font-size: 14px;
+            text-align: center;
         }
-        .footer a:hover {
-            text-decoration: underline;
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+            padding: 40px;
+            background: #1a1a1a;
         }
-        .back-button {
+
+        .right h2 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        .steps {
+            display: flex;
+            gap: 30px; 
+            margin: 20px 0;
+            align-items: center;
+        }
+
+.step-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: gray;
+    position: relative;
+}
+
+.step-label {
+    margin-top: 5px;
+    font-size: 14px;
+    color: gold;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+
+.step.active::after {
+    content: "✔"; 
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; 
+}
+
+.step.completed {
+    background: gold; 
+}
+
+.step.completed::after {
+    display: block;
+}
+
+
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
             display: block;
-            width: 100px;
-            padding: 10px;
-            text-align: center;
-            background: #ffc107;
-            color: #000;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-bottom: 20px;
         }
-        .back-button:hover {
-            background: #e0a800;
-            color: white;
-            text-decoration: none;
-        }
-        select.form-control {
-            padding: 2px;
-            font-size: 16px;
+        input {
             width: 100%;
-            text-align: center;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid gold;
+            border-radius: 5px;
+            background: #222;
+            color: white;
         }
-        .btn-facebook i, .btn-google i {
-            margin-right: 8px;
+        
+        .button-group-container {
+                display: flex;
+                justify-content: space-between; 
+                gap: 10px; 
+                width: 100%;
         }
+
+.button-group {
+    flex: 1; 
+    padding: 12px;
+    background: gold;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+}
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: gold;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .social-login {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap; 
+    justify-content: center; 
+}
+
+.social-btn {
+    flex: 1;
+    padding: 12px 20px; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; 
+    min-width: 120px; 
+    text-align: center;
+}
+
+        .fb { background: #1877f2; color: white; }
+        .google { background: #db4437; color: white; }
     </style>
-    <script src="https://kit.fontawesome.com/d8373423c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <a href="/markups/landing.html" class="back-button"><i class="fa-solid fa-arrow-left"></i> Back</a>
-    <div class="container mt-5">
-        <h1>Login to Your Account</h1>
-        <p>Access your personalized dashboard and manage your preferences.</p>
-        <div class="row justify-content-center">
-            <div class="col-md-5 text-center">
-                <a href="/markups/landing.html">
-                    <img src="/assets/logo-light.svg" class="img-fluid mb-4 logo-img">
-                </a>
-                <h1 class="mb-3">Create an Account</h1>
-                <p class="text-muted mb-4">"Timeless Precision, Unmatched Elegance."</p>
+    
+
+<div class="container">
+    <div class="left">
+        <div class="clock-container">
+            <div class="clock" id="clock">00:00 AM</div>
+        </div>
+        <h1 style="font-size: 40px; font-weight: 400; font-family: 'Poppins', sans-serif; text-transform: uppercase;">WATCHKRAFT</h1>
+
+        <p style="font-size: 14px; color: gold; letter-spacing: 5px; text-transform: uppercase; border-top: 1px solid gold; border-bottom: 1px solid gold; display: inline-block; padding: 5px 10px;">
+            Luxury Timepieces
+        </p>
+        <p style="margin-top: 20px;">Join our exclusive community of watch enthusiasts and collectors.Experience timeless elegance and precision craftsmanship.</p>
+    </div>
+
+    <div class="right">
+        <h2>Create Your Account</h2>
+        <p>Join the exclusive world of luxury timepieces</p>
+
+        <div class="steps">
+            <div class="step-container">
+                <div class="step active"></div>
+                <span class="step-label">Details</span>
             </div>
-            <div class="col-md-7">
-                <form>
-                    <div class="form-row mb-4">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="First Name">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="text" class="form-control" placeholder="Last Name">
-                        </div>
-                    </div>
-                    <input type="email" class="form-control mb-4" placeholder="Email Address">
-                    <div class="form-row mb-4">
-                        <div class="col-md-3">
-                            <select class="form-control">
-                                <option>+91</option>
-                                <option>+1</option>
-                                <option>+15</option>
-                                <option>+81</option>
-                            </select>
-                        </div>
-                        <div class="col-md-9">
-                            <input type="tel" class="form-control" placeholder="Phone Number">
-                        </div>
-                    </div>
-                    <div class="form-row mb-4">
-                        <div class="col-md-6">
-                            <input type="password" class="form-control" placeholder="Password">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="password" class="form-control" placeholder="Confirm Password">
-                        </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block mb-4">Create your account</button>
-                    <div class="text-center my-4">OR</div>
-                    <button class="btn btn-facebook btn-block"><i class="fab fa-facebook-f"></i> Continue with Facebook</button>
-                    <button class="btn btn-google btn-block"><i class="fab fa-google"></i> Continue with Google</button>
-                    <p class="text-center mt-4">Already Registered? <a href="/markups/existing_cust_login.html">Login</a></p>
-                </form>
+            <div class="step-container">
+                <div class="step"></div>
+                <span class="step-label">Contact</span>
+            </div>
+            <div class="step-container">
+                <div class="step"></div>
+                <span class="step-label">Security</span>
             </div>
         </div>
+        
+
+        <div class="form-step active">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Last Name">
+            <button class="button-group" onclick="nextStep()">Continue →</button>
+        </div>
+
+        <div class="form-step">
+            <input type="email" placeholder="Email">
+            <input type="tel" placeholder="Phone Number">
+            <div class="button-group-container">
+                <button class="button-group" onclick="prevStep()">← Back</button>
+                <button class="button-group" onclick="nextStep()">Continue →</button>
+            </div>
+        </div>
+
+        <div class="form-step">
+            <input type="password" placeholder="Create Password">
+            <input type="password" placeholder="Confirm Password">
+            <div class="button-group-container">
+                <button class="button-group" onclick="prevStep()">← Back</button>
+                <button class="button-group">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="social-login">
+            <button class="social-btn fb" onclick="facebookLogin()">Facebook</button>
+            <button class="social-btn google" onclick="googleLogin()">Google</button>
+        </div>
+        <p class="signin-text" style="color: lightgrey; margin-top: 20px;">
+            Already have an account? 
+            <a href="existing_cust_login.html" style="color: gold; text-decoration: none; font-weight: bold;">Sign in</a>
+          </p>
+          
     </div>
+</div>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        let seconds = now.getSeconds();
+        const ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12 || 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        seconds = seconds < 10 ? '0' + seconds : seconds;
+
+        document.getElementById("clock").innerHTML = 
+            `<div style="text-align: center;">
+                <div style="font-size: 40px; font-weight: bold;">${hours}:${minutes}:${seconds} ${ampm}</div>
+                <div style="font-size: 10px; color: gold; letter-spacing: 2px; text-transform: uppercase; margin-top: 5px;">PRECISION TIMEKEEPING</div>
+            </div>`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    let stepIndex = 0;
+
+    function nextStep() {
+        const steps = document.querySelectorAll('.form-step');
+        const indicators = document.querySelectorAll('.step');
+        const inputs = steps[stepIndex].querySelectorAll('input');
+
+        
+        let allFilled = true;
+        inputs.forEach(input => {
+            if (input.value.trim() === '') {
+                allFilled = false;
+                input.style.border = '2px solid red'; 
+            } else {
+                input.style.border = '1px solid gold';
+            }
+        });
+
+        if (!allFilled) {
+            alert('Please fill all fields before continuing.');
+            return;
+        }
+
+        
+        if (stepIndex < steps.length - 1) {
+            steps[stepIndex].classList.remove('active');
+            indicators[stepIndex].classList.add('completed'); 
+            stepIndex++;
+            steps[stepIndex].classList.add('active');
+            indicators[stepIndex].classList.add('active'); 
+        }
+    }
+
+    function prevStep() {
+        const steps = document.querySelectorAll('.form-step');
+        const indicators = document.querySelectorAll('.step');
+
+        if (stepIndex > 0) {
+            steps[stepIndex].classList.remove('active');
+            indicators[stepIndex].classList.remove('active'); 
+            indicators[stepIndex - 1].classList.remove('completed'); 
+            stepIndex--;
+            steps[stepIndex].classList.add('active');
+        }
+    }
+
+
+function facebookLogin() {
+    window.location.href = "https://www.facebook.com/login.php"; 
+}
+
+function googleLogin() {
+    window.location.href = "https://accounts.google.com/signin"; 
+}
+
+
+
+
+</script>
+
 </body>
 </html>
