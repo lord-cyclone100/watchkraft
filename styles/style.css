@@ -195,49 +195,6 @@ nav ul li a:hover {
     font-weight: 800;
 }
 
-/* Filters Section */
-.filters {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 12px auto;
-    padding: 1rem;
-    max-width: 800px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    background: rgba(20, 20, 20, 0.8);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.filters input, 
-.filters select, 
-.filters button {
-    padding: 2px 6px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-.filters select {
-    background: rgba(30, 30, 30, 0.8);
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 0.8rem 1.2rem;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-
-.filters select:hover {
-    border-color: #d48123;
-}
-
-
-.filters {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .search-wrapper {
     display: flex;
     align-items: center;
