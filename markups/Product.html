@@ -83,8 +83,12 @@
         </div>
     </nav>
 
+    <div class="filterButton">
+        <button onclick="filterToggle()">Filters</button>
+    </div>
+
     <!-- Filters Section -->
-    <section class="filters">
+    <section class="filters" id="filterPanel">
         <div class="container">
             <h2>Filter Products</h2>
             <div class="search-wrapper">
@@ -378,6 +382,10 @@
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+
+        function filterToggle() {
+            document.getElementById('filterPanel').classList.toggle('open');
         }
     </script>
     <script src="../logic/shopCart.js"></script>
