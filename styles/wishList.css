@@ -39,7 +39,6 @@ nav{
 /* Wishlist Items */
 .wishlist-item {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     padding: 15px;
     background: #f9f9f9;
@@ -63,8 +62,6 @@ nav{
 .product-wishlist {
     display: flex;
     align-items: center;
-    gap: 25px;
-    flex-grow: 1;
 }
 
 .product-wishlist div {
