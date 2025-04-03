@@ -94,7 +94,6 @@ body {
     align-items: center;
     padding: 40px;
     background: #1a1a1a;
-    overflow-y: scroll;
     overflow-x: hidden;
 }
 
