@@ -1,412 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/svg" href="../assets/favicon.svg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg" href="../assets/favicon.svg" />
     <title>Premium Services &mdash; WatchKraft</title>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/service.css">
-    <link rel="stylesheet" href="../styles/footer.css">
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/service.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <nav>
-        <a href="../index.html">
-            <img src="../assets/logo-light.svg" alt="">
+      <a href="../index.html">
+        <img src="../assets/logo-light.svg" alt="WatchKraft Logo" />
+      </a>
+      <div class="nav-head">
+        <ul>
+          <a href="../index.html">
+            <li>
+              <h1>HOME</h1>
+            </li>
+          </a>
+          <a href="./service.html">
+          <li>
+            <h1>SERVICE</h1>
+          </li>
         </a>
-        <div class="nav-head">
-            <ul>
-                <li>
-                    <h1><a href="../index.html">HOME</a></h1>
-                </li>
-                <li>
-                    <h1><a href="./service.html">SERVICE</a></h1>
-                </li>
-                <li>
-                    <h1><a href="./Product.html">PRODUCTS</a></h1>
-                </li>
-                <li>
-                    <h1><a href="./wishList.html">WISH LIST</a></h1>
-                </li>
-                <li>
-                    <h1><a href="./contact.html">CONTACT US</a></h1>
-                </li>
-            </ul>
-        </div>
-        <div class="nav-icons">
-            <header>
-                <div class="cart-icon">
-                    <a href="./shopCart.html">
-                        <i class="ri-shopping-cart-2-line"></i>
-                    </a>
-                    <span id="cart-count">0</span>
-                </div>
-            </header>
-            <a href="./login.html" class="login">
-                <i class="ri-user-line"></i>
+        <a href="./Product.html">
+          <li>
+            <h1>PRODUCTS</h1>
+          </li>
+        </a>
+        <a href="./wishList.html">
+          <li>
+            <h1>WISH LIST</h1>
+          </li>
+        </a>
+        <a href="./contact.html">
+          <li>
+            <h1>CONTACT US</h1>
+          </li>
+        </a>
+        </ul>
+      </div>
+      <div class="nav-icons">
+        <header>
+          <div class="cart-icon">
+            <a href="./shopCart.html">
+              <i class="ri-shopping-cart-2-line"></i>
             </a>
-        </div>
-        <div class="hamburger">
-            <button type="" class="menu-button" onclick="navOpen()">
-                <img src="../assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
-            </button>
-        </div>
+            <span id="cart-count">0</span>
+          </div>
+        </header>
+        <a href="./login.html" class="login">
+          <i class="ri-user-line"></i>
+        </a>
+      </div>
+      <div class="hamburger">
+        <button type="button" class="menu-button" onclick="navOpen()">
+          <img
+            src="../assets/burger-menu-svgrepo-com.svg"
+            alt="Menu"
+            class="menu-icon"
+          />
+        </button>
+      </div>
 
-        <div class="nav-head2" id="nav-head2">
-            <div class="cancelBox">
-                <button type="" class="menu-button cancel" onclick="navClose()">
-                    X
-                </button>
-            </div>
-            <ul>
-                <li>
-                    <h1><a href="../index.html">HOME</a></h1>
-                </li>
-                <li>
-                    <h1><a href="./service.html">SERVICE</a></h1>
-                </li>
-                <li>
-                    <h1><a href="./Product.html">PRODUCTS</a></h1>
-                </li>
-                <li>
-                    <h1><a href="./wishList.html">WISH LIST</a></h1>
-                </li>
-                <li>
-                    <h1><a href="./contact.html">CONTACT US</a></h1>
-                </li>
-            </ul>
+      <div class="nav-head2" id="nav-head2">
+        <div class="cancelBox">
+          <button type="button" class="menu-button cancel" onclick="navClose()">
+            X
+          </button>
         </div>
+        <ul>
+          <li>
+            <h1><a href="../index.html">HOME</a></h1>
+          </li>
+          <li>
+            <h1><a href="./service.html">SERVICE</a></h1>
+          </li>
+          <li>
+            <h1><a href="./Product.html">PRODUCTS</a></h1>
+          </li>
+          <li>
+            <h1><a href="./wishList.html">WISH LIST</a></h1>
+          </li>
+          <li>
+            <h1><a href="./contact.html">CONTACT US</a></h1>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Exceptional Watch Services</h1>
-            <p>Experience unparalleled craftsmanship and attention to detail for your luxury timepieces.</p>
-            <a href="#" class="btn">Explore Services</a>
-        </div>
+      <div class="hero-content">
+        <h1>Exceptional Watch Services</h1>
+        <p>
+          Experience unparalleled craftsmanship and attention to detail for your
+          luxury timepieces.
+        </p>
+        <a href="#services" class="btn">Explore Services</a>
+      </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Premium Services</h2>
-                <p>Discover the exceptional services we offer for your luxury timepieces.</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">⚙️</div>
-                        <h3>Expert Watch Repair</h3>
-                        <p>Our master watchmakers provide meticulous repair services for all types of luxury timepieces,
-                            ensuring precision and reliability.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">🚚</div>
-                        <h3>Premium Delivery</h3>
-                        <p>Enjoy secure and insured delivery of your precious timepieces directly to your doorstep with
-                            our white-glove service.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">💎</div>
-                        <h3>Quality Assurance</h3>
-                        <p>Every timepiece undergoes rigorous quality checks to ensure authenticity, performance, and
-                            impeccable condition.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">↩️</div>
-                        <h3>Hassle-Free Returns</h3>
-                        <p>Our 30-day return policy ensures complete satisfaction with your purchase, backed by our
-                            commitment to excellence.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">🧹</div>
-                        <h3>Professional Cleaning</h3>
-                        <p>Restore the brilliance of your timepiece with our specialized cleaning services that preserve
-                            its beauty and value.</p>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-content">
-                        <div class="service-icon">📜</div>
-                        <h3>Authentication Services</h3>
-                        <p>Our experts provide detailed authentication reports for your valuable timepieces, ensuring
-                            their provenance and value.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Premium Services</h2>
+          <p>
+            Discover the exceptional services we offer for your luxury
+            timepieces.
+          </p>
         </div>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">⚙️</div>
+              <h3>Expert Watch Repair</h3>
+              <p>
+                Our master watchmakers provide meticulous repair services for
+                all types of luxury timepieces, ensuring precision and
+                reliability.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">🚚</div>
+              <h3>Premium Delivery</h3>
+              <p>
+                Enjoy secure and insured delivery of your precious timepieces
+                directly to your doorstep with our white-glove service.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">💎</div>
+              <h3>Quality Assurance</h3>
+              <p>
+                Every timepiece undergoes rigorous quality checks to ensure
+                authenticity, performance, and impeccable condition.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">↩️</div>
+              <h3>Hassle-Free Returns</h3>
+              <p>
+                Our 30-day return policy ensures complete satisfaction with your
+                purchase, backed by our commitment to excellence.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">🧹</div>
+              <h3>Professional Cleaning</h3>
+              <p>
+                Restore the brilliance of your timepiece with our specialized
+                cleaning services that preserve its beauty and value.
+              </p>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">📜</div>
+              <h3>Authentication Services</h3>
+              <p>
+                Our experts provide detailed authentication reports for your
+                valuable timepieces, ensuring their provenance and value.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Brands Section -->
     <section class="brands-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Luxury Brands We Service</h2>
-                <p>We specialize in servicing and repairing timepieces from the world's most prestigious watch
-                    manufacturers.</p>
-            </div>
-            <div class="brands-grid">
-                <div class="brand-item">
-                    <div class="brand-name">Rolex</div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-name">Patek Philippe</div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-name">Audemars Piguet</div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-name">Omega</div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-name">Cartier</div>
-                </div>
-                <div class="brand-item">
-                    <div class="brand-name">TAG Heuer</div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="section-header">
+          <h2>Luxury Brands We Service</h2>
+          <p>
+            We specialize in servicing and repairing timepieces from the world's
+            most prestigious watch manufacturers.
+          </p>
         </div>
+        <div class="brands-grid">
+          <div class="brand-item">
+            <div class="brand-name">Rolex</div>
+          </div>
+          <div class="brand-item">
+            <div class="brand-name">Patek Philippe</div>
+          </div>
+          <div class="brand-item">
+            <div class="brand-name">Audemars Piguet</div>
+          </div>
+          <div class="brand-item">
+            <div class="brand-name">Omega</div>
+          </div>
+          <div class="brand-item">
+            <div class="brand-name">Cartier</div>
+          </div>
+          <div class="brand-item">
+            <div class="brand-name">TAG Heuer</div>
+          </div>
+        </div>
+      </div>
     </section>
-
-
 
     <!-- CTA Section -->
     <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Experience Our Premium Services</h2>
-                <p>Schedule a consultation with our watch experts today and discover the difference that professional
-                    care can make for your timepiece.</p>
-                <a href="#" class="btn">Book Appointment</a>
-            </div>
+      <div class="container">
+        <div class="cta-content">
+          <h2>Experience Our Premium Services</h2>
+          <p>
+            Schedule a consultation with our watch experts today and discover
+            the difference that professional care can make for your timepiece.
+          </p>
+          <a href="./contact.html" class="btn">Book Appointment</a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-section about">
-                <h2>About Us</h2>
-                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
-            </div>
-
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="./Product.html">Shop</a></li>
-                    <li><a href="./shopCart.html">Deals</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section customer-service">
-                <h2>Customer Service</h2>
-                <ul>
-                    <li><a href="./service.html">FAQs</a></li>
-                    <li><a href="./service.html">Return Policy</a></li>
-                    <li><a href="./service.html">Privacy Policy</a></li>
-                    <li><a href="./service.html">Terms & Conditions</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section social">
-                <h2>Follow Us</h2>
-                <div class="social-icons">
-                    <a href="#"><i class="ri-facebook-fill"></i></a>
-                    <a href="#"><i class="ri-twitter-x-line"></i></a>
-                    <a href="#"><i class="ri-instagram-line"></i></a>
-                    <a href="#"><i class="ri-youtube-fill"></i></i></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="footer-section about">
+          <h2>About Us</h2>
+          <p>
+            Welcome to our store! We provide the best quality products at the
+            best prices.
+          </p>
         </div>
 
-        <div class="footer-bottom">
-            <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
+        <div class="footer-section links">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./Product.html">Shop</a></li>
+            <li><a href="./shopCart.html">Deals</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
         </div>
+
+        <div class="footer-section customer-service">
+          <h2>Customer Service</h2>
+          <ul>
+            <li><a href="./service.html">FAQs</a></li>
+            <li><a href="./service.html">Return Policy</a></li>
+            <li><a href="./service.html">Privacy Policy</a></li>
+            <li><a href="./service.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section social">
+          <h2>Follow Us</h2>
+          <div class="social-icons">
+            <a href="#"><i class="ri-facebook-fill"></i></a>
+            <a href="#"><i class="ri-twitter-x-line"></i></a>
+            <a href="#"><i class="ri-instagram-line"></i></a>
+            <a href="#"><i class="ri-youtube-fill"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="current-year"></span> WatchKraft | Designed by
+          <b>Fazley Rahaman Molla</b>
+        </p>
+      </div>
     </footer>
-
 
     <button id="backToTop" onclick="scrollToTop()">↑</button>
 
-    <script>
-        window.onscroll = function () {
-            let button = document.getElementById("backToTop");
-            if (
-                document.body.scrollTop > 300 ||
-                document.documentElement.scrollTop > 300
-            ) {
-                button.style.display = "block";
-            } else {
-                button.style.display = "none";
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    </script>
-
-    <!-- Theme Toggle -->
-    <div class="theme-toggle">
-        <div class="theme-icon">🌙</div>
-    </div>
-
     <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        
-        // Dynamically update the year in the footer
-        document.querySelector(".year").textContent = new Date().getFullYear();
-        if(!mobileMenu || ! navLinks){
-            console.log("Element not found");
+      // Update current year in footer
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+
+      // Back to top button
+      window.onscroll = function () {
+        let button = document.getElementById("backToTop");
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          button.style.display = "block";
+        } else {
+          button.style.display = "none";
         }
-        else{
-                mobileMenu.addEventListener('click', () => {
-                console.log(mobileMenu);
-                mobileMenu.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
+      };
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      // Mobile menu functions
+      function navOpen() {
+        document.getElementById("nav-head2").classList.add("active");
+      }
+
+      function navClose() {
+        document.getElementById("nav-head2").classList.remove("active");
+      }
+
+      // Scroll Animation for navbar
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 50) {
+          nav.style.padding = "10px 0";
+          nav.style.boxShadow = "0 5px 15px rgba(0, 0, 0, 0.1)";
+        } else {
+          nav.style.padding = "15px 0";
+          nav.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
         }
-        
-        // Testimonial Slider
-        let slideIndex = 1;
-        showSlides(slideIndex);
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("testimonial-slide");
-            let dots = document.getElementsByClassName("dot");
-            let errorShown = true;
-            //Check if no elements found
-            if (slides.length === 0 || dots.length === 0) {
-                if (!errorShown) { 
-                    console.error("Slides or dots not found!");
-                    errorShown = true; 
-                }
-                return;
-            }
-            errorShown = false;
-            // Ensure slideIndex stays within bounds
-            if (n > slides.length) slideIndex = 1;
-            if (n < 1) slideIndex = slides.length;
-
-            for (i = 0; i < slides.length; i++) {
-                slides[i].classList.remove("active");
-            }
-
-            for (i = 0; i < dots.length; i++) {
-                dots[i].classList.remove("active");
-            }
-
-            slides[slideIndex - 1].classList.add("active");
-            dots[slideIndex - 1].classList.add("active");
-        }
-
-        // Auto Slide
-        document.addEventListener("DOMContentLoaded", () => {
-            let slideIndex = 1;
-            showSlides(slideIndex);
-
-            setInterval(() => {
-                slideIndex++;
-                showSlides(slideIndex);
-            }, 5000);
-        });
-        // setInterval(() => {
-        //     slideIndex++;
-        //     if (slideIndex > document.getElementsByClassName("testimonial-slide").length) {
-        //         slideIndex = 1;
-        //     }
-        //     showSlides(slideIndex);
-        // }, 5000);
-        
-        // Theme Toggle
-        const themeToggle = document.querySelector('.theme-toggle');
-        const themeIcon = document.querySelector('.theme-icon');
-        const servicesSection = document.querySelector('.services-section');
-        const sectionHeaderTheme = document.querySelector('.section-header h2');
-        let whiteMode = true;
-        themeToggle.addEventListener('click',()=>{
-            console.log("themeToggle");
-            if(whiteMode == true){
-                themeIcon.textContent = '☀️';
-                themeToggle.style.backgroundColor = "white";
-                servicesSection.style.backgroundColor = "black";
-                sectionHeaderTheme.style.color = "white";
-                whiteMode = false;
-            }
-            else{
-                themeIcon.textContent = '🌙';
-                themeToggle.style.backgroundColor = "black";
-                servicesSection.style.backgroundColor = "white";
-                sectionHeaderTheme.style.color = "black";
-                whiteMode = true;
-            }
-        });
-        
-        // themeToggle.addEventListener('click', () => {
-        //     document.body.classList.toggle('dark-mode');
-        //     if (document.body.classList.contains('dark-mode')) {
-        //         themeIcon.textContent = '☀️';
-        //     } else {
-        //         themeIcon.textContent = '🌙';
-        //     }
-        //     console.log("darkmode");
-        // });
-        
-        // Scroll Animation
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.padding = '10px 0';
-                nav.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.1)';
-            } else {
-                nav.style.padding = '15px 0';
-                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            }
-        });
+      });
     </script>
-    <script>
-        function navOpen() {
-            document.getElementById('nav-head2').classList.add('active');
-        }
-
-        function navClose() {
-            document.getElementById('nav-head2').classList.remove('active');
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    </script>
-</body>
-
+  </body>
 </html>

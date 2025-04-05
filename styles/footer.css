@@ -30,6 +30,7 @@
     color: white;
     padding: 40px 0;
     font-size: 14px;
+    width: 100%;
 }
 
 .footer-section {
@@ -123,9 +124,9 @@
 body {
     background-color: #222;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 .payments {
