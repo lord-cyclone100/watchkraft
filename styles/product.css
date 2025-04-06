@@ -239,6 +239,28 @@ footer {
     padding: 0;
 }
 
+.filterButton{
+    position: fixed;
+    top: 98px;
+    right: 12px;
+    display: none;
+    z-index: 14;
+}
+
+.filterButton button{
+    padding: 0.3em 0.5em;
+    font-size: 20px;
+    background: #000000a5;
+    color: #fdd835;
+    border-radius: 10%;
+    border: 0.5px solid rgba(255, 255, 255, 0.463);
+    backdrop-filter: blur(10px);
+}
+
+.filterButton button:hover{
+    background-color: #000000ca;
+}
+
 .search-wrapper {
     max-width: 500px;
     margin: 0 auto;
@@ -376,6 +398,37 @@ footer {
         margin-top: 10rem;
         gap: 0.2rem;
     }
+
+    .filterButton{
+        display: block;
+    }
+
+    .filters{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        height: 89.5vh;
+        transform: translateX(100vw);
+        transition: all ease-in-out 300ms;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 2em !important;
+        height: fit-content;
+        margin-top: 4em !important;
+    }
+
+    .advanced-filters{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .open{
+        transform: translateX(0vw);
+    }
 }
 
 /* Small devices (Tablets, 600px and below) */
@@ -408,6 +461,14 @@ footer {
     #searchInput {
         padding: 9px 15px;
         font-size: 1rem;
+    }
+
+    .container{
+        gap: 1.2em !important;
+    }
+
+    .advanced-filters{
+        gap: 1em !important;
     }
 }
 
