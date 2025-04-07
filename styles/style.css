@@ -9,8 +9,6 @@
 }
 
 html, body{
-    height: 100%;
-    width: 100%;
     background-color: #000 !important;
     overflow-x: hidden;
 }
@@ -52,7 +50,6 @@ nav{
 nav a > img{
     height: 3.5em;
     margin-right: 1rem;
-    
 }
 
 .logos{
@@ -574,6 +571,7 @@ body {
     color: #e0e0e0;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Contact Section */
