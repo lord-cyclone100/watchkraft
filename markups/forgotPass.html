@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WatchKraft - Forgot Password</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --gold: #d4af37;
+        --gold-light: rgba(231, 181, 18, 0.2);
+        --dark: #121212;
+        --dark-light: #fff;
+        --gray-dark: #fff;
+        --gray: #fff;
+        --white: #fff;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: var(--dark);
+        color: var(--white);
+        height: 100vh;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .bg-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 0.95) 0%,
+          rgba(20, 20, 20, 0.9) 100%
+        );
+        z-index: -1;
+      }
+
+      .bg-circle {
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      .bg-circle-1 {
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(
+          circle,
+          rgba(212, 175, 55, 0.1) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        top: -200px;
+        right: -200px;
+      }
+
+      .bg-circle-2 {
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(
+          circle,
+          rgba(212, 175, 55, 0.05) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        bottom: -150px;
+        left: -150px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+      }
+
+      .brand-title {
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+      }
+
+      .brand-tagline {
+        font-size: 0.9rem;
+        color: var(--gray);
+        font-style: italic;
+        letter-spacing: 1px;
+      }
+
+      .login-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem 1rem;
+        height: 100vh;
+      }
+
+      .login-card {
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .login-header {
+        text-align: center;
+        padding: 2rem 1rem;
+      }
+
+      .login-logo {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(212, 175, 55, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        border: 1px solid rgba(212, 175, 55, 0.3);
+      }
+
+      .login-logo i {
+        font-size: 32px;
+        color: var(--gold);
+      }
+
+      .form-control {
+        background-color: rgba(30, 30, 30, 0.7);
+        border: 1px solid var(--gray-dark);
+        color: var(--white);
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .form-control:focus {
+        background-color: rgba(40, 40, 40, 0.7);
+        border-color: var(--gold);
+        box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+        color: var(--white);
+      }
+
+      .form-label {
+        color: #ccc;
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .form-label i {
+        color: var(--gold);
+        margin-right: 0.5rem;
+        font-size: 0.8rem;
+      }
+
+      .btn-gold {
+        background-color: var(--gold);
+        color: var(--dark);
+        border: none;
+        font-weight: 500;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-gold:hover {
+        background-color: #c9a633;
+        color: var(--dark);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+      }
+
+      .btn-gold:active {
+        transform: translateY(0);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        border: 1px solid var(--gray-dark);
+        color: var(--gray);
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline:hover {
+        border-color: var(--gray);
+        color: var(--white);
+      }
+
+      .back-link {
+        color: var(--gray);
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        transition: all 0.3s ease;
+      }
+
+      .back-link:hover {
+        color: var(--gold);
+      }
+
+      .back-link i {
+        margin-right: 0.5rem;
+      }
+
+      .info-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: var(--gray);
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      /* Animation classes */
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 0.8s forwards;
+      }
+
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 0.8s forwards;
+      }
+
+      .delay-1 {
+        animation-delay: 0.2s;
+      }
+
+      .delay-2 {
+        animation-delay: 0.4s;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Success message styling */
+      .success-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: rgba(40, 167, 69, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        border: 1px solid rgba(40, 167, 69, 0.3);
+      }
+
+      .success-icon i {
+        font-size: 32px;
+        color: #28a745;
+      }
+
+      .success-message {
+        text-align: center;
+        display: none;
+      }
+
+      .form-container {
+        display: block;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 576px) {
+        .login-card {
+          border-radius: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-gradient"></div>
+    <div class="bg-circle bg-circle-1"></div>
+    <div class="bg-circle bg-circle-2"></div>
+
+    <div
+      class="login-container d-flex align-items-center justify-content-center"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="login-card p-4 p-lg-5 fade-in">
+              <a href="#" class="back-link mb-4" id="backToLogin">
+                <i class="fas fa-arrow-left"></i> Back to Login
+              </a>
+
+              <div class="login-header">
+                <div class="login-logo">
+                  <i class="fas fa-key"></i>
+                </div>
+                <h2 class="mb-2">Forgot Password</h2>
+                <p class="info-text">
+                  Enter your email address below and we'll send you a link to
+                  reset your password.
+                </p>
+              </div>
+
+              <!-- Form Container -->
+              <div class="form-container fade-in-up delay-1" id="formContainer">
+                <form id="forgotPasswordForm">
+                  <div class="mb-4">
+                    <label for="email" class="form-label">
+                      <i class="fas fa-envelope"></i>
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="your@email.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-gold w-100 mb-4"
+                    id="resetButton"
+                  >
+                    <span id="resetText">Send Reset Link</span>
+                    <span id="loadingSpinner" class="d-none">
+                      <span
+                        class="spinner-border spinner-border-sm me-2"
+                        role="status"
+                        aria-hidden="true"
+                      ></span>
+                      Sending...
+                    </span>
+                  </button>
+                </form>
+              </div>
+
+              <!-- Success Message -->
+              <div class="success-message fade-in-up" id="successMessage">
+                <div class="success-icon">
+                  <i class="fas fa-check"></i>
+                </div>
+                <h3 class="mb-3">Email Sent</h3>
+                <p class="mb-4">
+                  We've sent a password reset link to your email address. Please
+                  check your inbox and follow the instructions.
+                </p>
+                <button class="btn btn-outline w-100" id="backToLoginBtn">
+                  Return to Login
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const forgotPasswordForm =
+          document.getElementById("forgotPasswordForm");
+        const formContainer = document.getElementById("formContainer");
+        const successMessage = document.getElementById("successMessage");
+        const resetButton = document.getElementById("resetButton");
+        const resetText = document.getElementById("resetText");
+        const loadingSpinner = document.getElementById("loadingSpinner");
+        const backToLogin = document.getElementById("backToLogin");
+        const backToLoginBtn = document.getElementById("backToLoginBtn");
+
+        // Form submission
+        forgotPasswordForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const email = document.getElementById("email");
+          let isValid = true;
+
+          if (!email.value || !email.value.includes("@")) {
+            email.classList.add("is-invalid");
+            isValid = false;
+          } else {
+            email.classList.remove("is-invalid");
+          }
+
+          if (isValid) {
+            // Show loading state
+            resetText.classList.add("d-none");
+            loadingSpinner.classList.remove("d-none");
+            resetButton.disabled = true;
+
+            // Simulate API call
+            setTimeout(() => {
+              // Hide form and show success message
+              formContainer.style.display = "none";
+              successMessage.style.display = "block";
+            }, 2000);
+          }
+        });
+
+        // Back to login handlers
+        backToLogin.addEventListener("click", function (e) {
+          e.preventDefault();
+          // Redirect to login page
+          window.location.href = "login.html"; // Assuming your login page is named index.html
+        });
+
+        backToLoginBtn.addEventListener("click", function () {
+          // Redirect to login page
+          window.location.href = "login.html"; // Assuming your login page is named index.html
+        });
+
+        // Add focus effects for form inputs
+        const inputs = document.querySelectorAll(".form-control");
+        inputs.forEach((input) => {
+          input.addEventListener("focus", function () {
+            this.parentElement.querySelector(".form-label i").style.color =
+              "#D4AF37";
+          });
+
+          input.addEventListener("blur", function () {
+            this.parentElement.querySelector(".form-label i").style.color =
+              "#D4AF37";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
