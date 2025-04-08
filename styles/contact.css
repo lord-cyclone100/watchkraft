@@ -10,6 +10,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
+    cursor: url('/assets/cursor.png'), auto;
 }
 
 nav ul li a:hover {

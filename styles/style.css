@@ -11,11 +11,12 @@
 html, body{
     background-color: #000 !important;
     overflow-x: hidden;
+    cursor: url('/assets/cursor.png'), auto;
 }
 
 @font-face{
     font-family: 'domine';
-    src: url('/styles/fonts/Domine/Domine-VariableFont_wght.ttf');
+    src: url('/assets/fonts/Domine/Domine-VariableFont_wght.ttf');
 }
 
 
