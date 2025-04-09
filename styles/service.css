@@ -21,6 +21,7 @@ body {
     background-color: var(--light);
     color: var(--text);
     line-height: 1.6;
+    cursor: url('/assets/cursor.png'), auto;
 }
 
 h1, h2, h3, h4 {
