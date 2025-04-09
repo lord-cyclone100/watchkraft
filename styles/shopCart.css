@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* Reset and Base Styles */
 * {
     margin: 0;
@@ -395,92 +397,147 @@ th:last-child {
     top: 0;
     width: 100%;
     height: 100%;
+    backdrop-filter: blur(5px);
     background-color: rgba(0, 0, 0, 0.6);
     overflow: auto;
     padding-top: 60px;
-}
+  }
+  
 
 .modal-content {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     margin: 5% auto;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
     width: 35%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    text-align: center;
     animation: fadeIn 0.5s ease-in-out;
-}
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* Title */
+  .modal-content h2 {
+    font-family: 'poppins', sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
 
-.close-btn {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: #333;
-}
-
-.payment-options {
+  .payment-options {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    gap: 1rem;
-}
-
-.payment-btn {
-    background-color: #333;
+  }
+  
+  /* Close Button */
+  .close-btn {
     color: #fff;
-    padding: 12px 20px;
-    font-size: 16px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .close-btn:hover {
+    color: #ff4e4e;
+  }
+  
+  /* Payment Buttons */
+  .payment-btn {
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+    padding: 14px 20px;
+    font-size: 15px;
     font-weight: 600;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     width: 45%;
-    transition: background-color 0.3s ease;
-}
-
-.payment-btn:hover {
-    background-color: #194e9d;
-}
-
-.payment-form {
-    margin-top: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .payment-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Payment Form */
+  .payment-form {
+    margin-top: 25px;
     display: none;
     text-align: left;
-}
-
-.payment-form input {
+    animation: fadeInUp 0.4s ease-in-out;
+  }
+  
+  .payment-form h3 {
+    font-family: 'poppins', sans-serif; 
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #ffffffdd;
+  }
+  
+  /* Input Fields */
+  .payment-form input {
     width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.pay-btn {
-    background-color: #4caf50;
+    font-family: 'poppins', sans-serif;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 14px;
+    outline: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payment-form input::placeholder {
+    color: #ccc;
+  }
+  
+  .payment-form input:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+  
+  /* Pay Button */
+  .pay-btn {
+    background: linear-gradient(135deg, #4caf50, #81c784);
+    font-family: 'poppins', sans-serif;
     color: white;
     padding: 12px 20px;
     font-size: 16px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 15px;
     width: 100%;
-}
-
-.pay-btn:hover {
-    background-color: #3c9841;
-}
-
-.hidden {
-    display: none;
-}
-
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  .pay-btn:hover {
+    background: linear-gradient(135deg, #388e3c, #66bb6a);
+    transform: scale(1.02);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 /* Footer */
 footer {
     background-color: #222;
