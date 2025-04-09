@@ -1,5 +1,6 @@
 body {
     background-color: #1a1a1a;
+    cursor: url('/assets/cursor.png'), auto;
 }
 
 .landing-container {
