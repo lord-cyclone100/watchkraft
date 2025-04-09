@@ -12,6 +12,7 @@ body {
     height: 100vh;
     background: #0a0a0a;
     color: white;
+    cursor: url('/assets/cursor.png'), auto;
 }
 
 .container {
