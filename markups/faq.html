@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <!-- SEO Meta Tags -->
+    <title>FAQs | WatchKraft - Luxury Watch Support & Answers</title>
+    <meta name="description" content="Get answers to common questions about WatchKraft watches, shipping, warranties, and returns. Your guide to premium customer support.">
+  
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://watchkraft.netlify.app/markups/faq.html">
+    <meta property="og:title" content="FAQs | WatchKraft Customer Support">
+    <meta property="og:description" content="Get answers to common questions about WatchKraft watches, shipping, warranties, and returns.">
+    <meta property="og:image" content="https://watchkraft.netlify.app/assets/og-faq.jpg">
+  
+    <!-- Styles -->
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/faq.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <!-- FAQ Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How long does shipping take?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer free worldwide shipping within 5-7 business days."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is your return policy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You may return unworn watches within 30 days for a full refund."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer repairs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! All WatchKraft watches come with a 2-year repair warranty."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Header Navigation (Same as index.html) -->
+    <nav>
+        <a href="../index.html">
+            <img src="../assets/logo-light.svg" alt="WatchKraft Logo">
+        </a>
+        <div class="nav-head">
+            <ul>
+                <li>
+                    <h1><a href="../index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./contact.html">CONTACT US</a></h1>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-icons">
+            <header>
+                <div class="cart-icon">
+                    <a href="./shopCart.html">
+                        <i class="ri-shopping-cart-2-line"></i>
+                    </a>
+                    <span id="cart-count">0</span>
+                </div>
+            </header>
+            <a href="login.html" class="login">
+                <i class="ri-user-line"></i>
+            </a>
+        </div>
+        <div class="hamburger">
+            <button type="button" class="menu-button" onclick="navOpen()">
+                <img src="../assets/burger-menu-svgrepo-com.svg" alt="Menu" class="menu-icon">
+            </button>
+        </div>
+
+        <div class="nav-head2" id="nav-head2">
+            <div class="cancelBox">
+                <button type="button" class="menu-button cancel" onclick="navClose()">
+                    X
+                </button>
+            </div>
+            <ul>
+                <li>
+                    <h1><a href="../index.html">HOME</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./service.html">SERVICE</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./Product.html">PRODUCTS</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./wishList.html">WISH LIST</a></h1>
+                </li>
+                <li>
+                    <h1><a href="./contact.html">CONTACT US</a></h1>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main FAQ Content -->
+    <main class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+
+        <section class="faq-section">
+            <h2>Shipping & Delivery</h2>
+            <div class="faq-item">
+                <h3>How long does shipping take?</h3>
+                <p>We offer free worldwide shipping within 5-7 business days.</p>
+            </div>
+            <div class="faq-item">
+                <h3>Do you offer tracking?</h3>
+                <p>Yes, you'll receive a tracking number via email once your order ships.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Returns & Exchanges</h2>
+            <div class="faq-item">
+                <h3>What is your return policy?</h3>
+                <p>You may return unworn watches within 30 days for a full refund.</p>
+            </div>
+            <div class="faq-item">
+                <h3>How do I initiate a return?</h3>
+                <p>Contact our support team with your order number to start the process.</p>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Warranty & Repairs</h2>
+            <div class="faq-item">
+                <h3>Do you offer repairs?</h3>
+                <p>Yes! All watches come with a 2-year repair warranty.</p>
+            </div>
+            <div class="faq-item">
+                <h3>What's covered under warranty?</h3>
+                <p>Manufacturing defects and mechanical issues are fully covered.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Welcome to our store! We provide the best quality products at the best prices.</p>
+            </div>
+
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./Product.html">Shop</a></li>
+                    <li><a href="./shopCart.html">Deals</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section customer-service">
+                <h2>Customer Service</h2>
+                <ul>
+                    <li><a href="./faq.html">FAQs</a></li>
+                    <li><a href="./service.html">Return Policy</a></li>
+                    <li><a href="./service.html">Privacy Policy</a></li>
+                    <li><a href="./service.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="ri-facebook-fill"></i></a>
+                    <a href="#"><i class="ri-twitter-x-line"></i></a>
+                    <a href="#"><i class="ri-instagram-line"></i></a>
+                    <a href="#"><i class="ri-youtube-fill"></i></a>
+                </div>
+                <div class="payments">
+                    <a href="#" class="payment-link apple-pay">
+                        <i class="fab fa-apple-pay"></i>
+                    </a>
+                    <a href="#" class="payment-link google-pay">
+                        <i class="fa-brands fa-google-pay"></i>
+                    </a>
+                    <a href="#" class="payment-link mastercard">
+                        <i class="fa-brands fa-cc-mastercard"></i>
+                    </a>
+                    <a href="#" class="payment-link visa">
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
+        </div>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="../logic/script.js"></script>
+    <script>
+        // Initialize year in footer
+        document.querySelector('.year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
