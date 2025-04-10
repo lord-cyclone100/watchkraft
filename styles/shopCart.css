@@ -66,20 +66,6 @@ nav a>img {
     position: relative;
 }
 
-.nav-head>ul>li::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #c5a47e;
-    transition: width 0.3s ease;
-}
-
-.nav-head>ul>li:hover::after {
-    width: 100%;
-}
 
 .nav-links {
     list-style: none;

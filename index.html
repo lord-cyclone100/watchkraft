@@ -261,12 +261,13 @@
     <script src="./logic/script.js"></script>
     <script>
         function navOpen() {
-            document.getElementById('nav-head2').classList.add('active');
+            document.getElementById('nav-head2').style.display = 'block';
         }
 
         function navClose() {
-            document.getElementById('nav-head2').classList.remove('active');
+            document.getElementById('nav-head2').style.display = 'none';
         }
+
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: "smooth" });
