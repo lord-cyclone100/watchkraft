@@ -220,7 +220,7 @@
             <div class="footer-section customer-service">
                 <h2>Customer Service</h2>
                 <ul>
-                    <li><a href="./markups/service.html">FAQs</a></li>
+                    <li><a href="./markups/faq.html">FAQs</a></li>
                     <li><a href="./markups/service.html">Return Policy</a></li>
                     <li><a href="./markups/service.html">Privacy Policy</a></li>
                     <li><a href="./markups/service.html">Terms & Conditions</a></li>
@@ -277,12 +277,13 @@
     <script src="./logic/script.js"></script>
     <script>
         function navOpen() {
-            document.getElementById('nav-head2').classList.add('active');
+            document.getElementById('nav-head2').style.display = 'block';
         }
 
         function navClose() {
-            document.getElementById('nav-head2').classList.remove('active');
+            document.getElementById('nav-head2').style.display = 'none';
         }
+
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: "smooth" });
