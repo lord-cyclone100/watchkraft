@@ -31,156 +31,28 @@ html, body{
     font-size: 0.9em; /* Font size */
 }
 
-nav ul li a:hover {
-    color: yellow; /* Adjust hover color if needed */
-}
-
-
-nav{
+/* General Nav Styles */
+nav {
     width: 100%;
-    height: fit-content;
-    overflow: visible;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
     z-index: 15;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 4%;
-    max-width: 100vw;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(23, 22, 22, 0.2);
-    box-sizing: border-box;
-    padding: 15px 30px; 
-    background-color: #333; 
+    padding: 15px 30px;
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(8px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-sizing: border-box;
+    animation: fadeInDown 0.8s ease forwards;
 }
 
-nav a > img{
-    height: 3.5em;
-    margin-right: 1rem;
-}
-
-.logos{
-    display: flex;
-    justify-content: center;
-    gap: 1.5em;
-    color: #e67e22; 
-    font-size: 1.8rem; /* Larger font size for logo */
-    text-decoration: none; 
-}
-
-.logos > i{
-    color: #eee;
-    cursor: pointer;
-    font-size: 1.8rem; 
-    text-decoration: none; 
-}
-
-.nav-head > ul{
-    display: flex;
-    gap: 2.2rem;
-    white-space: nowrap;
-}
-
-.nav-head > ul > li{
-    list-style: none;
-    position: relative;
-}
-
-.nav-head > ul > li::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2.5px;
-    background: #eb8c1f;
-    transition: width 0.3s ease;
-}
-
-.nav-head > ul > li:hover::after {
-    width: 100%;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.8rem;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links li a {
-    color: white; 
-    text-decoration: none; 
-    font-size: 1.4rem; 
-    transition: color 0.3s ease; /* Transition for hover effect */
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-    transition: 0.3s;
-    
-}
-
-.nav-links a:hover {
-    color: #e9ad15;
-}
-
-.nav-links li a:hover {
-    color: #e67e22; 
-}
-
-.nav-icons {
-    display: flex;
-    gap: 1.5rem;
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-}
-.cart-icon {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-.cart-icon a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#cart-count {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: rgb(255, 187, 0);
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-}
-
-.login{
-    color: white;
-    text-decoration: none;
-}
-
-
-@keyframes fadeInUp {
+@keyframes fadeInDown {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
@@ -188,40 +60,170 @@ nav a > img{
     }
 }
 
-.nav-head > ul > li > h1{
-    text-transform: capitalize;
-    font-family: domine;
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
+nav a > img {
+    height: 3.5em;
+    margin-right: 1rem;
 }
-.nav-head2{
-    display: none;
-    transition: right 0.3s ease-in-out;
+
+.nav-head ul {
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
 }
-.nav-head2 > ul > li > h1{
-    text-transform: capitalize;
-    font-family: domine;
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-.nav-head2 ul li{
+
+.nav-head ul li {
     list-style: none;
+    position: relative;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+    opacity: 0;
 }
 
-nav ul li a {
-    color: white; /* Match other menu items */
-    text-decoration: none; /* Remove underline */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-nav ul li a:hover {
-    color: rgb(255, 247, 0); /* Adjust hover color if needed */
-    transition-duration: 1s;
-    font-weight: 800;
+.nav-head ul li h1 a {
+    font-family: 'Domine', serif;
+    font-size: 1.05rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
 }
+
+/* Hover underline animation */
+.nav-head ul li h1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #eb8c1f;
+    transition: width 0.3s ease;
+}
+
+.nav-head ul li h1 a:hover::after {
+    width: 100%;
+}
+
+.nav-head ul li h1 a:hover {
+    color: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* Nav Icons */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Cart styling */
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ffbb00;
+    color: #000;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Login Icon */
+.login {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.login:hover {
+    color: #e9ad15;
+}
+
+/* Hamburger (Mobile Menu) */
+.hamburger .menu-icon {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.hamburger .menu-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Menu Panel */
+.nav-head2 {
+    display: none; /* You'll show this with JS */
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 0;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.nav-head2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-head2 ul li h1 a {
+    display: block;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    font-family: 'Domine', serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-head2 ul li h1 a:hover {
+    background-color: #eb8c1f;
+    color: #000;
+}
+
+.cancelBox .cancel {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+}
+
 
 .search-wrapper {
     display: flex;
