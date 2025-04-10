@@ -1147,7 +1147,7 @@ p {
 
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #6a11cb, #2575fc);
+    background: linear-gradient(180deg, #ef9d06, #fff305);
     border-radius: 10px;
     transition: background 0.3s ease;
 }
