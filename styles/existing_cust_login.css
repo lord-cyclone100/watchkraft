@@ -11,6 +11,7 @@ body {
   cursor: url('/assets/cursor.png'), auto;
 }
 
+
 .container {
   max-width: 900px;
   background: #1e1e1e;
@@ -22,7 +23,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 65vh;
-
 }
 
 .user_details {

@@ -73,7 +73,7 @@ nav a>img {
     left: 0;
     width: 0;
     height: 2px;
-    background: #c5a47e;
+    background: #eb8209;
     transition: width 0.3s ease;
 }
 
@@ -250,6 +250,7 @@ td {
     object-fit: contain;
     background-color: transparent;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    transition: 0.3s ease;
 }
 
 .product-cart img:hover {
@@ -260,7 +261,7 @@ th {
     text-align: left;
     padding: 5px;
     color: #fff;
-    background: #fb972d;
+    background: #f58f21;
     font-weight: normal;
 }
 
@@ -275,7 +276,7 @@ td input {
 }
 
 td a {
-    color: #fc8506;
+    color: #f28919;
     font-size: 12px;
 }
 
@@ -342,7 +343,7 @@ th:last-child {
     font-size: 18px;
     padding: 10px 20px;
     width: 100%;
-    background-color: #fbc02d;
+    background-color: #f4b20d;
     color: #000;
     border: none;
     border-radius: 6px;
