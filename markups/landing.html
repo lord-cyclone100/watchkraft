@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,30 +14,64 @@
   <meta property="og:title" content="WatchKraft | Crafted Elegance for the Modern Individual">
   <meta property="og:image" content="https://watchkraft.netlify.app/assets/og-landing.jpg">
     <link rel="icon" type="image/svg" href="/assets/favicon.svg">
-    <title>Watch Kraft - Timeless Elegance</title>
-    <link rel="stylesheet" href="/styles/landing.css">
-    <link rel="stylesheet" href="/styles/animations.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
-</head>
 
-<body>
+    <link rel="icon" type="image/svg" href="/assets/favicon.svg" />
+    <link rel="stylesheet" href="/styles/landing.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!-- Particle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Particle Layer -->
+    <div id="tsparticles"></div>
+
+    <!-- Overlay for softening video -->
+    <div class="overlay"></div>
+
+    <!-- Main Container -->
     <div class="landing-container">
-        <video autoplay muted loop class="bg-video">
-            <source src="/assets/watch-video.mp4" type="video/mp4">
-        </video>
+      <video autoplay muted loop class="bg-video" loading="lazy">
+        <source src="/assets/watch-video.mp4" type="video/mp4" />
+      </video>
 
-        <div class="content">
-            <img src="/assets/logo-light.svg" alt="Watch Kraft" class="logo">
-            <h1 class="title">Crafting Timepieces of Distinction</h1>
-            <p class="subtitle">Since 1987</p>
-            <a href="/index.html" class="cta-btn">
-                Explore Collections
-                <i class="ri-arrow-right-line"></i>
-            </a>
-        </div>
+      <div class="content animate__scaleIn">
+        <img src="/assets/logo-light.svg" alt="Watch Kraft" class="logo" />
+        <h1 class="title">Crafting Timepieces of Distinction</h1>
+        <p class="subtitle">Since 1987</p>
+        <a href="/index.html" class="cta-btn">
+          Explore Collections <i class="ri-arrow-right-line"></i>
+        </a>
+      </div>
     </div>
 
-    <script src="/logic/landing.js"></script>
-</body>
+    <!-- Particles Config -->
+    <script>
+      tsParticles.load("tsparticles", {
+        fullScreen: { enable: false },
+        background: { color: "transparent" },
+        particles: {
+          number: { value: 80, density: { enable: true, area: 800 } },
+          color: { value: "#fdd835" },
+          shape: { type: "circle" },
+          opacity: { value: 0.3 },
+          size: { value: { min: 1, max: 4 } },
+          move: {
+            enable: true,
+            speed: 2,
+            bounce: true,
+            outModes: {
+              default: "bounce",
+            },
+          },
+        },
+        detectRetina: true,
+      });
+    </script>
 
+    <script src="/logic/landing.js"></script>
+  </body>
 </html>
