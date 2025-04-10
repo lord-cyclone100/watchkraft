@@ -20,6 +20,16 @@ html, body{
 }
 
 
+.badge {
+    background-color: #5cb85c; /* Green for new arrivals */
+    color: white; /* Text color */
+    padding: 5px 10px; /* Padding for badge */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Positioning */
+    top: 10px; /* Position from top */
+    right: 10px; /* Position from right */
+    font-size: 0.9em; /* Font size */
+}
 
 nav ul li a:hover {
     color: yellow; /* Adjust hover color if needed */
@@ -284,6 +294,42 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid #e0e0e0; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.watch-box:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+.watch-box h1 {
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.5em;
+    color: #333; 
+}
+
+.watch-box .price {
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 1.2em; 
+    color: #d9534f; 
+    font-weight: bold; 
+}
+.add-to-cart{
+background-color: #e1322c; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #c9302c; 
+    transform: scale(1.05); 
 }
 
 .copper-box{
@@ -364,6 +410,11 @@ nav ul li a:hover {
     height: 70vh;
     filter: drop-shadow(5px 5px 10px #000);
     transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.3s; /* Smooth transition */
+}
+    
+.watch-box:hover .watch-pic {
+    transform: scale(1.1); /* Zoom effect on hover */
 }
 
 .car-btn{
@@ -672,6 +723,14 @@ body {
     color: white;
     padding: 40px 0;
     font-size: 14px;
+    background-color: #181616; /* Dark background */
+    color: white; /* White text */
+    padding: 20px;
+}
+
+.footer a{
+    color: #d9534f; 
+    transition: color 0.3s;
 }
 
 .container {
@@ -718,7 +777,9 @@ body {
 .footer-section ul li a:hover {
     color: #f7ca05;
     font-size: medium;
-    font-weight: 500;
+    font-weight: 600;
+    transition: color 0.3s;
+    color: #f0ad4e;
 }
 
 .footer-section p {
@@ -785,6 +846,29 @@ body {
     background: rgba(20, 20, 20, 0.8);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #f9f9f9; /* Light background for filters */
+    padding: 20px; /* Padding around filters */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space below filters */
+}
+    
+.carousel {
+    padding: 20px; 
+}
+
+@media (max-width: 768px) {
+    .watch-box {
+        flex: 1 1 100%; /* Full width on mobile */
+        margin-bottom: 20px; /* Space between products */
+    }
+
+    .filters {
+        flex-direction: column; /* Stack filters vertically */
+    }
+
+    .search-wrapper {
+        width: 100%; /* Full width for search input */
+    }
 }
 
 .filters input, 
