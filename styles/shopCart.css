@@ -66,6 +66,23 @@ nav a>img {
     position: relative;
 }
 
+<<<<<<< HEAD
+=======
+.nav-head>ul>li::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #eb8209;
+    transition: width 0.3s ease;
+}
+
+.nav-head>ul>li:hover::after {
+    width: 100%;
+}
+>>>>>>> 365e001edbbc76cb71c6b4710124c6d3419f0f36
 
 .nav-links {
     list-style: none;
@@ -236,6 +253,7 @@ td {
     object-fit: contain;
     background-color: transparent;
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.5));
+    transition: 0.3s ease;
 }
 
 .product-cart img:hover {
@@ -246,7 +264,7 @@ th {
     text-align: left;
     padding: 5px;
     color: #fff;
-    background: #fb972d;
+    background: #f58f21;
     font-weight: normal;
 }
 
@@ -261,7 +279,7 @@ td input {
 }
 
 td a {
-    color: #fc8506;
+    color: #f28919;
     font-size: 12px;
 }
 
@@ -328,7 +346,7 @@ th:last-child {
     font-size: 18px;
     padding: 10px 20px;
     width: 100%;
-    background-color: #fbc02d;
+    background-color: #f4b20d;
     color: #000;
     border: none;
     border-radius: 6px;
