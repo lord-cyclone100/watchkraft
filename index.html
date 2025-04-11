@@ -23,6 +23,7 @@
   <meta property="twitter:description" content="Discover premium handcrafted watches at WatchKraft. Timeless designs, free worldwide shipping, and 100% authentic materials.">
   <meta property="twitter:image" content="https://watchkraft.netlify.app/assets/og-home.jpg">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/testimonials.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@500;700&display=swap">
@@ -200,6 +201,48 @@
             </div>
         </div>
     </section>
+    <section class="section-testimonials" id="testimonials">
+        <div class="testimonials-container">
+            <span class="subheading">Testimonials</span>
+            <h2 class="heading-secondary">
+                Once you try it, you can't go back
+            </h2>
+            <div class="testimonials">
+                <figure class="testimonial">
+                    <img class="testimonial-img" src="assets/customers/jane.jpg" srcset="assets/customers/dave.webp"
+                        alt="Photo of customer Dave Bryson" loading="lazy" />
+                    <blockquote class="testimonial-text">
+                        I highly recommend Watchkraft! This has been the 8th watch I sold online and my first with Watchkraft. The quote I received was much higher than any other offer, and the process was quick, safe, and professionally handled.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Dave Bryson</p>
+                </figure>
+                <figure class="testimonial">
+                    <img class="testimonial-img" src="assets/customers/ben.jpg" srcset="assets/customers/ben.webp"
+                        alt="Photo of customer Ben Hadley" loading="lazy" />
+                    <blockquote class="testimonial-text">
+                        Your photos and description were right on. The care in packaging was exceptional—no hidden traps here! The watch exceeded my expectations, and your service felt like old-world professionalism in a new-world enterprise.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Ben Hadley</p>
+                </figure>
+                <figure class="testimonial">
+                    <img class="testimonial-img" src="assets/customers/steve.jpg" srcset="assets/customers/steve.webp"
+                        loading="lazy" alt="Photo of customer Steve Miller" />
+                    <blockquote class="testimonial-text">
+                        They restored my 100-year-old pocket watch and a vintage Rolex flawlessly. Their team is knowledgeable, prices are fair, and their passion for timepieces is unmatched. A trusted partner for watch lovers.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Steve Miller</p>
+                </figure>
+                <figure class="testimonial">
+                    <img class="testimonial-img" src="assets/customers/hannah.jpg" srcset="assets/customers/hannah.webp"
+                        loading="lazy" alt="Photo of customer Hannah Smith" />
+                    <blockquote class="testimonial-text">
+                        My Butler GMT watch hasn't lost a second in 4 months—unlike my Rolex GMT Master II. The design is clean, functional, and the Pelican case presentation is unmatched. A true pilot's watch that outshines luxury brands.
+                    </blockquote>
+                    <p class="testimonial-name">&mdash; Hannah Smith</p>
+                </figure>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="footer-section about">
@@ -220,7 +263,7 @@
             <div class="footer-section customer-service">
                 <h2>Customer Service</h2>
                 <ul>
-                    <li><a href="./markups/service.html">FAQs</a></li>
+                    <li><a href="./markups/faq.html">FAQs</a></li>
                     <li><a href="./markups/service.html">Return Policy</a></li>
                     <li><a href="./markups/service.html">Privacy Policy</a></li>
                     <li><a href="./markups/service.html">Terms & Conditions</a></li>
@@ -277,12 +320,13 @@
     <script src="./logic/script.js"></script>
     <script>
         function navOpen() {
-            document.getElementById('nav-head2').classList.add('active');
+            document.getElementById('nav-head2').style.display = 'block';
         }
 
         function navClose() {
-            document.getElementById('nav-head2').classList.remove('active');
+            document.getElementById('nav-head2').style.display = 'none';
         }
+
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: "smooth" });

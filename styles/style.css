@@ -38,13 +38,8 @@ nav ul li a:hover {
     /* Adjust hover color if needed */
 }
 
-
 nav {
     width: 100%;
-    height: fit-content;
-    overflow: visible;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
     z-index: 15;
@@ -57,11 +52,24 @@ nav {
     border-bottom: 1px solid rgba(23, 22, 22, 0.2);
     box-sizing: border-box;
     padding: 15px 30px;
-    background-color: #333;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(8px);
+    animation: fadeInDown 0.8s ease forwards;
 }
 
-nav a>img {
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+nav a > img {
     height: 3.5em;
     margin-right: 1rem;
 }
@@ -89,19 +97,52 @@ nav a>img {
     white-space: nowrap;
 }
 
-.nav-head>ul>li {
+.nav-head ul {
+    display: flex;
+    gap: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-head ul li {
     list-style: none;
     position: relative;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-head ul li h1 a {
+    font-family: 'Domine', serif;
+    font-size: 1.05rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+    transition: all 0.3s ease;
 }
 
 .nav-head>ul>li::after {
     content: '';
     position: absolute;
-    bottom: -4px;
     left: 0;
-    width: 0;
-    height: 2.5px;
-    background: #eb8c1f;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #eb8c1f;
     transition: width 0.3s ease;
 }
 
@@ -139,12 +180,20 @@ nav a>img {
     color: #e9ad15;
 }
 
-.nav-links li a:hover {
-    color: #e67e22;
+
+.nav-head ul li h1 a:hover::after {
+    width: 100%;
 }
 
+.nav-head ul li h1 a:hover {
+    color: #f1c40f;
+    transform: scale(1.05);
+}
+
+/* Nav Icons */
 .nav-icons {
     display: flex;
+    align-items: center;
     gap: 1.5rem;
     font-size: 1.5rem;
     color: #fff;
@@ -153,34 +202,32 @@ nav a>img {
 
 .cart-icon {
     position: relative;
-    display: inline-block;
-    cursor: pointer;
 }
 
 .cart-icon a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 #cart-count {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: rgb(255, 187, 0);
+    background-color: #ffbb00;
     color: #000;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 50%;
+    font-size: 13px;
     width: 20px;
     height: 20px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 14px;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .login {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 
@@ -221,21 +268,33 @@ nav a>img {
 
 .nav-head2 ul li {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li a {
+.nav-head2 ul li h1 a {
+    display: block;
+    padding: 1rem 2rem;
     color: white;
-    /* Match other menu items */
     text-decoration: none;
-    /* Remove underline */
+    font-family: 'Domine', serif;
+    transition: background 0.3s, color 0.3s;
 }
 
-nav ul li a:hover {
-    color: rgb(255, 247, 0);
-    /* Adjust hover color if needed */
-    transition-duration: 1s;
-    font-weight: 800;
+.nav-head2 ul li h1 a:hover {
+    background-color: #eb8c1f;
+    color: #000;
 }
+
+.cancelBox .cancel {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+}
+
 
 .search-wrapper {
     display: flex;
