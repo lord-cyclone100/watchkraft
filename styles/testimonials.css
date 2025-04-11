@@ -1,0 +1,115 @@
+/*******************************************/
+/* TESTIMONIALS SECTION */
+/*******************************************/
+
+:root {
+    --primary-color-dark: #fdd835;
+    --text-color: #ccc;
+    --focus-outline: 2px solid #ff8000;
+    --focus-outline-offset: 4px;
+}
+
+.section-testimonials {
+    background-color: #000 !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4.8rem;
+    column-gap: 8rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out; /* Replaced --animation-duration-short */
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-img {
+    width: 6.4rem;
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1.6rem;
+    color: #6f6f6f;
+}
+
+.testimonial-name {
+    font-size: 1.6rem;
+    color: #535353;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3; /* Maintain aspect ratio */
+    object-fit: cover;
+    transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Disable hover scaling on touch devices */
+@media (hover: none) {
+    .gallery-item img:hover {
+        transform: none; /* Disable scaling */
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+    padding: 1.6rem;
+    height: 54%;
+}
+
+.no-flexbox-gap .gallery {
+    margin-inline: 1.6rem;
+}
+
+.testimonials-container {
+    padding: 9.6rem;
+}
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--primary-color-dark);
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.75px;
+}
+
+.heading-secondary {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    margin-bottom: 9.6rem;
+    color: var(--text-color);
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+.heading-secondary:focus {
+    outline: var(--focus-outline);
+    outline-offset: var(--focus-outline-offset);
+}
