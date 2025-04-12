@@ -537,3 +537,63 @@ input:checked+.slider:before {
         text-align: left; /* Align controls for better layout */
     }
 }
+
+/* Grid View */
+.wishList-page.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column width */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center the grid */
+    padding: 20px; /* Add padding around the grid */
+}
+
+.wishList-page.grid-view .wishlist-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* List View */
+.wishList-page.list-view .wishlist-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wishList-page.list-view .wishlist-item img {
+    width: 80px;
+    margin-right: 15px;
+}
+
+.wishList-page.list-view .wishlist-item div {
+    flex: 1;
+}
+
+/* Style for the view toggle button */
+.view-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.view-toggle img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.view-toggle:hover img {
+    transform: scale(1.1);
+}

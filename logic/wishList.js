@@ -250,3 +250,29 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const viewToggle = document.getElementById('viewToggle');
+    const viewToggleIcon = document.getElementById('viewToggleIcon');
+    const wishListPage = document.querySelector('.wishList-page');
+
+    // Load saved view preference
+    const savedView = localStorage.getItem('wishlistView') || 'grid-view';
+    wishListPage.classList.add(savedView);
+    viewToggleIcon.src = savedView === 'grid-view' ? '../assets/list.svg' : '../assets/grid.svg';
+
+    // Toggle view on button click
+    viewToggle.addEventListener('click', () => {
+        if (wishListPage.classList.contains('grid-view')) {
+            wishListPage.classList.remove('grid-view');
+            wishListPage.classList.add('list-view');
+            viewToggleIcon.src = '../assets/grid.svg'; // Switch to grid icon
+            localStorage.setItem('wishlistView', 'list-view');
+        } else {
+            wishListPage.classList.remove('list-view');
+            wishListPage.classList.add('grid-view');
+            viewToggleIcon.src = '../assets/list.svg'; // Switch to list icon
+            localStorage.setItem('wishlistView', 'grid-view');
+        }
+    });
+});
