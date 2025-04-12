@@ -222,6 +222,7 @@ nav a > img {
 
 /* Wishlist Items */
 .wishlist-item {
+    margin-top: 3px ;
     display: flex;
     justify-content: space-between;
     padding: 15px;
@@ -258,7 +259,7 @@ nav a > img {
 .product-wishlist p {
     font-size: 20px;
     font-weight: 600;
-    color: #222;
+    color:white;
     margin: 5px 0;
 }
 
