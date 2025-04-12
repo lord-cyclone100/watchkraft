@@ -313,9 +313,8 @@ nav a > img {
     font-size: 1rem;
     background: rgba(30, 30, 30, 0.8);
     color: #fff;
-    /**/
     padding: 10px;
-    border: 2px solid #ccc;
+    border: 2px solid #888888;
     transition: border-color 0.3s ease;
 }
 
@@ -974,8 +973,7 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     background: rgba(20, 20, 20, 0.8);
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background-color: #f9f9f9; /* Light background for filters */
+    border: 1px solid #fbc02d;
     padding: 20px; /* Padding around filters */
     border-radius: 10px; /* Rounded corners */
     margin-bottom: 20px; /* Space below filters */
