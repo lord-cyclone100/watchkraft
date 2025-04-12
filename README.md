@@ -1,6 +1,6 @@
 <img src="/assets/unnamed.png">
 <div align="center">
-  <img height="80" src="/assets/logo-dark.svg">
+  <img height="80" src="/assets/logo-light.svg">
 </div>
 
 <br>
