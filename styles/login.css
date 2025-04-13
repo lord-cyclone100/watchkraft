@@ -12,6 +12,7 @@ body {
     height: 100vh;
     background: #0a0a0a;
     color: white;
+    cursor: url('/assets/cursor.png'), auto;
 }
 
 .container {
@@ -34,6 +35,26 @@ body {
     align-items: center;
     padding: 20px;
     position: relative;
+}
+
+.goback{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.goback button{
+    font-size: 17px;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid gold;
+    color: gold;
+}
+
+.goback button:hover{
+    background: gold;
+    color: black;
+    transition: all 0.3s ease-in-out;
 }
 
 .clock-container {

@@ -21,6 +21,7 @@ body {
     background-color: var(--light);
     color: var(--text);
     line-height: 1.6;
+    cursor: url('/assets/cursor.png'), auto;
 }
 
 h1, h2, h3, h4 {
@@ -200,49 +201,120 @@ h1, h2, h3, h4 {
 
 /* Brands Section */
 .brands-section {
-    padding: 80px 0;
-    background-color: var(--primary);
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
     color: var(--light);
-    width: 100%;
-}
-
-.brands-section .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+    padding: 60px 0;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .section-header {
+    width: 100%;
+    display: flex;
     align-items: center;
-}
-
-.brands-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 40px;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  
+  .section-header h2 {
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--accent);
+  }
+  
+  .section-header p {
+    font-size: 18px;
+    color: #e0e0e0;
+    margin-top: 10px;
+    max-width: 700px;
+    margin-inline: auto;
+    line-height: 1.6;
+  }
+  
+  .brands-carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .brands-carousel {
+    width: 100%;
+    display: flex;
     align-items: center;
-    justify-items: center;
-    margin-top: 50px;
-}
-
-.brand-item {
+    gap: 60px;
+    animation: scrollCarousel 30s linear infinite;
+    width: max-content;
+  }
+  
+  .brand-item {
+    flex: 0 0 auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 300px;
     text-align: center;
-    transition: var(--transition);
-}
-
-.brand-item:hover {
-    transform: scale(1.1);
-}
-
-.brand-name {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  
+  .brand-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .brand-item img {
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1);
+  }
+  
+  .brand-name {
     font-family: 'Playfair Display', serif;
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: 500;
     color: var(--light);
     opacity: 0.8;
-    transition: var(--transition);
-}
-
-.brand-item:hover .brand-name {
+  }
+  
+  .brand-item:hover .brand-name {
     color: var(--accent);
     opacity: 1;
-}
+  }
+  
+  @keyframes scrollCarousel {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .brands-carousel-wrapper:hover .brands-carousel {
+    animation-play-state: paused;
+  }
+  
+  /* Variables */
+  :root {
+    --primary: #1b1f24;
+    --light: #ffffff;
+    --accent: #e6b800;
+  }
+  
 
 /* CTA Section */
 .cta-section {

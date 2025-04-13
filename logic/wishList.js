@@ -64,7 +64,6 @@ function loadWishListItems() {
     if (wishList.length === 0) {
         wishListContainer.innerHTML = `
             <div class="empty-wishList-container">
-                <img src="/assets/empty-cart.svg" alt="Empty Wish List">
                 <p class="empty-cart">Your wish list feels empty 🛒</p>
                 <button class="return-to-shop" onclick="window.location.href='/markups/Product.html'">Return to Shop</button>
             </div>
@@ -79,7 +78,8 @@ function loadWishListItems() {
             <div class="product-wishlist">
                 <img src="${item.image}" alt="${item.name}">
                 <div>
-                    <p>${item.name}</p>
+                    <p style="color: red;">${item.name}</p>
+                    
                     <small>Price: $${item.price.toFixed(2)}</small>
                     <p class="stock-status"></p>
                     <br>

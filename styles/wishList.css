@@ -1,30 +1,212 @@
 /* Wishlist Page Styling */
-nav{
+/* General Nav Styles */
+nav {
     width: 100%;
-    height: fit-content;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
     z-index: 15;
     display: flex;
-    flex-direction: row !important;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 4%;
-    max-width: 100vw;
-    overflow: visible;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 30px; /* Slightly increase padding */
+    font-size: 1rem; /* Ensure text is legible */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.95), rgba(50, 50, 50, 0.95)); /* Add gradient background */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #eb8c1f; /* Highlight border */
     box-sizing: border-box;
+    animation: fadeInDown 0.8s ease forwards;
 }
 
-.login {
-    color: white;
-    text-decoration: none;
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+nav a > img {
+    height: 3.5em;
+    margin-right: 1rem;
+}
+
+.nav-head ul {
+    display: flex;
+    gap: 3rem; /* Increase spacing between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-head ul li {
+    list-style: none;
+    position: relative;
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: calc(0.1s * var(--i));
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-head ul li h1 a {
+    font-family: 'Domine', serif;
+    font-size: 1.1rem; /* Slightly larger font */
+    color: #f5f5f5; /* Softer white */
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add subtle text shadow */
+    transition: all 0.3s ease;
+}
+
+/* Hover underline animation */
+.nav-head ul li h1 a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #eb8c1f;
+    transition: width 0.3s ease;
+}
+
+.nav-head ul li h1 a:hover::after {
+    width: 100%;
+}
+
+.nav-head ul li h1 a:hover {
+    color: #ffcc00; /* Brighter hover color */
+    transform: scale(1.1); /* Slightly larger hover effect */
+}
+
+/* Nav Icons */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* Increase spacing between icons */
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Cart styling */
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon a {
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s ease; /* Add hover animation */
+}
+
+.cart-icon a:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ffbb00;
+    color: #000;
+    font-size: 13px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Login Icon */
+.login {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.login:hover {
+    color: #e9ad15;
+}
+
+/* Hamburger (Mobile Menu) */
+.hamburger .menu-icon {
+    height: 24px;
+    width: 24px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5)); /* Add shadow for better visibility */
+}
+
+.hamburger .menu-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile Menu Panel */
+.nav-head2 {
+    display: none; /* You'll show this with JS */
+    background-color: #1e1e1e;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem 0;
+    transition: all 0.4s ease;
+    border-top: 2px solid #eb8c1f; /* Add border to mobile menu */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Enhance shadow */
+}
+
+.nav-head2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-head2 ul li h1 a {
+    display: block;
+    padding: 1rem 2rem;
+    font-size: 1rem; /* Adjust font size for mobile */
+    color: #f5f5f5; /* Softer white */
+    text-decoration: none;
+    font-family: 'Domine', serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+.nav-head2 ul li h1 a:hover {
+    background-color: #ffcc00; /* Brighter hover background */
+    color: #000; /* Contrast text color */
+}
+
+.cancelBox .cancel {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+}
+
 
 .wishlist-controls{
     top: 12vh;
+    border-radius: 15px; /* Increase corner roundness */
 }
 
 .wishList-page {
@@ -32,19 +214,23 @@ nav{
     margin: 80px auto 20px;
     padding: 20px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 15px; /* Increase corner roundness */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    line-height: 1.6; /* Improve readability */
+    font-size: 1rem; /* Standardize font size */
 }
 
 /* Wishlist Items */
 .wishlist-item {
+    margin-top: 3px ;
     display: flex;
     justify-content: space-between;
     padding: 15px;
     background: #f9f9f9;
-    border-radius: 8px;
+    border-radius: 12px; /* Increase corner roundness */
     margin-bottom: 15px;
     transition: all 0.3s ease-in-out;
+    gap: 15px; /* Add spacing between elements */
 }
 
 .wishlist-item:hover {
@@ -57,6 +243,7 @@ nav{
     object-fit: contain;
     border-radius: 10px;
     margin-right: 15px;
+    max-width: 80px; /* Ensure images are responsive */
 }
 
 .product-wishlist {
@@ -72,7 +259,7 @@ nav{
 .product-wishlist p {
     font-size: 20px;
     font-weight: 600;
-    color: #222;
+    color:white;
     margin: 5px 0;
 }
 
@@ -85,29 +272,31 @@ nav{
 
 .remove-wishlist-btn {
     padding: 10px 15px;
-    font-size: 14px;
+    font-size: 0.9rem; /* Adjust font size for consistency */
     font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Increase corner roundness */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
 }
 
 .cart-btn {
     background: #28a745;
     color: white;
     padding: 10px 15px;
-    font-size: 14px;
+    font-size: 0.9rem; /* Adjust font size for consistency */
     font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px; /* Increase corner roundness */
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add subtle shadow */
 }
 
 .cart-btn:hover {
     background: #218838;
+    transform: scale(1.05); /* Add hover effect */
 }
 
 .remove-wishlist-btn {
@@ -118,14 +307,20 @@ nav{
 
 .remove-wishlist-btn:hover {
     background: #c82333;
+    transform: scale(1.05); /* Add hover effect */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+    }
+
     .wishlist-item {
         flex-direction: column;
         text-align: center;
         padding: 20px;
+        gap: 10px; /* Adjust spacing */
     }
 
     .product-wishlist {
@@ -142,6 +337,7 @@ nav{
     .remove-btn {
         width: 100%;
         margin-top: 5px;
+        font-size: 0.85rem; /* Adjust button size */
     }
 }
 
@@ -222,7 +418,14 @@ input:checked+.slider:before {
 
 .dark-mode .wishList-page {
     background-color: #444;
+    color: #e0e0e0; /* Improve text contrast */
+    border-radius: 15px; /* Increase corner roundness */
+}
 
+.dark-mode .wishlist-item {
+    background: #2a2a2a; /* Darker background for dark mode */
+    border: 1px solid #444; /* Add subtle border */
+    border-radius: 12px; /* Increase corner roundness */
 }
 
 .dark-mode .return-to-shop {
@@ -250,14 +453,17 @@ input:checked+.slider:before {
     max-width: 900px;
     margin: 80px auto 20px;
     /* Ensures it appears below the navbar */
-    padding: 12px;
-    background: #e0e0e0;
-    /* Light grey for better visibility */
-    border-radius: 8px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px; /* Adjust padding for better spacing */
+    background: #121212; /* Match dark theme */
+    border: 1px solid #eb8c1f; /* Add border matching theme */
+    color: #f5f5f5; /* Softer white text */
+    border-radius: 15px; /* Increase corner roundness */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
     position: relative;
     z-index: 10;
     /* Keeps it above other elements */
+    flex-wrap: wrap; /* Ensure controls wrap on smaller screens */
+    gap: 10px; /* Add spacing between controls */
 }
 
 .wishlist-controls {
@@ -267,30 +473,37 @@ input:checked+.slider:before {
 
 .wishlist-controls label {
     font-size: 16px;
+    font-weight: bold; /* Emphasize labels */
     margin-right: 10px;
+    color: #ffcc00; /* Match theme accent color */
 }
 
 /* Label Styling */
 .wishlist-controls label {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold; /* Emphasize labels */
     margin-right: 8px;
-    color: #333;
-    /* Darker text for visibility */
+    color: #ffcc00; /* Match theme accent color */
 }
 
 /* Dropdown & Checkbox Styling */
 .wishlist-controls select,
 .wishlist-controls input {
-    padding: 8px;
-    border: 1px solid #999;
-    border-radius: 5px;
+    padding: 8px 12px; /* Adjust padding for better usability */
+    border: 1px solid #eb8c1f; /* Border matching theme */
+    border-radius: 10px; /* Increase corner roundness */
     font-size: 14px;
     cursor: pointer;
-    background: #f5f5f5;
-    /* Slightly darker background to stand out */
-    color: #222;
-    /* Dark text for contrast */
+    background: #1e1e1e; /* Darker background for inputs */
+    color: #f5f5f5; /* Softer white text */
+    min-width: 150px; /* Ensure dropdowns are wide enough */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.wishlist-controls select:hover,
+.wishlist-controls input:hover {
+    background: #2a2a2a; /* Slightly lighter background on hover */
+    /* border-color: #ffcc00; Highlight border on hover */
 }
 
 /* Checkbox Scaling */
@@ -298,6 +511,17 @@ input:checked+.slider:before {
     margin-left: 10px;
     transform: scale(1.2);
     cursor: pointer;
+    /* accent-color: #ffcc00; Match checkbox accent to theme */
+}
+
+.wishlist-controls input[type="checkbox"]:hover {
+    transform: scale(1.3); /* Slightly enlarge on hover */
+}
+
+.wishlist-controls select:focus,
+.wishlist-controls input:focus {
+    outline: none; /* Remove default outline */
+    /* box-shadow: 0 0 5px #ffcc00; Add glow effect */
 }
 
 .my-wishList {
@@ -311,5 +535,6 @@ input:checked+.slider:before {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+        text-align: left; /* Align controls for better layout */
     }
 }

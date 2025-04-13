@@ -8,7 +8,9 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  cursor: url('/assets/cursor.png'), auto;
 }
+
 
 .container {
   max-width: 900px;
@@ -21,7 +23,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 65vh;
-
 }
 
 .user_details {
