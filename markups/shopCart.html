@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WatchKraft | Your Shopping Cart</title>
-  <meta name="description" content="Review your WatchKraft shopping cart. Securely checkout with free shipping and a 30-day return policy.">
+  <meta name="description"
+    content="Review your WatchKraft shopping cart. Securely checkout with free shipping and a 30-day return policy.">
   <link rel="icon" type="image/svg" href="../assets/favicon.svg">
   <title>Shopping Cart &mdash; WatchKraft</title>
   <link rel="stylesheet" href="../styles/shopCart.css" />
   <link rel="stylesheet" href="../styles/footer.css">
   <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/nav.css">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
 </head>
 
@@ -18,71 +20,81 @@
   <!-- Navbar -->
   <nav>
     <a href="../index.html">
-        <img src="../assets/logo-light.svg" alt="">
+      <img src="../assets/logo-light.svg" alt="">
     </a>
     <div class="nav-head">
-        <ul>
-            <li>
-                <h1><a href="../index.html">HOME</a></h1>
-            </li>
-            <li>
-                <h1><a href="./service.html">SERVICE</a></h1>
-            </li>
-            <li>
-                <h1><a href="./Product.html">PRODUCTS</a></h1>
-            </li>
-            <li>
-                <h1><a href="./wishList.html">WISH LIST</a></h1>
-            </li>
-            <li>
-                <h1><a href="./contact.html">CONTACT US</a></h1>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <a href="../index.html">
+            <h1>HOME</h1>
+          </a>
+        </li>
+        <li>
+          <a href="./service.html">
+            <h1>SERVICE</h1>
+          </a>
+        </li>
+        <li>
+          <a href="./Product.html">
+            <h1>PRODUCTS</h1>
+          </a>
+        </li>
+        <li>
+          <a href="./wishList.html">
+            <h1>WISH LIST</h1>
+          </a>
+        </li>
+        <li>
+          <a href="./contact.html">
+            <h1>CONTACT US</h1>
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="nav-icons">
-        <header>
-            <div class="cart-icon">
-                <a href="./shopCart.html">
-                    <i class="ri-shopping-cart-2-line"></i>
-                </a>
-                <span id="cart-count">0</span>
-            </div>
-        </header>
-        <a href="./login.html" class="login">
-            <i class="ri-user-line"></i>
-        </a>
+      <header>
+        <div class="cart-icon">
+          <a href="./shopCart.html">
+            <i class="ri-shopping-cart-2-line"></i>
+          </a>
+          <span id="cart-count">0</span>
+        </div>
+      </header>
+      <a href="./login.html" class="login">
+        <i class="ri-user-line"></i>
+      </a>
     </div>
     <div class="hamburger">
-        <button type="" class="menu-button" onclick="navOpen()">
-            <img src="../assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
-        </button>
+      <button type="" class="menu-button" onclick="navOpen()">
+        <img src="../assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+      </button>
     </div>
 
     <div class="nav-head2" id="nav-head2">
-        <div class="cancelBox">
-            <button type="" class="menu-button cancel" onclick="navClose()">
-                X
-            </button>
-        </div>
-        <ul>
-            <li>
-                <h1><a href="../index.html">HOME</a></h1>
-            </li>
-            <li>
-                <h1><a href="./service.html">SERVICE</a></h1>
-            </li>
-            <li>
-                <h1><a href="./Product.html">PRODUCTS</a></h1>
-            </li>
-            <li>
-                <h1><a href="./wishList.html">WISH LIST</a></h1>
-            </li>
-            <li>
-                <h1><a href="./contact.html">CONTACT US</a></h1>
-            </li>
-        </ul>
+      <div class="cancelBox">
+        <button type="" class="menu-button cancel" onclick="navClose()">
+          X
+        </button>
+      </div>
+      <ul>
+        <li>
+          <h1><a href="../index.html">HOME</a></h1>
+        </li>
+        <li>
+          <h1><a href="./service.html">SERVICE</a></h1>
+        </li>
+        <li>
+          <h1><a href="./Product.html">PRODUCTS</a></h1>
+        </li>
+        <li>
+          <h1><a href="./wishList.html">WISH LIST</a></h1>
+        </li>
+        <li>
+          <h1><a href="./contact.html">CONTACT US</a></h1>
+        </li>
+      </ul>
     </div>
-</nav>
+  </nav>
 
   <!-- Cart item details -->
   <div class="small-container cart-page">
@@ -187,9 +199,10 @@
 
     <!-- Copyright Section -->
     <div class="footer-bottom">
-      <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b> & 
-                <a href="../markups/contributor.html" onclick="handleContributorClick()" style="text-decoration: underline; cursor: pointer;"><i>Contributors</i></a>
-             </p>
+      <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b> &
+        <a href="../markups/contributor.html" onclick="handleContributorClick()"
+          style="text-decoration: underline; cursor: pointer;"><i>Contributors</i></a>
+      </p>
     </div>
   </footer>
 
@@ -215,17 +228,17 @@
   </script>
   <script>
     function navOpen() {
-        document.getElementById('nav-head2').classList.add('active');
+      document.getElementById('nav-head2').classList.add('active');
     }
 
     function navClose() {
-        document.getElementById('nav-head2').classList.remove('active');
+      document.getElementById('nav-head2').classList.remove('active');
     }
 
     function scrollToTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-</script>
+  </script>
   <script src="/logic/shopCart.js"></script>
 </body>
 
