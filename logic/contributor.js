@@ -2,6 +2,16 @@ const REPO_OWNER = "lord-cyclone100";
 const REPO_NAME = "watchkraft";
 const GITHUB_TOKEN = "";
 
+const scrollToTopButton = document.getElementById("scrollButton");
+
+scrollToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+}
+);
+
 async function fetchContributors() {
   const contributorsContainer = document.getElementById("contributors");
   const canvas = document.createElement("canvas");
