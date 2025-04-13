@@ -1,17 +1,14 @@
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    cursor: url('/assets/cursor.png'), auto;
+:root {
+    --primary-color: #ff3366; /* Adjusted for better contrast */
+    --secondary-color: #1a0014; /* Adjusted for better contrast */
+    --animation-duration: 2.5s;
+    --flicker-duration: 4s;
+    --hue-rotate-duration: 6s;
 }
-
+body {
+    cursor: url(/assets/cursor.png), auto;
+}
 .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -19,19 +16,79 @@ body {
     width: 100%;
     margin: 0px;
     background: radial-gradient(circle, black 0%, rgb(17, 16, 16) 100%);
+    background: -webkit-radial-gradient(circle, black 0%, rgb(17, 16, 16) 100%);
+    background: -moz-radial-gradient(circle, black 0%, rgb(17, 16, 16) 100%);
     overflow: hidden;
+    animation: hueRotate var(--hue-rotate-duration) ease-in-out 3s infinite;
+    will-change: transform, filter;
 }
 
-h1 {
-    font-size: 48px;
+.wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 150px;
+    font-size: 32px;
+    text-transform: uppercase;
+    transform: translate(-50%, -50%);
+    display: block;
     color: #ff005d;
-    margin-bottom: 20px;
+    font-weight: 300;
+    font-family: Audiowide , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0px 0px 6px var(--secondary-color); /* Enhanced shadow for better visibility */
+    animation: fadeInText 3s ease-in 3.5s forwards, flicker4 5s linear 7.5s infinite, hueRotate var(--hue-rotate-duration) ease-in-out 3s infinite;
+    will-change: color, text-shadow;
 }
 
-p {
-    font-size: 18px;
-    color: #ffffff;
-    margin-bottom: 30px;
+#svgWrap {
+    position: absolute;
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: hueRotate var(--hue-rotate-duration) ease-in-out 3s infinite;
+    will-change: transform, filter;
+  }
+  
+  .svgPath {
+    stroke: var(--primary-color);
+    stroke-width: 2px;
+    fill: transparent;
+    filter: url(#glow);
+}
+
+.svgPathSecondary {
+    stroke: var(--secondary-color);
+    stroke-width: 3px;
+    fill: transparent;
+    filter: url(#glow);
+}
+
+#id3_1 {
+    stroke-dasharray: 940px;
+    stroke-dashoffset: -940px;
+    animation: drawLine3 var(--animation-duration) ease-in-out 0s forwards, flicker3 var(--flicker-duration) linear 4s infinite;
+}
+
+#id2_1 {
+    stroke-dasharray: 735px;
+    stroke-dashoffset: -735px;
+    animation: drawLine2 var(--animation-duration) ease-in-out 0.5s forwards, flicker2 var(--flicker-duration) linear 4.5s infinite;
+}
+
+#id1_1 {
+    stroke-dasharray: 940px;
+    stroke-dashoffset: -940px;
+    animation: drawLine1 var(--animation-duration) ease-in-out 1s forwards, flicker1 var(--flicker-duration) linear 5s infinite;
 }
 
 #homeButton {
@@ -42,19 +99,157 @@ p {
     padding: 12px 24px;
     font-size: 18px;
     text-transform: uppercase;
-    font-family: Audiowide;
-    background: #ff005d;
-    color: #ffffff;
+    font-family: Audiowide , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--primary-color);
+    color: #ffffff; /* Ensure sufficient contrast with the background */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease;
+    outline: none;
 }
 
 #homeButton:hover {
-    background: #12000a;
-    box-shadow: 0 0 10px #ff005d;
+    background: var(--secondary-color);
+    box-shadow: 0 0 12px var(--primary-color); /* Enhanced hover effect for better visibility */
 }
 
-/* Add other animations and styles from the original inline CSS */
+#homeButton:focus {
+    outline: 2px solid var(--primary-color);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+@keyframes drawLine1 {
+    0%  {stroke-dashoffset: -940px;}
+    100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes drawLine2 {
+    0%  {stroke-dashoffset: -735px;}
+    100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes drawLine3 {
+    0%  {stroke-dashoffset: -940px;}
+    100%{stroke-dashoffset: 0px;}
+}
+
+@keyframes flicker1 {
+    0%  {stroke: var(--primary-color);}
+    1%  {stroke: transparent;}
+    3%  {stroke: transparent;}
+    4%  {stroke: #ff005d;}
+    6%  {stroke: #ff005d;}
+    7%  {stroke: transparent;}
+    13% {stroke: transparent;}
+    14% {stroke: var(--primary-color);}
+    100%{stroke: var(--primary-color);}
+}
+
+@keyframes flicker2 {
+    0%  {stroke: var(--primary-color);}
+    50% {stroke: var(--primary-color);}
+    51% {stroke: transparent;}
+    61% {stroke: transparent;}
+    62% {stroke: var(--primary-color);}
+    100%{stroke: var(--primary-color);}
+}
+
+@keyframes flicker3 {
+    0%  {stroke: var(--primary-color);}
+    1%  {stroke: transparent;}
+    10% {stroke: transparent;}
+    11% {stroke: #ff005d;}
+    40% {stroke: #ff005d;}
+    41% {stroke: transparent;}
+    45% {stroke: transparent;}
+    46% {stroke: var(--primary-color);}
+    100%{stroke: var(--primary-color);}
+}
+
+@keyframes flicker4 {
+    0%  {color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+    30% {color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+    31% {color: var(--secondary-color); text-shadow: 0px 0px 4px var(--secondary-color);}
+    32% {color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+    36% {color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+    37% {color: var(--secondary-color); text-shadow: 0px 0px 4px var(--secondary-color);}
+    41% {color: var(--secondary-color); text-shadow: 0px 0px 4px var(--secondary-color);}
+    42% {color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+    85% {color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+    86% {color: var(--secondary-color); text-shadow: 0px 0px 4px var(--secondary-color);}
+    95% {color: var(--secondary-color); text-shadow: 0px 0px 4px var(--secondary-color);}
+    96% {color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+    100%{color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+}
+
+@keyframes fadeInText {
+    1%  {color: var(--secondary-color); text-shadow: 0px 0px 4px var(--secondary-color);}
+    70% {color: var(--primary-color); text-shadow: 0px 0px 14px var(--primary-color);}
+    100%{color: var(--primary-color); text-shadow: 0px 0px 4px var(--primary-color);}
+}
+
+@keyframes hueRotate {
+    0%  {filter: hue-rotate(0deg);}
+    50% {filter: hue-rotate(-120deg);}
+    100%{filter: hue-rotate(0deg);}
+}
+
+@media only screen and (max-width: 500px) {
+    #svgWrap {
+        width: 90% !important;
+        margin-top: -100px;
+    }
+    #text {
+        margin-top: 10px;
+        font-size: 24px; /* Adjust font size for better readability */
+        word-wrap: break-word; /* Handle text overflow */
+        text-align: center; /* Center align text */
+    }
+    #homeButton {
+        margin-top: 80px;
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    #svgWrap {
+        width: 100% !important;
+        margin-top: -80px;
+    }
+    #text {
+        margin-top: 5px;
+        font-size: 20px; /* Further adjust font size for ultra-small screens */
+    }
+    #homeButton {
+        margin-top: 60px;
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loading-text {
+    color: var(--primary-color); /* Ensure sufficient contrast with the background */
+    font-family: Audiowide , 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.hidden {
+    display: none;
+}
