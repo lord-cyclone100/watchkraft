@@ -16,7 +16,7 @@ body {
 
 /* cart item */
 .cart-page {
-    margin: 80px auto;
+    margin: 115px auto;
 }
 
 table {
@@ -198,8 +198,8 @@ th:last-child {
     background-color: rgba(0, 0, 0, 0.6);
     overflow: auto;
     padding-top: 60px;
-  }
-  
+}
+
 
 .modal-content {
     background: rgba(255, 255, 255, 0.15);
@@ -214,38 +214,38 @@ th:last-child {
     animation: fadeIn 0.5s ease-in-out;
     color: #fff;
     text-align: center;
-  }
-  
-  /* Title */
-  .modal-content h2 {
+}
+
+/* Title */
+.modal-content h2 {
     font-family: 'poppins', sans-serif;
     margin-bottom: 1rem;
     font-size: 1.8rem;
     font-weight: 700;
-  }
+}
 
-  .payment-options {
+.payment-options {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-  }
-  
-  /* Close Button */
-  .close-btn {
+}
+
+/* Close Button */
+.close-btn {
     color: #fff;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
-  }
-  
-  .close-btn:hover {
+}
+
+.close-btn:hover {
     color: #ff4e4e;
-  }
-  
-  /* Payment Buttons */
-  .payment-btn {
+}
+
+/* Payment Buttons */
+.payment-btn {
     background: linear-gradient(135deg, #1d2b64, #f8cdda);
     font-family: 'poppins', sans-serif;
     color: #fff;
@@ -258,30 +258,30 @@ th:last-child {
     width: 45%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-  
-  .payment-btn:hover {
+}
+
+.payment-btn:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  }
-  
-  /* Payment Form */
-  .payment-form {
+}
+
+/* Payment Form */
+.payment-form {
     margin-top: 25px;
     display: none;
     text-align: left;
     animation: fadeInUp 0.4s ease-in-out;
-  }
-  
-  .payment-form h3 {
-    font-family: 'poppins', sans-serif; 
+}
+
+.payment-form h3 {
+    font-family: 'poppins', sans-serif;
     font-size: 1.3rem;
     margin-bottom: 1rem;
     color: #ffffffdd;
-  }
-  
-  /* Input Fields */
-  .payment-form input {
+}
+
+/* Input Fields */
+.payment-form input {
     width: 100%;
     font-family: 'poppins', sans-serif;
     padding: 12px;
@@ -293,18 +293,18 @@ th:last-child {
     font-size: 14px;
     outline: none;
     transition: background-color 0.3s ease;
-  }
-  
-  .payment-form input::placeholder {
+}
+
+.payment-form input::placeholder {
     color: #ccc;
-  }
-  
-  .payment-form input:focus {
+}
+
+.payment-form input:focus {
     background-color: rgba(255, 255, 255, 0.25);
-  }
-  
-  /* Pay Button */
-  .pay-btn {
+}
+
+/* Pay Button */
+.pay-btn {
     background: linear-gradient(135deg, #4caf50, #81c784);
     font-family: 'poppins', sans-serif;
     color: white;
@@ -316,25 +316,26 @@ th:last-child {
     margin-top: 15px;
     width: 100%;
     transition: background 0.3s ease, transform 0.2s ease;
-  }
-  
-  .pay-btn:hover {
+}
+
+.pay-btn:hover {
     background: linear-gradient(135deg, #388e3c, #66bb6a);
     transform: scale(1.02);
-  }
-  
-  /* Animations */
-  @keyframes fadeInUp {
+}
+
+/* Animations */
+@keyframes fadeInUp {
     0% {
-      opacity: 0;
-      transform: translateY(20px);
+        opacity: 0;
+        transform: translateY(20px);
     }
+
     100% {
-      opacity: 1;
-      transform: translateY(0);
+        opacity: 1;
+        transform: translateY(0);
     }
-  }
-  
+}
+
 /* Footer */
 footer {
     background-color: #222;
