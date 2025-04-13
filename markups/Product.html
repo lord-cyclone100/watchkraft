@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/svg" href="../assets/favicon.svg">
-    <title>Timeless Masterpieces &mdash; WatchKraft</title>
+    <title>Shop Luxury Watches | WatchKraft Collections</title>
+  <meta name="description" content="Explore WatchKraft's curated collections of handcrafted luxury watches. Free shipping and a 2-year warranty included.">
+
+  <!-- Open Graph Tags -->
+  <meta property="og:title" content="Shop Luxury Watches | WatchKraft">
+  <meta property="og:image" content="https://watchkraft.netlify.app/assets/og-shop.jpg">
     <link rel="stylesheet" href="../styles/animations.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/product.css">
+    <link rel="stylesheet" href="../styles/nav.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
@@ -22,19 +28,19 @@
         <div class="nav-head">
             <ul>
                 <li>
-                    <h1><a href="../index.html">HOME</a></h1>
+                    <a href="../index.html"><h1>HOME</h1></a>
                 </li>
                 <li>
-                    <h1><a href="./service.html">SERVICE</a></h1>
+                    <a href="./service.html"><h1>SERVICE</h1></a>
                 </li>
                 <li>
-                    <h1><a href="./Product.html">PRODUCTS</a></h1>
+                    <a href="./Product.html"><h1>PRODUCTS</h1></a>
                 </li>
                 <li>
-                    <h1><a href="./wishList.html">WISH LIST</a></h1>
+                    <a href="./wishList.html"><h1>WISH LIST</h1></a>
                 </li>
                 <li>
-                    <h1><a href="./contact.html">CONTACT US</a></h1>
+                    <a href="./contact.html"><h1>CONTACT US</h1></a>
                 </li>
             </ul>
         </div>
@@ -143,7 +149,7 @@
             data-gender="male" 
             data-brand="casio" 
             data-type="analog" 
-            data-material="metal"
+            data-material="leather"
             data-color="gold silver"
             data-stock="5"
         >
@@ -178,8 +184,8 @@
             data-id="3"
             data-gender="unisex" 
             data-brand="helix"
-            data-type="digital"
-            data-material="plastic"
+            data-type="analog"
+            data-material="leather"
             data-color="black"
             data-stock="5"
         >
@@ -197,7 +203,7 @@
             data-gender="male" 
             data-brand="casio"
             data-type="analog"
-            data-material="leather"
+            data-material="metal"
             data-color="gold"
             data-stock="5"
         >
@@ -211,54 +217,36 @@
             <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
         </div>
         <div class="product" 
-            data-id="4"
+            data-id="5"
             data-gender="male" 
             data-brand="casio"
-            data-type="analog"
+            data-type="digital"
             data-material="leather"
-            data-color="gold"
+            data-color="white"
             data-stock="5"
         >
-            <img src="../assets/gold-watch.svg" alt="Gold Watch">
-            <h2>Gold Noir</h2>
+            <img src="../assets/Titan-digital.svg" alt="Digital Watch">
+            <h2>Pixel Pulse</h2>
             <p>$399.99</p>
-            <p class="brand">Casio</p>
+            <p class="brand">Titan</p>
             <p class="stock-status"></p> <!-- Stock availability -->
             <button class="add-to-cart-btn">Add to Cart</button>
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
             <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
         </div>
         <div class="product" 
-            data-id="4"
-            data-gender="male" 
-            data-brand="casio"
+            data-id="6"
+            data-gender="female" 
+            data-brand="Titan"
             data-type="analog"
-            data-material="leather"
-            data-color="gold"
-            data-stock="5"
+            data-material="plastic"
+            data-color="pink"
+            data-stock="4"
         >
-            <img src="../assets/gold-watch.svg" alt="Gold Watch">
-            <h2>Gold Noir</h2>
+            <img src="../assets/Pink-plastic-watch.svg" alt="Analog Watch">
+            <h2>Rosé Dial</h2>
             <p>$399.99</p>
-            <p class="brand">Casio</p>
-            <p class="stock-status"></p> <!-- Stock availability -->
-            <button class="add-to-cart-btn">Add to Cart</button>
-            <button class="wishlist-btn">❤️ Add to Wishlist</button>
-            <button class="buy-now-btn" onclick="redirectToCheckout()">Buy Now</button>
-        </div>
-        <div class="product" 
-            data-id="4"
-            data-gender="male" 
-            data-brand="casio"
-            data-type="analog"
-            data-material="leather"
-            data-color="gold"
-            data-stock="5"
-        >
-            <img src="../assets/gold-watch.svg" alt="Gold Watch">
-            <h2>Gold Noir</h2>
-            <p>$399.99</p>
-            <p class="brand">Casio</p>
+            <p class="brand">Titan</p>
             <p class="stock-status"></p> <!-- Stock availability -->
             <button class="add-to-cart-btn">Add to Cart</button>
             <button class="wishlist-btn">❤️ Add to Wishlist</button>
@@ -306,7 +294,9 @@
         </div>
 
         <div class="footer-bottom">
-            <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b></p>
+            <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b> & 
+                <a href="../markups/contributor.html" onclick="handleContributorClick()" style="text-decoration: underline; cursor: pointer;"><i>Contributors</i></a>
+             </p>
         </div>
     </footer>
 

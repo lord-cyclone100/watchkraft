@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg" href="../assets/favicon.svg" />
-    <title>Premium Services &mdash; WatchKraft</title>
+    <title>WatchKraft | Customer Service & Warranty Support</title>
+  <meta name="description" content="Need help? WatchKraft offers 24/7 customer support, warranty claims, and repair services. Contact us for assistance with your luxury timepiece.">
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
@@ -16,91 +17,79 @@
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/service.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/nav.css">
   </head>
 
   <body>
     <!-- Navigation -->
     <nav>
       <a href="../index.html">
-        <img src="../assets/logo-light.svg" alt="WatchKraft Logo" />
+          <img src="../assets/logo-light.svg" alt="">
       </a>
       <div class="nav-head">
         <ul>
-          <a href="../index.html">
-            <li>
-              <h1>HOME</h1>
-            </li>
-          </a>
-          <a href="./service.html">
           <li>
-            <h1>SERVICE</h1>
+              <a href="../index.html"><h1>HOME</h1></a>
           </li>
-        </a>
-        <a href="./Product.html">
           <li>
-            <h1>PRODUCTS</h1>
+              <a href="./service.html"><h1>SERVICE</h1></a>
           </li>
-        </a>
-        <a href="./wishList.html">
           <li>
-            <h1>WISH LIST</h1>
+              <a href="./Product.html"><h1>PRODUCTS</h1></a>
           </li>
-        </a>
-        <a href="./contact.html">
           <li>
-            <h1>CONTACT US</h1>
+              <a href="./wishList.html"><h1>WISH LIST</h1></a>
           </li>
-        </a>
-        </ul>
+          <li>
+              <a href="./contact.html"><h1>CONTACT US</h1></a>
+          </li>
+      </ul>
+
       </div>
       <div class="nav-icons">
-        <header>
-          <div class="cart-icon">
-            <a href="./shopCart.html">
-              <i class="ri-shopping-cart-2-line"></i>
-            </a>
-            <span id="cart-count">0</span>
-          </div>
-        </header>
-        <a href="./login.html" class="login">
-          <i class="ri-user-line"></i>
-        </a>
+          <header>
+              <div class="cart-icon">
+                  <a href="./shopCart.html">
+                      <i class="ri-shopping-cart-2-line"></i>
+                  </a>
+                  <span id="cart-count">0</span>
+              </div>
+          </header>
+          <a href="./login.html" class="login">
+              <i class="ri-user-line"></i>
+          </a>
       </div>
       <div class="hamburger">
-        <button type="button" class="menu-button" onclick="navOpen()">
-          <img
-            src="../assets/burger-menu-svgrepo-com.svg"
-            alt="Menu"
-            class="menu-icon"
-          />
-        </button>
+          <button type="" class="menu-button" onclick="navOpen()">
+              <img src="../assets/burger-menu-svgrepo-com.svg" alt="" class="menu-icon">
+          </button>
       </div>
 
       <div class="nav-head2" id="nav-head2">
-        <div class="cancelBox">
-          <button type="button" class="menu-button cancel" onclick="navClose()">
-            X
-          </button>
-        </div>
-        <ul>
-          <li>
-            <h1><a href="../index.html">HOME</a></h1>
-          </li>
-          <li>
-            <h1><a href="./service.html">SERVICE</a></h1>
-          </li>
-          <li>
-            <h1><a href="./Product.html">PRODUCTS</a></h1>
-          </li>
-          <li>
-            <h1><a href="./wishList.html">WISH LIST</a></h1>
-          </li>
-          <li>
-            <h1><a href="./contact.html">CONTACT US</a></h1>
-          </li>
-        </ul>
+          <div class="cancelBox">
+              <button type="" class="menu-button cancel" onclick="navClose()">
+                  X
+              </button>
+          </div>
+          <ul>
+              <li>
+                  <h1><a href="../index.html">HOME</a></h1>
+              </li>
+              <li>
+                  <h1><a href="./service.html">SERVICE</a></h1>
+              </li>
+              <li>
+                  <h1><a href="./Product.html">PRODUCTS</a></h1>
+              </li>
+              <li>
+                  <h1><a href="./wishList.html">WISH LIST</a></h1>
+              </li>
+              <li>
+                  <h1><a href="./contact.html">CONTACT US</a></h1>
+              </li>
+          </ul>
       </div>
-    </nav>
+  </nav>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -205,28 +194,66 @@
             most prestigious watch manufacturers.
           </p>
         </div>
-        <div class="brands-grid">
-          <div class="brand-item">
-            <div class="brand-name">Rolex</div>
-          </div>
-          <div class="brand-item">
-            <div class="brand-name">Patek Philippe</div>
-          </div>
-          <div class="brand-item">
-            <div class="brand-name">Audemars Piguet</div>
-          </div>
-          <div class="brand-item">
-            <div class="brand-name">Omega</div>
-          </div>
-          <div class="brand-item">
-            <div class="brand-name">Cartier</div>
-          </div>
-          <div class="brand-item">
-            <div class="brand-name">TAG Heuer</div>
+    
+        <div class="brands-carousel-wrapper">
+          <div class="brands-carousel">
+            <!-- Repeat the below block with actual logos -->
+            <div class="brand-item">
+              <img src="../assets/rolex.png" alt="Rolex" />
+              <div class="brand-name">Rolex</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/patek.png" alt="Patek Philippe" />
+              <div class="brand-name">Patek Philippe</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/audemars.png" alt="Audemars Piguet" />
+              <div class="brand-name">Audemars Piguet</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/omega.png" alt="Omega" />
+              <div class="brand-name">Omega</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/fastrack.png" alt="Fastrack" />
+              <div class="brand-name">Fastrack</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/tag.png" alt="TAG Heuer" />
+              <div class="brand-name">TAG Heuer</div>
+            </div>
+    
+            <!-- Duplicate for infinite scroll -->
+            <div class="brand-item">
+              <img src="../assets/rolex.png" alt="Rolex" />
+              <div class="brand-name">Rolex</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/patek.png" alt="Patek Philippe" />
+              <div class="brand-name">Patek Philippe</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/audemars.png" alt="Audemars Piguet" />
+              <div class="brand-name">Audemars Piguet</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/omega.png" alt="Omega" />
+              <div class="brand-name">Omega</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/fastrack.png" alt="Fastrack" />
+              <div class="brand-name">Fastrack</div>
+            </div>
+            <div class="brand-item">
+              <img src="../assets/tag.png" alt="TAG Heuer" />
+              <div class="brand-name">TAG Heuer</div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    
+    
 
     <!-- CTA Section -->
     <section class="cta-section">
@@ -285,10 +312,9 @@
       </div>
 
       <div class="footer-bottom">
-        <p>
-          © <span id="current-year"></span> WatchKraft | Designed by
-          <b>Fazley Rahaman Molla</b>
-        </p>
+        <p>© <span class="year"></span> WatchKraft | Designed by <b>Fazley Rahaman Molla</b> & 
+          <a href="../markups/contributor.html" onclick="handleContributorClick()" style="text-decoration: underline; cursor: pointer;"><i>Contributors</i></a>
+       </p>
       </div>
     </footer>
 

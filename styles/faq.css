@@ -1,0 +1,89 @@
+/* FAQ Page Styles */
+.faq-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+  }
+  
+  .faq-container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2d2d2d;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .faq-section {
+    margin-bottom: 3rem;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .faq-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: #3a3a3a;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .faq-item {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .faq-item:hover {
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+  }
+  
+  .faq-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: #2d2d2d;
+    margin-bottom: 0.5rem;
+  }
+  
+  .faq-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-left: 1rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .faq-container {
+      padding: 0 1rem;
+      margin: 2rem auto;
+    }
+  
+    .faq-container h1 {
+      font-size: 2rem;
+    }
+  
+    .faq-section {
+      padding: 1rem;
+    }
+  
+    .faq-section h2 {
+      font-size: 1.6rem;
+    }
+  
+    .faq-item {
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+  
+    .faq-item h3 {
+      font-size: 1.2rem;
+    }
+  }
+  
