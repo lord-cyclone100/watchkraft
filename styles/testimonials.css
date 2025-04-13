@@ -64,16 +64,22 @@
   .testimonial-name {
     font-weight: 600;
     font-size: 0.9rem;
-    color: #0077ff;
+    color: goldenrod;
+  }
+  .testimonial-sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .testimonials-container {
-    background: linear-gradient(135deg, #fce4ec, #ffffff);
-    color: black;
+    background: linear-gradient(135deg, #725908, #151001);
+    color: rgb(255, 255, 255);
     padding: 2rem 1.5rem;
     border-radius: 1.25rem;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
-    max-width: 1050px;
+    max-width: 2050px;
     max-height: fit-content;
     margin: 0 auto;
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -87,7 +93,6 @@
   
   .heading-secondary {
     font-size: 2rem;
-    color: #000000 !important; 
     font-weight: 900;
     margin-bottom: 1.5rem;
     text-shadow: none !important; 
@@ -99,10 +104,8 @@
   
 
   .subheading{
-    font-size: 2rem;
-    color: #000000 !important;
+    font-size: 4rem;
     font-weight: 900;
-    margin-bottom: 1.5rem;
     text-shadow: none !important; 
     letter-spacing: 0.3px;
     animation: fadeInUp 1s ease both;
