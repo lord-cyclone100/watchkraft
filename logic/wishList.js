@@ -171,7 +171,7 @@ function renderWishlist(items) {
     if (items.length === 0) {
         wishListContainer.innerHTML = `
         <div class="empty-wishList-container">
-            <img src="/assets/empty-cart.svg" alt="Empty Wish List">
+            <img src="/assets/wishlist.png"  alt="Empty Wish List" style="height: 400px; width:400px;">
             <p class="empty-cart">Your wish list feels empty 🛒</p>
             <button class="return-to-shop" onclick="window.location.href='Product.html'">Return to Shop</button>
         </div>
