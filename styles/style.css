@@ -614,7 +614,17 @@ body {
     display: inline-block;
     color: #ddc22c;
     letter-spacing: 1px;
-}
+        font-size: 24px; /* Larger font size for the heading */
+        font-weight: 700; /* Bold heading */
+        color: #e7a704; /* Darker text color */
+        margin-bottom: 10px; /* Space below the heading */
+    }
+    
+    .footer-section.about p {
+        font-size: 16px; /* Standard font size for the paragraph */
+        line-height: 1.6; /* Improved line height for readability */
+        color: #fbf5f5; /* Slightly lighter text color */
+    }
 
 .footer-section ul {
     list-style: none;
@@ -991,7 +1001,7 @@ p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: rgb(52, 50, 50);
+    background-color: rgb(74, 73, 73);
     color: white;
     border: none;
     width: 40px;
@@ -1004,7 +1014,7 @@ p {
 }
 
 #backToTop:hover {
-    background-color: #555;
+    background-color: #888888;
 }
 
 /* For WebKit browsers */
