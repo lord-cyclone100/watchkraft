@@ -1083,7 +1083,7 @@ p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: rgb(52, 50, 50);
+    background-color: rgb(74, 73, 73);
     color: white;
     border: none;
     width: 40px;
@@ -1096,6 +1096,6 @@ p {
 }
 
 #backToTop:hover {
-    background-color: #555;
+    background-color: #888888;
 }
 
